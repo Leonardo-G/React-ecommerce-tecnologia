@@ -1,0 +1,15 @@
+.header__img{
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80vh;
+    width: min(100%, 150rem);
+}
+
+.coverHeader{
+    height: 40vh;
+}
+

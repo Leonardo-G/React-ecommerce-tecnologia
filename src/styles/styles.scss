@@ -1,0 +1,11 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@import "./base/base";
+
+@import "./components/navegacion";
+
+
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../styles/components/HeaderCarrousel";
