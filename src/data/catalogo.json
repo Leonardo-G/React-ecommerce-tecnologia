@@ -1,0 +1,38 @@
+[
+    {
+        "marca": "LG",
+        "modelos": {
+            "modelo1": "..."
+        }
+    },
+    {
+        "marca": "Motorola",
+        "modelos": {
+            "modelo1": "..."
+        }
+    },
+    {
+        "marca": "Apple",
+        "modelos": {
+            "modelo1": "..."
+        }
+    },
+    {
+        "marca": "LG",
+        "modelos": {
+            "modelo1": "..."
+        }
+    },
+    {
+        "marca": "Huawei",
+        "modelos": {
+            "modelo1": "..."
+        }
+    },
+    {
+        "marca": "Otros",
+        "modelos": {
+            "modelo1": "..."
+        }
+    }
+]

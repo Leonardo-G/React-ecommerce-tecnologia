@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { CartWidget } from './CartWidget';
 
 export const Navegacion = () => {
     return (
@@ -11,6 +12,8 @@ export const Navegacion = () => {
                 <a href="?#">Enlace</a>
                 <a href="?#">Enlace</a>
             </div>
+            
+            <CartWidget />
         </nav>
     )
 }
