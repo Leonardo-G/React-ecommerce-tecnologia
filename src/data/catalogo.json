@@ -8,7 +8,7 @@
                 "id": "faSS2S",
                 "tipo": "smartphone",
                 "modelo": "LG Velvet",
-                "img": "./assets/imagenes/lg/lgvelvet-producto.jpg",
+                "img": "./assets/imagenes/lg/velvet-producto.jpg",
                 "stock": "35",
                 "precio": "95500",
                 "especificaciones": {
@@ -22,7 +22,7 @@
                 "id": "sadDF1",
                 "tipo": "smartphone",
                 "modelo": "LG G8s",
-                "img": "../../public/assets/imagenes/lg/g8s-producto.jpg",
+                "img": "./assets/imagenes/lg/g8s-producto.jpg",
                 "stock": "15",
                 "precio": "64999",
                 "especificaciones": {
@@ -36,7 +36,7 @@
                 "id": "asd1pb",
                 "tipo": "smartphone",
                 "modelo": "LG Q60",
-                "img": "../../public/assets/imagenes/lg/g60-producto.jpg",
+                "img": "assets/imagenes/lg/q60-producto.jpg",
                 "stock": "5",
                 "precio": "79899",
                 "especificaciones": {
@@ -50,7 +50,7 @@
                 "id": "s84hD",
                 "tipo": "smartphone",
                 "modelo": "LG K71",
-                "img": "../../public/assets/imagenes/lg/k71-producto.webp",
+                "img": "assets/imagenes/lg/k71-producto.webp",
                 "stock": "74",
                 "precio": "41999",
                 "especificaciones": {
@@ -64,7 +64,7 @@
                 "id": "dad5w1",
                 "tipo": "smartwatch",
                 "modelo": "LG Watch W7",
-                "img": "../../public/assets/imagenes/lg/lgwatchg7-producto.jpg",
+                "img": "assets/imagenes/lg/lgwatchw7-producto.jpg",
                 "stock": "15",
                 "especificaciones": {
                     "dimensiones": "44.5 x 44.4 12.9mm",
@@ -104,7 +104,7 @@
                 "id": "sad84X",
                 "tipo": "smartwatch",
                 "modelo": "Apple Watch Serires 7",
-                "img": "../../public/assets/imagenes/apple/watchseries7-producto.jpg",
+                "img": "assets/imagenes/apple/watchseries7-producto.jpg",
                 "stock": "4",
                 "especificaciones": {
                     "dimensiones": "45,08 x 38,21 x 10,7 mm",
@@ -117,7 +117,7 @@
                 "id": "sadr84",
                 "tipo": "smartwatch",
                 "modelo": "Apple Watch Serires 6",
-                "img": "../../public/assets/imagenes/apple/watchseries6-producto.jpg",
+                "img": "assets/imagenes/apple/watchseries6-producto.jpg",
                 "stock": "2",
                 "especificaciones": {
                     "dimensiones": "44 x 34 x 10,7 mm",
@@ -130,7 +130,7 @@
                 "id": "SAD8sa",
                 "tipo": "smartwatch",
                 "modelo": "Apple Watch SE",
-                "img": "../../public/assets/imagenes/apple/watchse-producto.jpg",
+                "img": "assets/imagenes/apple/watchse-producto.jpg",
                 "stock": "0",
                 "especificaciones": {
                     "dimensiones": "40 x 34 x 10,7 mm",

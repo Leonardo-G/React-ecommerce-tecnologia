@@ -48,26 +48,40 @@ export const ItemListContainer = () => {
         setArrayProducts([...devolver])
         console.log(devolver)
     }
+
+    const handleReverse = () => {
+        setShowProducts({
+            show: false,
+            brand: ""
+        })
+        productsShow("")
+    }
     
     return (
         <div className="main">
-            
-            <div className="gridMain">
-                {   
-                    arrayProducts.map( product => (
-                        <ItemList 
-                            key={product.marca} 
-                            id={product.marca} 
-                            descripcion={product.descripcion} 
-                            img={product.imgMarca} 
-                            handleShowProduct={handleShowProduct} 
-                            setShowProducts={setShowProducts} 
-                            showProducts={showProducts} 
-                            productsShow={productsShow}
-                            productos={product.productos}/>
-                    ))
+            <div className="container">
+                <div className="gridMain">
+                    {   
+                        arrayProducts.map( product => (
+                            <ItemList 
+                                key={product.marca} 
+                                id={product.marca} 
+                                descripcion={product.descripcion} 
+                                img={product.imgMarca} 
+                                handleShowProduct={handleShowProduct} 
+                                setShowProducts={setShowProducts} 
+                                showProducts={showProducts} 
+                                productsShow={productsShow}
+                                productos={product.productos}/>
+                        ))
+                    }
+                </div>
+                {
+                    showProducts.brand !== "" && 
+                        <div className="btn btn--reverse" onClick={handleReverse}>Atras</div>
                 }
             </div>
+
         </div>
     )
 }

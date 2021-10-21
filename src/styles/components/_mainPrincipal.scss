@@ -3,17 +3,34 @@
     margin: 10rem auto;
 }
 
-.gridMain{
+.container{
     margin: 0 auto;
     width: min(90%, 120rem);
+}
+
+.gridMain{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
     row-gap: 5rem;
 }
-.main__marca{
+
+.btn--reverse{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 15rem;
+    background-color: #010101;
+    color: #fff;
+    text-align: right;
+    &:hover{
+        border: 1px solid #010101;
+    }
+}
+
+.main__marca, .main__productos{
+    height: 30rem;
     position: relative;
-    .empresa{
+    .empresa, .marca{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -23,7 +40,7 @@
         flex-direction: column;
         row-gap: 2rem;
     }
-    .empresa__marca{
+    .empresa__marca, .marca__modelo{
         font-size: 3rem;
         color: #fff;
         margin: 3rem 0;

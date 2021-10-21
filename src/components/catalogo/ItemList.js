@@ -1,21 +1,12 @@
 import React from 'react'
 import { Item } from './Item'
 
-export const ItemList = ({id, descripcion, img, handleShowProduct, setShowProducts, showProducts, productsShow, productos}) => {
-    console.log(productos)
-
-    const handleReverse = () => {
-        setShowProducts({
-            show: false,
-            brand: ""
-        })
-        productsShow("")
-    }
-
+export const ItemList = ({id, descripcion, img, handleShowProduct, showProducts, productos}) => {
+    
     return (
         <>
-            {   !showProducts.show && 
-                    <div className="main__marca">
+            {  !showProducts.show && 
+                <div className="main__marca">
                     <img src={img} alt={id}/>
                     <div className="empresa">
                         <h3 className="empresa__marca">{id}</h3>
@@ -26,20 +17,14 @@ export const ItemList = ({id, descripcion, img, handleShowProduct, setShowProduc
                         <p className="empresa__info">{descripcion}</p>
                         
                     </div>
-                    </div>
-                }
-                {
-                    showProducts.brand !== "" && 
-                        <div className="btn" onClick={handleReverse}>ATRAs</div>
-                }
+                </div>
+            }
 
-                { showProducts.brand !== "" &&
-                    
-                    productos.map(producto => (
-                        
-                        <Item key={producto.id} {...producto}/>
-                    ))
-                }
+            { showProducts.brand !== "" &&        
+                productos.map(producto => (
+                    <Item key={producto.id} {...producto}/>
+                ))
+            }
         </>
     )
 }
