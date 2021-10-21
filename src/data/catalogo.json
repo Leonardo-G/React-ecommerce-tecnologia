@@ -1,6 +1,7 @@
 [
     {
         "marca": "LG",
+        "descripcion": "lorem asd eona d saloerm",
         "modelos": {
             "modelo1": "..."
         }
