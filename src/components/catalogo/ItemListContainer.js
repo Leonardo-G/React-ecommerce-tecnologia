@@ -1,34 +1,73 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 //En el futuro se consulta a la api creada
 import catalogo from "../../data/catalogo.json";
-import { ItemCount } from "./ItemCount";
+// import { ItemCount } from "./ItemCount";
+import { ItemList } from './ItemList';
 
 export const ItemListContainer = () => {
 
+    const [arrayProducts, setArrayProducts] = useState([]);
     const [quantity, setQuantity] = useState(1);
     const stockProduct = 15;
 
-    //Proximamente va a ir los campos de cada una de las marcas y sus productos.
+    const [showProducts, setShowProducts] = useState({
+        show: false,
+        brand: ""
+    })
+    const handleShowProduct = (id) => {
+        setShowProducts({show: true, brand: id});
+        productsShow(id)
+    }
+    
+    const consultaJSON = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if(catalogo){
+                    resolve(catalogo)
+                    return
+                }
+                reject("No se encontro la API");
+            }, 1500);
+        })
+    }
 
+    useEffect(() => {
+        consultaJSON()
+            .then(res => setArrayProducts([...res]))
+            .catch(err => console.log(err))
+    }, [])
+
+
+    const productsShow = (brand) => {
+        if(brand === ""){
+            setArrayProducts([...catalogo]);
+            return;
+        }
+
+        const devolver = arrayProducts.filter(product => product.marca === brand)
+        setArrayProducts([...devolver])
+        console.log(devolver)
+    }
+    
     return (
         <div className="main">
+            
             <div className="gridMain">
-                <div className="main__marca">
-                    <img src="./assets/imagenes/lgmain.jpg" alt="marca lg"/>
-                    <div className="empresa">
-                        <h3 className="empresa__marca">{catalogo[0].marca}</h3>
-                        <button className="btn btn--marca">Ver Productos</button>
-                        <p className="empresa__info">Descripcion lorem sadaq safñnasd nasdoasd</p>
-                        
-                    </div>
-                </div>
-                <div className="gridMain">
-                    Proximamente mas marcas
-                </div>
+                {   
+                    arrayProducts.map( product => (
+                        <ItemList 
+                            key={product.marca} 
+                            id={product.marca} 
+                            descripcion={product.descripcion} 
+                            img={product.imgMarca} 
+                            handleShowProduct={handleShowProduct} 
+                            setShowProducts={setShowProducts} 
+                            showProducts={showProducts} 
+                            productsShow={productsShow}
+                            productos={product.productos}/>
+                    ))
+                }
             </div>
-
-            {/* Contador que estara dentro de un producto */}
-            <ItemCount quantity={quantity} setQuantity={setQuantity} stockProduct={stockProduct}/>
         </div>
     )
 }
