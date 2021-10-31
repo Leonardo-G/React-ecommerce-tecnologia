@@ -7,7 +7,7 @@ import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from '../producto/DetailDescription';
 
 
-export const ItemDetail = ({modelo, descripcion, precio, especificaciones}) => {
+export const ItemDetail = ({modelo, imgs, descripcion, precio, especificaciones}) => {
 
     const [showDescription, setShowDescription] = useState(false)
 
@@ -23,7 +23,7 @@ export const ItemDetail = ({modelo, descripcion, precio, especificaciones}) => {
             <div className="itemDetail">
                 <div className="itemDetail__imgs">
                     {
-                        especificaciones.imgs.map( (img, idx) => (
+                        imgs.map( (img, idx) => (
                             <ItemDetailImg key={ idx } img={ img }/>
                         ))
                     }

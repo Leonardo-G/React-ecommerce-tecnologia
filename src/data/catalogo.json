@@ -33,11 +33,9 @@
                 "modelo": "LG G8s",
                 "imgs": [
                     "./assets/imagenes/lg/g8s-producto.jpg",
-                    "./assets/imagenes/lg/velvet/1.jpg",
-                    "./assets/imagenes/lg/velvet/2.jpg",
-                    "./assets/imagenes/lg/velvet/3.jpg",
-                    "./assets/imagenes/lg/velvet/4.jpg",
-                    "./assets/imagenes/lg/velvet/5.webp"
+                    "./assets/imagenes/lg/g8s/1.jpg",
+                    "./assets/imagenes/lg/g8s/2.webp",
+                    "./assets/imagenes/lg/g8s/3.webp"
                 ],
                 "stock": "15",
                 "precio": "64999",
@@ -52,7 +50,12 @@
                 "id": "asd1pb",
                 "tipo": "smartphone",
                 "modelo": "LG Q60",
-                "img": "assets/imagenes/lg/q60-producto.jpg",
+                "imgs": [
+                    "./assets/imagenes/lg/q60-producto.jpg",
+                    "./assets/imagenes/lg/q60/1.jpg",
+                    "./assets/imagenes/lg/q60/2.jpg",
+                    "./assets/imagenes/lg/q60/3.webp"
+                ],
                 "stock": "5",
                 "precio": "79899",
                 "especificaciones": {
@@ -66,6 +69,13 @@
                 "id": "s84hD",
                 "tipo": "smartphone",
                 "modelo": "LG K71",
+                "imgs": [
+                    "./assets/imagenes/lg/k71-producto.webp",
+                    "./assets/imagenes/lg/k71/1.webp",
+                    "./assets/imagenes/lg/k71/2.png",
+                    "./assets/imagenes/lg/k71/3.webp",
+                    "./assets/imagenes/lg/k71/4.jpg"
+                ],
                 "img": "assets/imagenes/lg/k71-producto.webp",
                 "stock": "74",
                 "precio": "41999",
@@ -80,6 +90,13 @@
                 "id": "dad5w1",
                 "tipo": "smartwatch",
                 "modelo": "LG Watch W7",
+                "imgs": [
+                    "./assets/imagenes/lg/lgwatchw7-producto.jpg",
+                    "./assets/imagenes/lg/k71/1.webp",
+                    "./assets/imagenes/lg/k71/2.png",
+                    "./assets/imagenes/lg/k71/3.webp",
+                    "./assets/imagenes/lg/k71/4.jpg"
+                ],
                 "img": "assets/imagenes/lg/lgwatchw7-producto.jpg",
                 "stock": "15",
                 "especificaciones": {
@@ -99,9 +116,96 @@
             {
                 "id": "asd34S",
                 "tipo": "smartwatch",
-                "modelo": "Moto 360",
-                "img": "assets/imagenes/motorola/moto360-producto.jpg",
+                "modelo": "Moto 360 3ra gen...",
+                "imgs": [
+                    "./assets/imagenes/motorola/moto360-producto.jpg",
+                    "./assets/imagenes/motorola/moto360/1.jpg",
+                    "./assets/imagenes/motorola/moto360/2.jpg",
+                    "./assets/imagenes/motorola/moto360/3.jpg",
+                    "./assets/imagenes/motorola/moto360/4.jpg",
+                    "./assets/imagenes/motorola/moto360/5.jpg",
+                    "./assets/imagenes/motorola/moto360/6.jpg",
+                    "./assets/imagenes/motorola/moto360/7.jpg"
+                ],
                 "stock": "18",
+                "especificaciones": {
+                    "dimensiones": "42,8 x 42,8 x 11,68 mm",
+                    "material": "Acero Inoxidable",
+                    "pantalla": "OLED de 1,2 pulgadas Resolución 390 x 390 píxeles Circular Gorilla Glass 3",
+                    "procesador": "Snapdragon 3100"
+                }
+            },
+            {
+                "id": "SF24SA",
+                "tipo": "smartphone",
+                "modelo": "Edge 20 Pro",
+                "imgs": [
+                    "./assets/imagenes/motorola/edge20pro-producto.jpg",
+                    "./assets/imagenes/motorola/edge20pro/1.png",
+                    "./assets/imagenes/motorola/edge20pro/2.png",
+                    "./assets/imagenes/motorola/edge20pro/3.jpg",
+                    "./assets/imagenes/motorola/edge20pro/4.jpg"
+                ],
+                "stock": "89",
+                "especificaciones": {
+                    "dimensiones": "42,8 x 42,8 x 11,68 mm",
+                    "material": "Acero Inoxidable",
+                    "pantalla": "OLED de 1,2 pulgadas Resolución 390 x 390 píxeles Circular Gorilla Glass 3",
+                    "procesador": "Snapdragon 3100"
+                }
+            },
+            {
+                "id": "f3S3df",
+                "tipo": "smartphone",
+                "modelo": "Moto g60s",
+                "imgs": [
+                    "./assets/imagenes/motorola/motog60s-producto.png",
+                    "./assets/imagenes/motorola/g60s/1.jpg",
+                    "./assets/imagenes/motorola/g60s/2.jpg",
+                    "./assets/imagenes/motorola/g60s/3.png",
+                    "./assets/imagenes/motorola/g60s/4.webp"
+                ],
+                "stock": "46",
+                "especificaciones": {
+                    "dimensiones": "42,8 x 42,8 x 11,68 mm",
+                    "material": "Acero Inoxidable",
+                    "pantalla": "OLED de 1,2 pulgadas Resolución 390 x 390 píxeles Circular Gorilla Glass 3",
+                    "procesador": "Snapdragon 3100"
+                }
+            },
+            {
+                "id": "fa4dDd",
+                "tipo": "smartphone",
+                "modelo": "Moto g9 Plus",
+                "imgs": [
+                    "./assets/imagenes/motorola/motog9plus-producto.jpg",
+                    "./assets/imagenes/motorola/g9plus/1.jpg",
+                    "./assets/imagenes/motorola/g9plus/2.png",
+                    "./assets/imagenes/motorola/g9plus/3.jpg",
+                    "./assets/imagenes/motorola/g9plus/4.jpg"
+                ],
+                "stock": "126",
+                "especificaciones": {
+                    "dimensiones": "42,8 x 42,8 x 11,68 mm",
+                    "material": "Acero Inoxidable",
+                    "pantalla": "OLED de 1,2 pulgadas Resolución 390 x 390 píxeles Circular Gorilla Glass 3",
+                    "procesador": "Snapdragon 3100"
+                }
+            },
+            {
+                "id": "SDS2Hx",
+                "tipo": "smartphone",
+                "modelo": "Moto g30",
+                "imgs": [
+                    "./assets/imagenes/motorola/motog30-producto.webp",
+                    "./assets/imagenes/motorola/g30/1.webp",
+                    "./assets/imagenes/motorola/g30/2.webp",
+                    "./assets/imagenes/motorola/g30/3.webp",
+                    "./assets/imagenes/motorola/g30/4.webp",
+                    "./assets/imagenes/motorola/g30/5.webp",
+                    "./assets/imagenes/motorola/g30/6.webp"
+                ],
+                "stock": "26",
                 "especificaciones": {
                     "dimensiones": "42,8 x 42,8 x 11,68 mm",
                     "material": "Acero Inoxidable",
@@ -119,8 +223,11 @@
             {
                 "id": "sad84X",
                 "tipo": "smartwatch",
-                "modelo": "Apple Watch Serires 7",
-                "img": "assets/imagenes/apple/watchseries7-producto.jpg",
+                "modelo": "Apple Watch Series 7",
+                "precio": "",
+                "imgs": [
+                    "./assets/imagenes/apple/watchseries7-producto.jpg"
+                ],
                 "stock": "4",
                 "especificaciones": {
                     "dimensiones": "45,08 x 38,21 x 10,7 mm",
@@ -130,10 +237,13 @@
                 }
             },
             {
-                "id": "sadr84",
+                "id": "s0dr84",
                 "tipo": "smartwatch",
-                "modelo": "Apple Watch Serires 6",
-                "img": "assets/imagenes/apple/watchseries6-producto.jpg",
+                "modelo": "Apple Watch Series 6",
+                "precio": "",
+                "imgs": [
+                    "./assets/imagenes/apple/watchseries6-producto.jpg"
+                ],
                 "stock": "2",
                 "especificaciones": {
                     "dimensiones": "44 x 34 x 10,7 mm",
@@ -146,7 +256,9 @@
                 "id": "SAD8sa",
                 "tipo": "smartwatch",
                 "modelo": "Apple Watch SE",
-                "img": "assets/imagenes/apple/watchse-producto.jpg",
+                "imgs": [
+                    "./assets/imagenes/apple/watchse-producto.jpg"
+                ],
                 "stock": "0",
                 "especificaciones": {
                     "dimensiones": "40 x 34 x 10,7 mm",
@@ -158,10 +270,77 @@
             {
                 "id": "8asd12",
                 "tipo": "smartwatch",
-                "modelo": "Apple Watch SE",
+                "modelo": "Apple Watch Nike",
                 "precio": "90.000",
-                "img": "assets/imagenes/apple/watchnike-producto.jpg",
+                "imgs": [
+                    "./assets/imagenes/apple/watchnike-producto.webp"
+                ],
                 "stock": "12",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "SD2Jn5",
+                "tipo": "smartphone",
+                "modelo": "Iphone 13",
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/apple/iphone13-producto.jpg",
+                    "./assets/imagenes/apple/iphone13/1.jpg",
+                    "./assets/imagenes/apple/iphone13/2.jpg",
+                    "./assets/imagenes/apple/iphone13/3.jpg",
+                    "./assets/imagenes/apple/iphone13/4.jpg",
+                    "./assets/imagenes/apple/iphone13/5.jpg",
+                    "./assets/imagenes/apple/iphone13/6.jpg"
+                ],
+                "stock": "351",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "NFB752",
+                "tipo": "smartphone",
+                "modelo": "Iphone 13 Pro Max",
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/apple/iphone13promax-producto.jpg",
+                    "./assets/imagenes/apple/iphone13max/1.jpg",
+                    "./assets/imagenes/apple/iphone13max/2.jpg",
+                    "./assets/imagenes/apple/iphone13max/3.jpg",
+                    "./assets/imagenes/apple/iphone13max/4.jpg",
+                    "./assets/imagenes/apple/iphone13max/5.jpg"
+                ],
+                "stock": "151",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "fas5Fs",
+                "tipo": "smartphone",
+                "modelo": "Iphone SE",
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/apple/iphonese-producto.jpg",
+                    "./assets/imagenes/apple/iphonese/1.jpg",
+                    "./assets/imagenes/apple/iphonese/2.jpg",
+                    "./assets/imagenes/apple/iphonese/3.jpg",
+                    "./assets/imagenes/apple/iphonese/4.jpg",
+                    "./assets/imagenes/apple/iphonese/5.jpg",
+                    "./assets/imagenes/apple/iphonese/6.jpg"
+                ],
+                "stock": "151",
                 "especificaciones": {
                     "dimensiones": "40 x 34 x 10,7 mm",
                     "material": "Aluminio",
@@ -177,7 +356,191 @@
         "imgMarca": "./assets/imagenes/huaweimain.jpg",
         "productos": [
             {
-                "id": "sdg3dd"
+                "id": "fasJH8",
+                "tipo": "smartphone",
+                "modelo": "Mate 40 Pro",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb",
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/huawei/mate40pro-producto.jpg",
+                    "./assets/imagenes/huawei/mate40pro/1.jpg",
+                    "./assets/imagenes/huawei/mate40pro/2.jpg",
+                    "./assets/imagenes/huawei/mate40pro/3.jpg",
+                    "./assets/imagenes/huawei/mate40pro/4.jpg",
+                    "./assets/imagenes/huawei/mate40pro/5.jpg"
+                ],
+                "stock": "51",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "hp4aF3",
+                "tipo": "smartphone",
+                "modelo": "P40 Pro",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb",
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/huawei/huaweip40pro-producto.jpg",
+                    "./assets/imagenes/huawei/p40pro/1.jpg",
+                    "./assets/imagenes/huawei/p40pro/2.jpg",
+                    "./assets/imagenes/huawei/p40pro/3.jpg",
+                    "./assets/imagenes/huawei/p40pro/4.jpg",
+                    "./assets/imagenes/huawei/p40pro/5.jpg",
+                    "./assets/imagenes/huawei/p40pro/6.jpg",
+                    "./assets/imagenes/huawei/p40pro/7.jpg"
+                ],
+                "stock": "51",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "hp4aF3",
+                "tipo": "smartphone",
+                "modelo": "P40 Pro",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb", 
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/huawei/huaweip40pro-producto.jpg",
+                    "./assets/imagenes/huawei/p40pro/1.jpg",
+                    "./assets/imagenes/huawei/p40pro/2.jpg",
+                    "./assets/imagenes/huawei/p40pro/3.jpg",
+                    "./assets/imagenes/huawei/p40pro/4.jpg",
+                    "./assets/imagenes/huawei/p40pro/5.jpg",
+                    "./assets/imagenes/huawei/p40pro/6.jpg",
+                    "./assets/imagenes/huawei/p40pro/7.jpg"
+                ],
+                "stock": "51",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "hp4aF3",
+                "tipo": "smartphone",
+                "modelo": "P40 Pro Plus",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb", 
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/huawei/p40proplus-producto.jpg",
+                    "./assets/imagenes/huawei/p40proplus/1.jpg",
+                    "./assets/imagenes/huawei/p40proplus/2.jpg"
+                ],
+                "stock": "51",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            }
+        ]
+    },
+    {
+        "marca": "Samsung",
+        "descripcion": "lorem asd eona d saloerm",
+        "imgMarca": "./assets/imagenes/samsungmain.webp",
+        "productos": [
+            {
+                "id": "NVX31X",
+                "tipo": "smartphone",
+                "modelo": "Galaxy S21 Ultra",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb",
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/samsung/galaxys21ultra-producto.jpg",
+                    "./assets/imagenes/samsung/galaxys21ultra/1.jpg",
+                    "./assets/imagenes/samsung/galaxys21ultra/2.jpg",
+                    "./assets/imagenes/samsung/galaxys21ultra/3.jpg",
+                    "./assets/imagenes/samsung/galaxys21ultra/4.jpg",
+                    "./assets/imagenes/samsung/galaxys21ultra/5.jpg",
+                    "./assets/imagenes/samsung/galaxys21ultra/6.jpg"
+                ],
+                "stock": "61",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "MN8snd",
+                "tipo": "smartphone",
+                "modelo": "Galaxy S20 FE",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb",
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/samsung/galaxys20fe-producto.png",
+                    "./assets/imagenes/samsung/galaxys20fe/1.png",
+                    "./assets/imagenes/samsung/galaxys20fe/2.png",
+                    "./assets/imagenes/samsung/galaxys20fe/3.png",
+                    "./assets/imagenes/samsung/galaxys20fe/4.png",
+                    "./assets/imagenes/samsung/galaxys20fe/5.png"
+                ],
+                "stock": "51",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "FASL79",
+                "tipo": "smartphone",
+                "modelo": "Galaxy A71",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb", 
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/samsung/galaxya71-producto.jpg",
+                    "./assets/imagenes/samsung/galaxya71/1.jpg",
+                    "./assets/imagenes/samsung/galaxya71/2.jpg",
+                    "./assets/imagenes/samsung/galaxya71/3.jpg",
+                    "./assets/imagenes/samsung/galaxya71/4.jpg"
+                ],
+                "stock": "51",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "Nxx515",
+                "tipo": "smartphone",
+                "modelo": "Galaxy Note 20 Ultra",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb", 
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/samsung/galaxynote20ultra-producto.jpg",
+                    "./assets/imagenes/samsung/galaxynote20ultra/1.jpg",
+                    "./assets/imagenes/samsung/galaxynote20ultra/2.jpg",
+                    "./assets/imagenes/samsung/galaxynote20ultra/3.jpg",
+                    "./assets/imagenes/samsung/galaxynote20ultra/4.jpg",
+                    "./assets/imagenes/samsung/galaxynote20ultra/5.jpg",
+                    "./assets/imagenes/samsung/galaxynote20ultra/6.jpg",
+                    "./assets/imagenes/samsung/galaxynote20ultra/7.jpg",
+                    "./assets/imagenes/samsung/galaxynote20ultra/8.jpg"
+                ],
+                "stock": "62",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
             }
         ]
     },
@@ -187,7 +550,74 @@
         "imgMarca": "./assets/imagenes/otrosmain.jpg",
         "productos": [
             {
-                "id": "adg213"
+                "id": "bxcSD4",
+                "tipo": "smartphone",
+                "modelo": "Xiami Mi 11",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb",
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/otros/xiaomimi11-producto.jpg",
+                    "./assets/imagenes/otros/xiaomimi11/1.jpg",
+                    "./assets/imagenes/otros/xiaomimi11/2.jpg",
+                    "./assets/imagenes/otros/xiaomimi11/3.jpg",
+                    "./assets/imagenes/otros/xiaomimi11/4.jpg",
+                    "./assets/imagenes/otros/xiaomimi11/5.jpg"
+                ],
+                "stock": "51",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "hp4aF3",
+                "tipo": "smartphone",
+                "modelo": "Xiaomi Note 10 Pro",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb",
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/otros/xiaominote10pro-producto.jpg",
+                    "./assets/imagenes/otros/xiaominote10pro/1.jpg",
+                    "./assets/imagenes/otros/xiaominote10pro/2.jpg",
+                    "./assets/imagenes/otros/xiaominote10pro/3.jpg",
+                    "./assets/imagenes/otros/xiaominote10pro/4.jpg",
+                    "./assets/imagenes/otros/xiaominote10pro/5.jpg",
+                    "./assets/imagenes/otros/xiaominote10pro/6.jpg",
+                    "./assets/imagenes/otros/xiaominote10pro/7.jpg"
+                ],
+                "stock": "51",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
+            },
+            {
+                "id": "hp4aF3",
+                "tipo": "smartphone",
+                "modelo": "One Plus 9 Pro",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb", 
+                "precio": "90.000",
+                "imgs": [
+                    "./assets/imagenes/otros/oneplus9pro-producto.jpg",
+                    "./assets/imagenes/otros/oneplus9pro/1.jpg",
+                    "./assets/imagenes/otros/oneplus9pro/2.jpg",
+                    "./assets/imagenes/otros/oneplus9pro/3.jpg",
+                    "./assets/imagenes/otros/oneplus9pro/4.jpg",
+                    "./assets/imagenes/otros/oneplus9pro/5.jpg",
+                    "./assets/imagenes/otros/oneplus9pro/6.jpg",
+                    "./assets/imagenes/otros/oneplus9pro/7.jpg"
+                ],
+                "stock": "51",
+                "especificaciones": {
+                    "dimensiones": "40 x 34 x 10,7 mm",
+                    "material": "Aluminio",
+                    "pantalla": "Pantalla Retina OLED LTPO",
+                    "procesador": "Chip S5 SiP con procesador de doble núcleo de 64 bits"
+                }
             }
         ]
     }
