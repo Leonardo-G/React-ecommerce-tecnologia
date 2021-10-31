@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 //En el futuro se consulta a la api creada
 import catalogo from "../../data/catalogo.json";
+import { ItemDetailContainer } from './ItemDetailContainer';
 // import { ItemCount } from "./ItemCount";
 import { ItemList } from './ItemList';
 
@@ -9,6 +10,9 @@ export const ItemListContainer = () => {
     const [arrayProducts, setArrayProducts] = useState([]);
     const [quantity, setQuantity] = useState(1);
     const stockProduct = 15;
+    
+    const [idProduct, setIdProduct] = useState("")
+    const [detailProduct, setDetailProduct] = useState({})
 
     const [showProducts, setShowProducts] = useState({
         show: false,
@@ -56,6 +60,10 @@ export const ItemListContainer = () => {
         })
         productsShow("")
     }
+
+    const handleShowDetailProduct = (id) => {
+        setIdProduct(id)
+    }
     
     return (
         <div className="main">
@@ -72,7 +80,9 @@ export const ItemListContainer = () => {
                                 setShowProducts={setShowProducts} 
                                 showProducts={showProducts} 
                                 productsShow={productsShow}
-                                productos={product.productos}/>
+                                productos={product.productos}
+                                handleShowDetailProduct={handleShowDetailProduct}
+                            />
                         ))
                     }
                 </div>
@@ -80,8 +90,11 @@ export const ItemListContainer = () => {
                     showProducts.brand !== "" && 
                         <div className="btn btn--reverse" onClick={handleReverse}>Atras</div>
                 }
+                {
+                    idProduct.length > 0 &&
+                    <ItemDetailContainer idProduct={idProduct} arrayProducts={arrayProducts}/>
+                }
             </div>
-
         </div>
     )
 }

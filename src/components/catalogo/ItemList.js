@@ -1,7 +1,7 @@
 import React from 'react'
 import { Item } from './Item'
 
-export const ItemList = ({id, descripcion, img, handleShowProduct, showProducts, productos}) => {
+export const ItemList = ({id, descripcion, img, handleShowProduct, showProducts, productos, handleShowDetailProduct}) => {
     
     return (
         <>
@@ -22,7 +22,7 @@ export const ItemList = ({id, descripcion, img, handleShowProduct, showProducts,
 
             { showProducts.brand !== "" &&        
                 productos.map(producto => (
-                    <Item key={producto.id} {...producto}/>
+                    <Item key={producto.id} {...producto} handleShowDetailProduct={handleShowDetailProduct}/>
                 ))
             }
         </>

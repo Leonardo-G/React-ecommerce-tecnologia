@@ -1,0 +1,24 @@
+.itemDetail{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    .itemDetail__imgs{
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        grid-auto-rows:60rem;
+        row-gap: 2rem;
+        column-gap: 2rem;
+    }
+    .itemDetail__description{
+        .description-false{
+            visibility: hidden;
+            opacity: 0;
+            transition: 2s all ease;
+        }
+        .description-true{
+            transition: 2s all ease;
+        }
+    }
+    .description-button{
+        cursor: pointer;
+    }
+}

@@ -8,10 +8,19 @@
                 "id": "faSS2S",
                 "tipo": "smartphone",
                 "modelo": "LG Velvet",
-                "img": "./assets/imagenes/lg/velvet-producto.jpg",
+                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb",
+                "imgs": [
+                    "./assets/imagenes/lg/velvet-producto.jpg",
+                    "./assets/imagenes/lg/velvet/1.jpg",
+                    "./assets/imagenes/lg/velvet/2.jpg",
+                    "./assets/imagenes/lg/velvet/3.jpg",
+                    "./assets/imagenes/lg/velvet/4.jpg",
+                    "./assets/imagenes/lg/velvet/5.webp"
+                ],
                 "stock": "35",
                 "precio": "95500",
                 "especificaciones": {
+                    "modelo": "LG Velvet",
                     "dimensiones": "167,2 x 74,1 x 7,9 mm",
                     "material": "Acero Inoxidable",
                     "pantalla": "Pantalla P-OLED de 6,8 pulgadas, 1080 x 2460 píxeles",
@@ -22,7 +31,14 @@
                 "id": "sadDF1",
                 "tipo": "smartphone",
                 "modelo": "LG G8s",
-                "img": "./assets/imagenes/lg/g8s-producto.jpg",
+                "imgs": [
+                    "./assets/imagenes/lg/g8s-producto.jpg",
+                    "./assets/imagenes/lg/velvet/1.jpg",
+                    "./assets/imagenes/lg/velvet/2.jpg",
+                    "./assets/imagenes/lg/velvet/3.jpg",
+                    "./assets/imagenes/lg/velvet/4.jpg",
+                    "./assets/imagenes/lg/velvet/5.webp"
+                ],
                 "stock": "15",
                 "precio": "64999",
                 "especificaciones": {
