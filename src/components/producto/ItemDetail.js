@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-import { ItemCount } from './ItemCount'
+import { ItemCount } from '../catalogo/ItemCount'
 import { ItemDetailImg } from './ItemDetailImg';
-import { DetailDescription } from '../producto/DetailDescription';
+import { DetailDescription } from './DetailDescription';
 
 
 export const ItemDetail = ({modelo, imgs, descripcion, precio, especificaciones}) => {

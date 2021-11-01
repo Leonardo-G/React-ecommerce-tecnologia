@@ -1,13 +1,23 @@
 .navegacion{
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 8rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: #fff;
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: .5rem;
+        width: 100%;
+        background: rgb(255,255,255);
+        background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 24%, rgba(230,231,235,0.8715861344537815) 61%, rgba(195,196,199,0.7875525210084033) 86%);
+        background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 24%, rgba(230,231,235,0.8715861344537815) 61%, rgba(195,196,199,0.7875525210084033) 86%);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 24%, rgba(230,231,235,0.8715861344537815) 61%, rgba(195,196,199,0.7875525210084033) 86%);
+    }
     .navegacion__logo a{
         font-size: 1.8rem;
         color: #000;

@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
-//En el futuro se consulta a la api creada
 import catalogo from "../../data/catalogo.json";
-import { ItemDetailContainer } from './ItemDetailContainer';
-// import { ItemCount } from "./ItemCount";
+import { useConsultApi } from '../../hooks/useConsultApi';
+import { Header } from '../header/Header';
+
+import { ItemDetailContainer } from '../producto/ItemDetailContainer';
 import { ItemList } from './ItemList';
 
 export const ItemListContainer = () => {
 
+    //Guardar la consulta del Api
     const [arrayProducts, setArrayProducts] = useState([]);
+
     const [quantity, setQuantity] = useState(1);
     const stockProduct = 15;
     
@@ -23,22 +26,11 @@ export const ItemListContainer = () => {
         productsShow(id)
     }
     
-    const consultaJSON = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if(catalogo){
-                    resolve(catalogo)
-                    return
-                }
-                reject("No se encontro la API");
-            }, 1500);
-        })
-    }
+    const consultApi = useConsultApi(catalogo);
 
     useEffect(() => {
-        consultaJSON()
-            .then(res => setArrayProducts([...res]))
-            .catch(err => console.log(err))
+        consultApi
+            .then(res => setArrayProducts(res))
     }, [])
 
 
@@ -66,35 +58,34 @@ export const ItemListContainer = () => {
     }
     
     return (
-        <div className="main">
-            <div className="container">
-                <div className="gridMain">
-                    {   
-                        arrayProducts.map( product => (
-                            <ItemList 
-                                key={product.marca} 
-                                id={product.marca} 
-                                descripcion={product.descripcion} 
-                                img={product.imgMarca} 
-                                handleShowProduct={handleShowProduct} 
-                                setShowProducts={setShowProducts} 
-                                showProducts={showProducts} 
-                                productsShow={productsShow}
-                                productos={product.productos}
-                                handleShowDetailProduct={handleShowDetailProduct}
-                            />
-                        ))
+        <>
+            <Header />
+            <main className="main">
+                <div className="container">
+                    <div className="gridMain">
+                        {   
+                            arrayProducts.map( product => (
+                                <ItemList 
+                                    key={product.marca} 
+                                    id={product.marca} 
+                                    descripcion={product.descripcion} 
+                                    img={product.imgMarca} 
+                                    handleShowProduct={handleShowProduct} 
+                                    setShowProducts={setShowProducts} 
+                                    showProducts={showProducts} 
+                                    productsShow={productsShow}
+                                    productos={product.productos}
+                                    handleShowDetailProduct={handleShowDetailProduct}
+                                />
+                            ))
+                        }
+                    </div>
+                    {
+                        showProducts.brand !== "" && 
+                            <div className="btn btn--reverse" onClick={handleReverse}>Atras</div>
                     }
                 </div>
-                {
-                    showProducts.brand !== "" && 
-                        <div className="btn btn--reverse" onClick={handleReverse}>Atras</div>
-                }
-                {
-                    idProduct.length > 0 &&
-                    <ItemDetailContainer idProduct={idProduct} arrayProducts={arrayProducts}/>
-                }
-            </div>
-        </div>
+            </main>
+        </>
     )
 }
