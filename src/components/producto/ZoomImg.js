@@ -1,0 +1,51 @@
+import React, { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronCircleLeft, faChevronCircleRight, faTimes } from '@fortawesome/free-solid-svg-icons';
+
+export const ZoomImg = ({ imgShow, setImgShow, idxImg, setIdxImg }) => {
+    
+    const handleCloseZoom = () => {
+        setImgShow({
+            imgZoom: "",
+            show: false
+        })
+    }
+
+    const handleNextImg = () => {
+        if( idxImg >= (imgShow.lengthImg - 1) ) return;
+
+        setIdxImg( idxImg + 1);
+    }
+
+    const handlePreviousImg = () => {
+        if( idxImg === 0 ) return;
+
+        setIdxImg( idxImg - 1)
+    }
+
+    return (
+        <div className="zoom">
+            <div 
+                className="zoom__icon icon--close"
+                onClick={ handleCloseZoom }    
+            >
+                <FontAwesomeIcon icon={ faTimes }/>
+            </div>
+            <div 
+                className="zoom__icon icon--previous"
+                onClick={ handlePreviousImg }    
+            >
+                <FontAwesomeIcon icon={ faChevronCircleLeft }/>
+            </div>
+            <div className="zoom__container">
+                <img src={ `../${imgShow.imgZoom}` } alt=""/>
+            </div>
+            <div 
+                className="zoom__icon icon--next"
+                onClick={ handleNextImg }    
+            >
+                <FontAwesomeIcon icon={ faChevronCircleRight }/>
+            </div>
+        </div>
+    )
+}

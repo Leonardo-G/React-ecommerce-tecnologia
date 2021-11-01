@@ -1,9 +1,13 @@
 import React from 'react'
 
-export const ItemDetailImg = ({ img }) => {
+export const ItemDetailImg = ({ id, img, handleZoomImage }) => {
+    
     return (
-        <div>
-            <img src={ `../${img}` } alt= ""/>
+        <div 
+            className="description-zoom"
+            onClick={() => handleZoomImage(id)}
+        >
+            <img src={ `../${img}` } alt= "" data-img={ id }/>
         </div>
     )
 }

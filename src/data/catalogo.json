@@ -8,7 +8,7 @@
                 "id": "faSS2S",
                 "tipo": "smartphone",
                 "modelo": "LG Velvet",
-                "descripcion": "lorem asd eona d saloerm lorem asdasdhubas asjdnasu bhdasnd sahsbd hasbdan shb",
+                "descripcion": "Una propuesta 5G de la compañía surcoreana que se sitúa a caballo entre la gama media y la gama alta. Un diseño distinto al que estamos acostumbrados a ver.",
                 "imgs": [
                     "./assets/imagenes/lg/velvet-producto.jpg",
                     "./assets/imagenes/lg/velvet/1.jpg",
@@ -18,13 +18,19 @@
                     "./assets/imagenes/lg/velvet/5.webp"
                 ],
                 "stock": "35",
-                "precio": "95500",
+                "precio": "69999",
                 "especificaciones": {
-                    "modelo": "LG Velvet",
-                    "dimensiones": "167,2 x 74,1 x 7,9 mm",
-                    "material": "Acero Inoxidable",
-                    "pantalla": "Pantalla P-OLED de 6,8 pulgadas, 1080 x 2460 píxeles",
-                    "procesador": "Qualcomm Snapdragon 765G"
+                    "pantalla": "OLED de 6,8 pulgadas",
+                    "dimensionesPeso": "167,1 x 74,1 x 7,85 mm, 180g.",
+                    "procesador": "Snapdragon 765G",
+                    "ram": "6 GB",
+                    "almacenamiento": "128 GB",
+                    "camaraFrontal": "16 MP",
+                    "camaraTrasera": "48 MP, 8 MP gran angular, 5 MP bokeh",
+                    "bateria": "4.300 mAh",
+                    "sistemaOperativo": "Android",
+                    "Conectividad": "5G SA/NSA WI-FI, Bluetooth, USB-C",
+                    "otros": "Altavoces estéreo, IP68"
                 }
             },
             {

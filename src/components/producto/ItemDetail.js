@@ -1,13 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 import { ItemCount } from '../catalogo/ItemCount'
 import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';
+import { ZoomImg } from './ZoomImg';
 
 
 export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especificaciones}) => {
+
+    const [idxImg, setIdxImg] = useState(0)
+    const [imgShow, setImgShow] = useState({
+        lengthImg: imgs.length,
+        imgZoom: "",
+        show: false
+    })
 
     const [showDescription, setShowDescription] = useState(false)
 
@@ -19,12 +27,28 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
         }
     }
 
+    const handleZoomImage = (id) => {
+        setIdxImg(parseInt(id));
+        setImgShow({...imgShow, show:true})
+    }
+
+    
+    useEffect(() => {
+        if(imgShow){
+            const src = imgs.find((img, idx) => idx === idxImg);
+            setImgShow({...imgShow, imgZoom: src})
+        }
+
+        // eslint-disable-next-line
+    }, [idxImg])
+
     return (
+        <>
             <div className="itemDetail">
                 <div className="itemDetail__imgs">
                     {
                         imgs.map( (img, idx) => (
-                            <ItemDetailImg key={ idx } img={ img }/>
+                            <ItemDetailImg key={ idx } id={ idx } img={ img } handleZoomImage={ handleZoomImage }/>
                         ))
                     }
                 </div>
@@ -48,5 +72,9 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
                     </div>
                 </div>
             </div>
+            {   imgShow.show &&
+                <ZoomImg imgShow={ imgShow } setImgShow={ setImgShow } idxImg={ idxImg } setIdxImg={ setIdxImg }/>
+            }
+        </>
     )
 }
