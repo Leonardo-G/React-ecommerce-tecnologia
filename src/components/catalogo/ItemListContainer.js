@@ -11,8 +11,6 @@ export const ItemListContainer = () => {
     //Guardar la consulta del Api
     const [arrayProducts, setArrayProducts] = useState([]);
 
-    const [quantity, setQuantity] = useState(1);
-    const stockProduct = 15;
     
     const [idProduct, setIdProduct] = useState("")
     const [detailProduct, setDetailProduct] = useState({})

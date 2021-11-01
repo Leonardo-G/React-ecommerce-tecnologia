@@ -1,9 +1,12 @@
 import React from 'react'
 
-export const DetailDescription = ({modelo}) => {
+export const DetailDescription = ({dimensiones, material, pantalla, procesador}) => {
     return (
         <div>
-            <p>{modelo}</p>
+            <p><span>Dimensiones: </span>{ dimensiones }</p>
+            <p><span>Material: </span>{ material }</p>
+            <p><span>Pantalla: </span>{ pantalla }</p>
+            <p><span>Procesador: </span>{ procesador }</p>
         </div>
     )
 }

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 //Futuro  contador en el producto
-export const ItemCount = ({quantity, setQuantity, stockProduct}) => {
+export const ItemCount = ({ stock }) => {
+
+    const [quantity, setQuantity] = useState(1);
 
     const handleIncrement = () => {
-        if( quantity < stockProduct ){
+        if( quantity < stock ){
             setQuantity( quantity + 1);
         }
     }
@@ -19,20 +21,23 @@ export const ItemCount = ({quantity, setQuantity, stockProduct}) => {
     }
 
     return (
-        <div>
-            <p style={{fontSize: "2rem"}}>Cantidad disponible : { stockProduct }</p>
-            <button 
-                className="btn btn--producto"
-                onClick={ handleDecrement }
-            > - 1</button>
-            <p style={{fontSize: "2rem"}}>{ quantity }</p>
-            <button 
-                className="btn btn--producto"
-                onClick={ handleIncrement }
-            > + 1</button>
+        <>
+            <div className="description-buttons">
+                <button 
+                    className="btn btn--producto"
+                    onClick={ handleDecrement }
+                    > - 1</button>
+                <p className="description-quantity">{ quantity }</p>
+                <button 
+                    className="btn btn--producto"
+                    onClick={ handleIncrement }
+                    > + 1</button>
+                <p> Stock : { stock }</p>
+            </div>
             <button
+                className="btn btn--add"
                 onClick={ handleAddCart }
             >Agregar Producto</button>
-        </div>
+        </>
     )
 }

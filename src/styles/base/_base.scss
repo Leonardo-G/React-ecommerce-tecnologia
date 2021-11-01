@@ -58,4 +58,22 @@ p, h3{
 }
 
 .btn--producto{
+    padding: 0;
+    height: 3rem;
+    width: 5rem;
+    &:hover{
+        color: #fff;
+        background-color: #000;
+    }
 }
+
+.btn--add{
+    color: #fff;
+    background-color: #000;
+    &:hover{    
+        color: #000;
+        background-color: #fff;
+        border: 1px solid #000;
+    }
+}
+

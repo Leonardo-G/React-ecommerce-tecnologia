@@ -9,7 +9,6 @@ export const ItemDetailContainer = () => {
     const [ productDetail, setProductDetail ] = useState({})
     const getItem =  useConsultApi(catalogo)
     const { id: idItem} =useParams();
-    console.log(idItem)
     
 
     useEffect( () => {

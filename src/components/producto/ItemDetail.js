@@ -7,7 +7,7 @@ import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';
 
 
-export const ItemDetail = ({modelo, imgs, descripcion, precio, especificaciones}) => {
+export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especificaciones}) => {
 
     const [showDescription, setShowDescription] = useState(false)
 
@@ -30,18 +30,18 @@ export const ItemDetail = ({modelo, imgs, descripcion, precio, especificaciones}
                 </div>
                 <div className="itemDetail__description">
                     <h1>{ modelo }</h1>
-                    <p> $ {  Number(precio).toFixed(2) }</p>
+                    <p className="description-price"> $ {  Number(precio).toFixed(2) }</p>
                     <p>{ descripcion }</p>
                     {
-                        <ItemCount />
+                        <ItemCount stock={ stock }/>
                     }
                     <div className="description-button"
                          onClick={handleShowDescription}
                     >
                         <p>Especificaciones</p>
-                        <FontAwesomeIcon icon={ faPlus }/>
+                        <FontAwesomeIcon className="icon-rotate" icon={ faPlus }/>
                     </div>
-                    <div className={showDescription ? "description-false" : "description-true"}>
+                    <div className={!showDescription ? "description-false" : "description-true"}>
                         {
                             <DetailDescription {...especificaciones}/>
                         }
