@@ -31,6 +31,7 @@
             "imgMarca": "./assets/imagenes/otrosmain.jpg"
         }
     ],
+    "probar": "3",
     "productos":[
         {
             "id": "faSS2S",
@@ -541,7 +542,7 @@
             }
         },
         {
-            "id": "hp4aF3",
+            "id": "de0515",
             "marca": "Huawei",
             "tipo": "smartphone",
             "modelo": "P40 Pro",
@@ -754,7 +755,7 @@
             }
         },
         {
-            "id": "hp4aF3",
+            "id": "sfF80j",
             "marca": "Otros",
             "tipo": "smartphone",
             "modelo": "Xiaomi Redmi Note 10 Pro",

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
 import { useConsultApi } from '../../hooks/useConsultApi';
 import catalogo from "../../data/catalogo.json";
+import { ItemProduct } from '../catalogo/ItemProduct';
 
-export const ItemSearchContainer = () => {
+export const ItemSearchContainer = ({inputsValues}) => {
     const [arrayProducts, setArrayProducts] = useState([])
     const consultApi = useConsultApi(catalogo)
 
@@ -12,16 +12,22 @@ export const ItemSearchContainer = () => {
     useEffect(() => {
         consultApi
             .then(resp => {
-                const res = resp.map(p => {
-                    setArrayProducts([...p.productos, ...arrayProducts])
-                    return
-                })
+                if(inputsValues.search === ""){
+                    setArrayProducts([...resp.productos])
+                    return;
+                }
+                const results = resp.productos.filter(r => r.modelo.toLowerCase().includes(inputsValues.search.toLowerCase()));
+                return setArrayProducts([...results])
             })
-    }, [])
+    }, [inputsValues.search])
 
     return (
-        <div>
-            
-        </div>
+        <>
+            {
+                arrayProducts.map( product => (
+                    <ItemProduct key={ product.id } { ...product }/>
+                ))
+            }
+        </>
     )
 }
