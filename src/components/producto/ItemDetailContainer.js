@@ -18,15 +18,11 @@ export const ItemDetailContainer = () => {
     useEffect( () => {
         getItem
             .then( resp => {
-                resp.forEach( p => {
-                    const product = p.productos.find( pItem => pItem.id === idItem );
-                    if(product){
-                        console.log(product)
-                        setProductDetail({...product});
-                        return;
-                    }
-                    console.log(product)
-                })
+                const product = resp.productos.find( pItem => pItem.id === idItem );
+                if(product){
+                    setProductDetail({...product});
+                    return;
+                }
             })
     }, [])
 

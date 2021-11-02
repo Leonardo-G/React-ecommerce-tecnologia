@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import catalogo from "../../data/";
+import catalogo from "../../data/catalogo.json";
 import { useConsultApi } from '../../hooks/useConsultApi';
 import { Header } from '../header/Header';
 
@@ -26,7 +26,7 @@ export const ItemListContainer = () => {
 
     useEffect(() => {
         consultApi
-            .then(res => setArrayProducts(res))
+            .then(res => setArrayProducts(res.marcas))
     }, [])
 
 

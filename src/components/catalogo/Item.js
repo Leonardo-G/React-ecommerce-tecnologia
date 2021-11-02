@@ -15,9 +15,9 @@ export const Item = () => {
     useEffect(() => {
         consultJSON
             .then(resp => {
-                const result = resp.find( r => r.marca === idParam)
-                setArrayProducts([...result.productos]);
-                console.log(result.productos)
+                console.log(resp.productos)
+                const result = resp.productos.filter( r => r.marca === idParam)
+                setArrayProducts([...result]);
             })
     }, [idParam])
     console.log(arrayProducts)

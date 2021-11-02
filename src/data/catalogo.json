@@ -1,803 +1,821 @@
-[
-    {
-        "marca": "LG",
-        "descripcion": "lorem asd eona d saloerm",
-        "imgMarca": "./assets/imagenes/lgmain.jpg",
-        "productos": [
-            {
-                "id": "faSS2S",
-                "tipo": "smartphone",
-                "modelo": "LG Velvet",
-                "descripcion": "Una propuesta 5G de la compañía surcoreana que se sitúa a caballo entre la gama media y la gama alta. Un diseño distinto al que estamos acostumbrados a ver.",
-                "imgs": [
-                    "./assets/imagenes/lg/velvet-producto.jpg",
-                    "./assets/imagenes/lg/velvet/1.jpg",
-                    "./assets/imagenes/lg/velvet/2.jpg",
-                    "./assets/imagenes/lg/velvet/3.jpg",
-                    "./assets/imagenes/lg/velvet/4.jpg",
-                    "./assets/imagenes/lg/velvet/5.webp"
-                ],
-                "stock": "35",
-                "precio": "69999",
-                "especificaciones": {
-                    "dimensionesPeso": "167,1 x 74,1 x 7,85 mm, 180g.",
-                    "pantalla": "OLED de 6,8 pulgadas",
-                    "procesador": "Snapdragon 765G",
-                    "ram": "6 GB",
-                    "almacenamiento": "128 GB",
-                    "camaraFrontal": "16 MP",
-                    "camaraTrasera": "48 MP, 8 MP gran angular, 5 MP bokeh",
-                    "bateria": "4.300 mAh",
-                    "sistemaOperativo": "Android",
-                    "Conectividad": "5G SA/NSA WI-FI, Bluetooth, USB-C",
-                    "otros": "Altavoces estéreo, IP68"
-                }
-            },
-            {
-                "id": "sadDF1",
-                "tipo": "smartphone",
-                "modelo": "LG G8s Thing",
-                "descripcion": "Una vez más, el 'diferenciarse o morir' se iza como bandera por parte de uno de los fabricantes con más recorrido en el mercado de móviles. La propuesta: cinco cámaras, el procesador más potente y la posibilidad de manejarlo sin tocarlo.",
-                "imgs": [
-                    "./assets/imagenes/lg/g8s-producto.jpg",
-                    "./assets/imagenes/lg/g8s/1.jpg",
-                    "./assets/imagenes/lg/g8s/2.jpg",
-                    "./assets/imagenes/lg/g8s/3.jpg",
-                    "./assets/imagenes/lg/g8s/4.jpg",
-                    "./assets/imagenes/lg/g8s/5.jpg"
-                ],
-                "stock": "15",
-                "precio": "58699",
-                "especificaciones": {
-                    "dimensionesPeso": "155,3 x 76,6 x 8,09 mm, 180 g",
-                    "pantalla": "6,21 pulgadas G-OLED FullVision, FHD+ (2.248 X 1.080 px), 18.7:9 (80,9% ratio pantalla)",
-                    "procesador": "Snapdragon 855",
-                    "ram": "6 GB",
-                    "almacenamiento": "128 GB (hasta 2TB con microSD)",
-                    "camaraFrontal": "16 MP",
-                    "camaraTrasera": "12 MP (f/1.8) 78º, 13 MP (f/2.4) súper gran angular 136º , 12 MP (f/2.6) teleobjetivo 47.7º, Sí Autofocus: principal (AF/Dual PDAF/OIS), (FF), (AF/2x Zoom)/LED - Frontal (FF)",
-                    "bateria": "3.550 mAh, Carga rápida Quick Charge 3.0 (compatible 4.0)/Carga inalámbrica (WPC - Wireless Power Consortium)-Qi",
-                    "sistemaOperativo": "Android 9 Pie + capa LG",
-                    "conectividad": "Wifi 802.11 a/b/g/n/ac, Dual Band, Wi-Fi Direct, DLNA, hotspot, Bluetooth 5.0, NFC, USB tipo C 3.0, jack de auriculares",
-                    "otros": "Sonido DTS-X 3D hasta 7.1 canales, IP68, Air Motion"
-                }
-            },
-            {
-                "id": "asd1pb",
-                "tipo": "smartphone",
-                "modelo": "LG Q60",
-                "descripcion": "Una buena construcción pero con fervor por las huellas hacen de este LG Q60 un teléfono atractivo, que cuenta con una pantalla brillante y a buen nivel. Buena batería, buen sonido sin brillar y en general un teléfono de línea media que se mueve en la media del mercado.",
-                "imgs": [
-                    "./assets/imagenes/lg/q60-producto.jpg",
-                    "./assets/imagenes/lg/q60/1.jpg",
-                    "./assets/imagenes/lg/q60/2.jpg",
-                    "./assets/imagenes/lg/q60/3.webp"
-                ],
-                "stock": "5",
-                "precio": "79899",
-                "especificaciones": {
-                    "dimensionesPeso": "161,3 x 77 x 8,7 milímetros",
-                    "pantalla": "6,26 pulgadas, HD+ 19:9, FullVision",
-                    "procesador": "Ocho núcleos a 2GHz",
-                    "ram": "3GB",
-                    "almacenamiento": "64GB, MicroSd hasta 2TB",
-                    "camaraFrontal": "13 megapíxeles",
-                    "camaraTrasera": "16 megapíxeles, 2 megapíxeles para profundidad, 5 megapíxeles super gran angular",
-                    "bateria": "3.500 mAh",
-                    "sistemaOperativo": "",
-                    "conectividad": "Wifi",
-                    "otros": "Lector de huellas, Sonido DTS:X 3D, Inteligencia artificial, Protección MIL-STD 810G"
-                }
-            },
-            {
-                "id": "s84hD",
-                "tipo": "smartphone",
-                "modelo": "LG K71",
-                "descripcion": "Un nuevo modelo que mantiene el diseño clásico de LG con la cámara en horizontal y el lector de huellas a la espalda y la peculiaridad de incluir un stylus. El LG K71 toma como base el LG Stylo 6, aunque cuenta con una mayor cantidad de RAM y almacenamiento y mayor resolución en las cámaras.",
-                "imgs": [
-                    "./assets/imagenes/lg/k71-producto.webp",
-                    "./assets/imagenes/lg/k71/1.webp",
-                    "./assets/imagenes/lg/k71/2.png",
-                    "./assets/imagenes/lg/k71/3.webp",
-                    "./assets/imagenes/lg/k71/4.jpg"
-                ],
-                "img": "assets/imagenes/lg/k71-producto.webp",
-                "stock": "74",
-                "precio": "36999",
-                "especificaciones": {
-                    "dimensionesPeso": "171,4 x 77,7 x 8,7 mm, 220 g.",
-                    "pantalla": " 6,8 pulgadas Full HD+",
-                    "procesador": "Helio P35",
-                    "ram": "4 GB",
-                    "almacenamiento": "128GB",
-                    "camaraFrontal": "32 megapíxeles",
-                    "camaraTrasera": "48 megapíxeles, 5 megapíxeles gran angular, 5 megapíxeles bokeh",
-                    "bateria": "4000 mAh",
-                    "sistemaOperativo": "Android 10",
-                    "conectividad": "4G, Wifi, Bluetooth 5.0, USB Tipo C",
-                    "otros": "Stylus,Lector de huellas trasero, Altavoces estéreo, DTS:X 3D"
-                }
-            },
-            {
-                "id": "dad5w1",
-                "tipo": "smartwatch",
-                "modelo": "LG Watch W7",
-                "descripcion": "Teniendo en cuenta que funciona con un mecanismo de cuarzo como los relojes analógicos, es prescindible las funciones digitales. Es decir, podemos convertirlo en un reloj 'normal' apagando las áreas digitales y funcionará correctamente para indicar la hora. Lo hará aproximadamente cien días sin cargarlo.",
-                "imgs": [
-                    "./assets/imagenes/lg/lgwatchw7-producto.jpg",
-                    "./assets/imagenes/lg/lgwatchw7/1.jpg",
-                    "./assets/imagenes/lg/lgwatchw7/2.jpg",
-                    "./assets/imagenes/lg/lgwatchw7/3.jpg",
-                    "./assets/imagenes/lg/lgwatchw7/4.png"
-                ],
-                "stock": "15",
-                "precio": "39989",
-                "especificaciones": {
-                    "dimensionesPeso": "44,5 x 45,4 x 12,9 mm, 79,5 g",
-                    "pantalla": "LCD 1.2 pulgadas",
-                    "procesador": "Qualcomm Snapdragon Wear 2100",
-                    "ram": "768 MB LPDDR3",
-                    "almacenamiento": "4 GB",
-                    "bateria": "240 mAh",
-                    "sistemaOperativo": "Wear OS",
-                    "conectividad": "Wi-Fi 802.11 b, g, \n Bluetooth 4.2 BLE \n USB-C",
-                    "otros": "IP68"
-                }
+{
+    "marcas": [
+        {
+            "marca": "LG",
+            "descripcion": "lorem asd eona d saloerm",
+            "imgMarca": "./assets/imagenes/lgmain.jpg"
+        },
+        {
+            "marca": "Motorola",
+            "descripcion": "lorem asd eona d saloerm",
+            "imgMarca": "./assets/imagenes/motorolamain.png"
+        },
+        {
+            "marca": "Apple",
+            "descripcion": "lorem asd eona d saloerm",
+            "imgMarca": "./assets/imagenes/applemain.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "descripcion": "lorem asd eona d saloerm",
+            "imgMarca": "./assets/imagenes/samsungmain.webp"
+        },
+        {    
+            "marca": "Huawei",
+            "descripcion": "lorem asd eona d saloerm",
+            "imgMarca": "./assets/imagenes/huaweimain.jpg"
+        },
+        {
+            "marca": "Otros",
+            "descripcion": "lorem asd eona d saloerm",
+            "imgMarca": "./assets/imagenes/otrosmain.jpg"
+        }
+    ],
+    "productos":[
+        {
+            "id": "faSS2S",
+            "marca": "LG",
+            "tipo": "smartphone",
+            "modelo": "LG Velvet",
+            "descripcion": "Una propuesta 5G de la compañía surcoreana que se sitúa a caballo entre la gama media y la gama alta. Un diseño distinto al que estamos acostumbrados a ver.",
+            "imgs": [
+                "./assets/imagenes/lg/velvet-producto.jpg",
+                "./assets/imagenes/lg/velvet/1.jpg",
+                "./assets/imagenes/lg/velvet/2.jpg",
+                "./assets/imagenes/lg/velvet/3.jpg",
+                "./assets/imagenes/lg/velvet/4.jpg",
+                "./assets/imagenes/lg/velvet/5.webp"
+            ],
+            "stock": "35",
+            "precio": "69999",
+            "especificaciones": {
+                "dimensionesPeso": "167,1 x 74,1 x 7,85 mm, 180g.",
+                "pantalla": "OLED de 6,8 pulgadas",
+                "procesador": "Snapdragon 765G",
+                "ram": "6 GB",
+                "almacenamiento": "128 GB",
+                "camaraFrontal": "16 MP",
+                "camaraTrasera": "48 MP, 8 MP gran angular, 5 MP bokeh",
+                "bateria": "4.300 mAh",
+                "sistemaOperativo": "Android",
+                "Conectividad": "5G SA/NSA WI-FI, Bluetooth, USB-C",
+                "otros": "Altavoces estéreo, IP68"
             }
-        ]
-    },
-    {
-        "marca": "Motorola",
-        "descripcion": "lorem asd eona d saloerm",
-        "imgMarca": "./assets/imagenes/motorolamain.png",
-        "productos": [
-            {
-                "id": "asd34S",
-                "tipo": "smartwatch",
-                "modelo": "Moto 360 3ra gen...",
-                "descripcion": "Los nuevos Moto 360 de tercera generación llegan como decíamos de la mano de un desconocido fabricante llamado eBuyNow. Esta empresa se comportará en esta alianza como lo hace por ejemplo HMD Global con Nokia: aprovecha la marca y se encarga de la fabricación.",
-                "imgs": [
-                    "./assets/imagenes/motorola/moto360-producto.jpg",
-                    "./assets/imagenes/motorola/moto360/1.jpg",
-                    "./assets/imagenes/motorola/moto360/2.jpg",
-                    "./assets/imagenes/motorola/moto360/3.jpg",
-                    "./assets/imagenes/motorola/moto360/4.jpg",
-                    "./assets/imagenes/motorola/moto360/5.jpg",
-                    "./assets/imagenes/motorola/moto360/6.jpg",
-                    "./assets/imagenes/motorola/moto360/7.jpg"
-                ],
-                "stock": "18",
-                "precio": "72300",
-                "especificaciones": {
-                    "dimensionesPeso": "42,8 x 42,8 x 11,68 mm, \n52 gramos",
-                    "pantalla": "OLED de 1,2 pulgadas, \nResolución 390 x 390 píxeles, \nCircular, \nGorilla Glass 3",
-                    "procesador": "Snapdragon 3100",
-                    "ram": "1 GB",
-                    "almacenamiento": "8 GB",
-                    "bateria": "355 mAh",
-                    "sistemaOperativo": "Wear OS",
-                    "conectividad": "Bluetooth 4.2, \nWi-Fi b/g/n, \nNFC, \nGPS, GLONASS, Beidou, Galileo",
-                    "otros": "Resistencia de tres atmósferas, \nCompatibilidad con iOS y Android"
-                }
-            },
-            {
-                "id": "SF24SA",
-                "tipo": "smartphone",
-                "modelo": "Moto Edge 20 Pro",
-                "descripcion": "El Motorola Edge llegó en septiembre de 2020, con un nombre que indicaba pantalla curva y rozando con los dedos la gama alta. Motorola ha querido darle una vuelta de tuerca a esta familia Edge dejando a un lado la curva, subiendo el listón en potencia y ofreciendo al mercado una alternativa de gama alta a un precio relativamente contenido.",
-                "imgs": [
-                    "./assets/imagenes/motorola/edge20pro-producto.jpg",
-                    "./assets/imagenes/motorola/edge20pro/1.jpg",
-                    "./assets/imagenes/motorola/edge20pro/2.jpg",
-                    "./assets/imagenes/motorola/edge20pro/3.jpg",
-                    "./assets/imagenes/motorola/edge20pro/4.jpg",
-                    "./assets/imagenes/motorola/edge20pro/5.jpg",
-                    "./assets/imagenes/motorola/edge20pro/6.jpg",
-                    "./assets/imagenes/motorola/edge20pro/7.jpg"
-                ],
-                "stock": "89",
-                "precio": "109999",
-                "especificaciones": {
-                    "dimensionesPeso": "163 x 76 x 7,99 mm, \n190 gramos, \n185 gramo (cuero vegano)",
-                    "pantalla": " OLED de 6,7 pulgadas, \nResolución FullHD+, \nTasa de refresco: 144 Hz, \nTáctil de refresco táctil: 576 Hz, \nFormato 20:9, \nHDR10+, \nDCI-P3",
-                    "procesador": "Snapdragon 870",
-                    "ram": "12 GB LPDDR5",
-                    "almacenamiento": "256 GB UFS 3.1",
-                    "camaraFrontal": "32 megapíxeles",
-                    "camaraTrasera": "108 MP (1/1,52', 0,7μm) f/1.9 \nTele 8 MP, zoom óptico 5x f/3.4, OIS, \nUGA-macro 16 MP (119º), f/2.2",
-                    "bateria": "4.500 mAh Carga rápida 30 W",
-                    "sistemaOperativo": "Android 11",
-                    "conectividad": "Wi-Fi 6, \n2.4/5 GHz, \nBluetooth 5.1, \nNFC, \nGPS, AGPS, LTEPP, SUPL, Glonass, Galileo, \ndual SIM",
-                    "otros": "IP52, \n3 micrófonos"
-                }
-            },
-            {
-                "id": "f3S3df",
-                "tipo": "smartphone",
-                "modelo": "Moto g60s",
-                "descripcion": "Se trata de un dispositivo de gama media, sencillo, con un precio suculento y que destaca por montar una enorme pantalla de 6,8 pulgadas con 120 Hz.",
-                "imgs": [
-                    "./assets/imagenes/motorola/motog60s-producto.png",
-                    "./assets/imagenes/motorola/g60s/1.jpg",
-                    "./assets/imagenes/motorola/g60s/2.jpg",
-                    "./assets/imagenes/motorola/g60s/3.png",
-                    "./assets/imagenes/motorola/g60s/4.webp"
-                ],
-                "stock": "46",
-                "precio": "49999",
-                "especificaciones": {
-                    "dimensionesPeso": "169,61 x 75,88 x 9,6 mm, \n212 gramos",
-                    "pantalla": "IPS/LCD de 6,8 pulgadas, \nResolución FullHD+ (2.460 x 1.080 píxeles), \nFormato 20:09, \nTasa de refresco: 120 Hz",
-                    "procesador": "MediaTek Helio G95 mejorado, GPU ARM Mali-G76",
-                    "ram": "4 GB",
-                    "almacenamiento": "128 GB ampliables con microSD",
-                    "camaraFrontal": "16 MP f/2.25",
-                    "camaraTrasera": "64 MP f/1.7, \nGran angular 8 MP f/2.2, 118º, \nMacro 5 MP f/2.4, \nProfundidad 2 MP f/2.4, \nFlash LED",
-                    "bateria": "5.000 mAh Carga rápida de 50W",
-                    "sistemaOperativo": "Android 11 con My UX",
-                    "conectividad": "Wi-Fi ac, \n2.4/5 GHz, \nBluetooth 5.0, \nNFC, \nGPS, AGPS, LTEPP, SUPL, Glonass, Galileo, \nDual SIM híbrida, \nUSB tipo C",
-                    "otros": "Jack de auriculares, \nTecla para Google Assistant, \nResistencia IP52, \nLector de huellas, \nDesbloqueo facial"
-                }
-            },
-            {
-                "id": "fa4dDd",
-                "tipo": "smartphone",
-                "modelo": "Moto g9 Plus",
-                "descripcion": "El teléfono que llegó para revolucionar la gama media allá por 2013 ya es todo un anciano y es que ya son nueve (sí, nueve) las generaciones de la familia Moto G, que se dice pronto. Modelo más avanzado de esta nueva gama: el Moto G9 Plus. Motorola ha apostado por un perfil técnico que se enmarca en la gama media, pero que apuesta por puntos fuertes como el procesador Snapdragon 730G o una enorme batería de 5.000 mAh de capacidad.",
-                "imgs": [
-                    "./assets/imagenes/motorola/motog9plus-producto.jpg",
-                    "./assets/imagenes/motorola/g9plus/1.jpg",
-                    "./assets/imagenes/motorola/g9plus/2.jpg",
-                    "./assets/imagenes/motorola/g9plus/3.jpg",
-                    "./assets/imagenes/motorola/g9plus/4.jpg",
-                    "./assets/imagenes/motorola/g9plus/5.jpg",
-                    "./assets/imagenes/motorola/g9plus/6.jpg",
-                    "./assets/imagenes/motorola/g9plus/7.jpg"
-                ],
-                "stock": "126",
-                "precio": "49999",
-                "especificaciones": {
-                    "dimensionesPeso": "169,61 x 75,88 x 9,6 mm",
-                    "pantalla": "LCD de 6,8 pulgadas, \nFullHD+ (2.400 x 1.080 píxeles) 386 ppp, \nRatio 20:09, \nHDR10",
-                    "procesador": "Snapdragon 730G",
-                    "ram": "4 GB",
-                    "almacenamiento": "128 GB",
-                    "camaraFrontal": "16 MP f/0",
-                    "camaraTrasera": "Sensor principal: 64 MP (1/1.73') f/1, \nUltra angular 8 MP (1/4.0') f/2.2, \nProfundidad: 2 MP f/2.2, \nMacro 2 MP f/2.2.",
-                    "bateria": "5.000 mAh Carga rápida de 30W",
-                    "sistemaOperativo": "Android 10",
-                    "conectividad": "Wi-Fi ac, \nBluetooth 5.0, \nNFC, \nDual SIM híbrida, \nUSB tipo C, \nMinijack, \n4G",
-                    "otros": "Lector de huellas en un lateral"
-                }
-            },
-            {
-                "id": "SDS2Hx",
-                "tipo": "smartphone",
-                "modelo": "Moto g30",
-                "descripcion": "El Moto G30 presenta un diseño continuista con una trasera que, aunque es de plástico, tiene un acabado mate que resulta atractivo a la vista y muy agradable al tacto. Además, al haber prescindido del cristal y del brillo, Motorola ha logrado que las huellas no ensucien el terminal.",
-                "imgs": [
-                    "./assets/imagenes/motorola/motog30-producto.webp",
-                    "./assets/imagenes/motorola/g30/1.webp",
-                    "./assets/imagenes/motorola/g30/2.webp",
-                    "./assets/imagenes/motorola/g30/3.webp",
-                    "./assets/imagenes/motorola/g30/4.webp",
-                    "./assets/imagenes/motorola/g30/5.webp",
-                    "./assets/imagenes/motorola/g30/6.webp"
-                ],
-                "stock": "26",
-                "precio": "87389",
-                "especificaciones": {
-                    "dimensionesPeso": "165,22 x 75,73 x 9,14 mm, \n197g",
-                    "pantalla": "LCD IPS de 6,5 pulgadas, \nHD+ (1600 x 720 píxeles), \nTasa de refresco: 90Hz",
-                    "procesador": "Snapdragon 662",
-                    "ram": "4 GB",
-                    "almacenamiento": "128 GB + microSD hasta 512 GB",
-                    "camaraFrontal": "13 MP f/2.2",
-                    "camaraTrasera": "64 MP (1/1.7') f/1,7, \nUltra angular 8 MP f/2.2, \nProfundidad: 2 MP f/2.4, \nMacro 2 MP f/2.4.",
-                    "bateria": "5.000 + mAh Carga rápida de 15W",
-                    "sistemaOperativo": "Android 11",
-                    "conectividad": "Wi-Fi ac, \nBluetooth 5.0, \nNFC, \nDual SIM, \nUSB tipo C, \nJack 3,5mm, \n4G/LTE",
-                    "otros": "Lector de huellas trasero, \nreconocimiento facial, \nIP52, \nbotón Google Assistant"
-                }
+        },
+        {
+            "id": "sadDF1",
+            "marca": "LG",
+            "tipo": "smartphone",
+            "modelo": "LG G8s Thing",
+            "descripcion": "Una vez más, el 'diferenciarse o morir' se iza como bandera por parte de uno de los fabricantes con más recorrido en el mercado de móviles. La propuesta: cinco cámaras, el procesador más potente y la posibilidad de manejarlo sin tocarlo.",
+            "imgs": [
+                "./assets/imagenes/lg/g8s-producto.jpg",
+                "./assets/imagenes/lg/g8s/1.jpg",
+                "./assets/imagenes/lg/g8s/2.jpg",
+                "./assets/imagenes/lg/g8s/3.jpg",
+                "./assets/imagenes/lg/g8s/4.jpg",
+                "./assets/imagenes/lg/g8s/5.jpg"
+            ],
+            "stock": "15",
+            "precio": "58699",
+            "especificaciones": {
+                "dimensionesPeso": "155,3 x 76,6 x 8,09 mm, 180 g",
+                "pantalla": "6,21 pulgadas G-OLED FullVision, FHD+ (2.248 X 1.080 px), 18.7:9 (80,9% ratio pantalla)",
+                "procesador": "Snapdragon 855",
+                "ram": "6 GB",
+                "almacenamiento": "128 GB (hasta 2TB con microSD)",
+                "camaraFrontal": "16 MP",
+                "camaraTrasera": "12 MP (f/1.8) 78º, 13 MP (f/2.4) súper gran angular 136º , 12 MP (f/2.6) teleobjetivo 47.7º, Sí Autofocus: principal (AF/Dual PDAF/OIS), (FF), (AF/2x Zoom)/LED - Frontal (FF)",
+                "bateria": "3.550 mAh, Carga rápida Quick Charge 3.0 (compatible 4.0)/Carga inalámbrica (WPC - Wireless Power Consortium)-Qi",
+                "sistemaOperativo": "Android 9 Pie + capa LG",
+                "conectividad": "Wifi 802.11 a/b/g/n/ac, Dual Band, Wi-Fi Direct, DLNA, hotspot, Bluetooth 5.0, NFC, USB tipo C 3.0, jack de auriculares",
+                "otros": "Sonido DTS-X 3D hasta 7.1 canales, IP68, Air Motion"
             }
-        ]
-    },
-    {
-        "marca": "Apple",
-        "descripcion": "lorem asd eona d saloerm",
-        "imgMarca": "./assets/imagenes/applemain.jpg",
-        "productos": [
-            {
-                "id": "sad84X",
-                "tipo": "smartwatch",
-                "modelo": "Apple Watch Series 7",
-                "descripcion": "Presume de una pantalla mejor aprovechada y mantiene su surtido de sensores que le permiten registrar muchos valores de la actividad y estado del usuario. Veamos qué tan con el tras unos días.",
-                "imgs": [
-                    "./assets/imagenes/apple/watchseries7-producto.jpg",
-                    "./assets/imagenes/apple/watchseries7/1.jpg",
-                    "./assets/imagenes/apple/watchseries7/2.jpg",
-                    "./assets/imagenes/apple/watchseries7/3.jpg",
-                    "./assets/imagenes/apple/watchseries7/4.jpg",
-                    "./assets/imagenes/apple/watchseries7/5.jpg",
-                    "./assets/imagenes/apple/watchseries7/6.jpg",
-                    "./assets/imagenes/apple/watchseries7/7.jpg"
-                ],
-                "stock": "13",
-                "precio": "217444",
-                "especificaciones": {
-                    "dimensionesPeso": "45,08 x 38,21 x 10,7 mm, 38,8 g, \n38,8g",
-                    "pantalla": "41 mm: Ion-X glass (LTPO) OLED Always-On Retina display, \n1000 nits, \n352 x 430 px",
-                    "procesador": "S7 64-bit dual-core",
-                    "ram": "n/a",
-                    "almacenamiento": "32 GB",
-                    "bateria": "Hasta 18 horas, Carga rápida",
-                    "sistemaOperativo": "Android 11",
-                    "conectividad": "Wi-Fi, \nBluetooth 5.0.",
-                    "otros": "Función llamada de emergencia, \ndetección de caídas, \nIPS6X, \nResistencia al agua hasta 50 metros"
-                }
-            },
-            {
-                "id": "s0dr84",
-                "tipo": "smartwatch",
-                "modelo": "Apple Watch Series 6",
-                "descripcion": "El que hereda el testigo del Apple Watch Series 5 se actualiza con la medición de la saturación de oxígeno y el altímetro, incorporando nuevos sensores y manteniendo el diseño. También tiene un procesador nuevo y se estrena con una edición Product Red.",
-                "imgs": [
-                    "./assets/imagenes/apple/watchseries6-producto.jpg",
-                    "./assets/imagenes/apple/watchseries6/1.jpg",
-                    "./assets/imagenes/apple/watchseries6/2.jpg",
-                    "./assets/imagenes/apple/watchseries6/3.jpg",
-                    "./assets/imagenes/apple/watchseries6/4.jpg"
-                ],
-                "stock": "2",
-                "precio": "64999",
-                "especificaciones": {
-                    "dimensionesPeso": "39,8 x 34,4 x 10,7 mm, \n30,5g",
-                    "pantalla": "41 mm: Ion-X glass (LTPO) OLED Always-On Retina display, \n1000 nits, \n324 x 394 px",
-                    "procesador": "S6 64-bit dual-core",
-                    "ram": "n/a",
-                    "almacenamiento": "32 GB",
-                    "bateria": "Hasta 18 horas",
-                    "sistemaOperativo": "WatchOS",
-                    "conectividad": "Wi-Fi, \nBluetooth 5.0",
-                    "otros": "SpO2, \nRitmo cardiaco, \nECG, \nAcelerómetro, \nGiroscopio, \nAltímetro, \nGPS/GNSS, \nBrújula, \nSensor de luz ambientalFunción llamada de emergencia, \ndetección de caídas, \nIPS6X, \nResistencia al agua hasta 50 metros"
-                }
-            },
-            {
-                "id": "SAD8sa",
-                "tipo": "smartwatch",
-                "modelo": "Apple Watch SE",
-                "descripcion": "Por primera vez, Apple propone un nuevo Apple Watch. Lo hace recortando en características relacionadas con los sensores avanzados para conseguir un precio más ajustado.",
-                "imgs": [
-                    "./assets/imagenes/apple/watchse-producto.jpg",
-                    "./assets/imagenes/apple/watchse/1.jpg",
-                    "./assets/imagenes/apple/watchse/2.jpg",
-                    "./assets/imagenes/apple/watchse/3.jpg",
-                    "./assets/imagenes/apple/watchse/4.jpg",
-                    "./assets/imagenes/apple/watchse/5.jpg",
-                    "./assets/imagenes/apple/watchse/6.jpg",
-                    "./assets/imagenes/apple/watchse/7.jpg"
-                ],
-                "stock": "0",
-                "precio": "64895",
-                "especificaciones": {
-                    "dimensionesPeso": "40 x 34 x 10,7 mm, \n30,49g",
-                    "pantalla": "Tipo: 44mm: 368 x 448 píxeles Superficie de pantalla de 977 mm²",
-                    "procesador": "S5 SiP con procesador de doble núcleo de 64 bits",
-                    "ram": "n/a",
-                    "almacenamiento": "32 GB",
-                    "bateria": "Hasta 18 horas",
-                    "sistemaOperativo": "WatchOS",
-                    "conectividad": "Wi-Fi, \nBluetooth 5.0, \n4G LTE y UMTS",
-                    "otros": "Ritmo cardiaco, \nGiroscopio, \nAltímetro, \ndetección de caídas."
-                }
-            },
-            {
-                "id": "SD2Jn5",
-                "tipo": "smartphone",
-                "modelo": "Iphone 13",
-                "descripcion": "el iPhone 13 tiene mucho que decir: monta lo último de lo último en procesadores Apple, tiene el modo cinemático que tanto ruido ha hecho en redes sociales y mejora sustancialmente la autonomía.",
-                "imgs": [
-                    "./assets/imagenes/apple/iphone13-producto.jpg",
-                    "./assets/imagenes/apple/iphone13/1.jpg",
-                    "./assets/imagenes/apple/iphone13/2.jpg",
-                    "./assets/imagenes/apple/iphone13/3.jpg",
-                    "./assets/imagenes/apple/iphone13/4.jpg",
-                    "./assets/imagenes/apple/iphone13/5.jpg",
-                    "./assets/imagenes/apple/iphone13/6.jpg"
-                ],
-                "stock": "351",
-                "precio": "375999",
-                "especificaciones": {
-                    "dimensionesPeso": "146,7 x 71,5 x 7,6 mm, \n173g",
-                    "pantalla": "Super Retina XDR OLED de 6,1 pulgadas, \nResolución FullHD+ (2.532 x 1.170 píxeles) 460pp, \nTrue-Tone, \nHDR",
-                    "procesador": "Apple A15 Bionic GPU cuatro núcleos",
-                    "ram": "4 GB",
-                    "almacenamiento": "512 GB",
-                    "camaraFrontal": "12 MP f/2.2",
-                    "camaraTrasera": "12 MP f/1.6, OIS, \nGran angular: 12 MP f/2.4, 120º FOV, \nVídeo: 4K Dolby Vision.",
-                    "bateria": "3.227 mAh, \nCarga rápida 20W",
-                    "sistemaOperativo": "iOS 15",
-                    "conectividad": "5G (sub-6 GHz), \nLTE Gigabit MIMO 4x4, \nNFC, \nNanoSIM y eSIM, \nGPS, GLONASS, Galileo, QZSS, BeiDou, \nBluetooth 5.0, \nChip UWB",
-                    "otros": "Resistencia IP68, \nFaceID, \nAltavoces estéreo, \nDolby Atmos"
-                }
-            },
-            {
-                "id": "NFB752",
-                "tipo": "smartphone",
-                "modelo": "Iphone 13 Pro Max",
-                "descripcion": "El iPhone 13 Pro mejora la autonomía con respecto al iPhone 12 Pro, introduciendo mejoras en fotografía. Un buen Diseño, pantalla y sonido: parece un iPhone y suena como un iPhone",
-                "imgs": [
-                    "./assets/imagenes/apple/iphone13promax-producto.jpg",
-                    "./assets/imagenes/apple/iphone13max/1.jpg",
-                    "./assets/imagenes/apple/iphone13max/2.jpg",
-                    "./assets/imagenes/apple/iphone13max/3.jpg",
-                    "./assets/imagenes/apple/iphone13max/4.jpg",
-                    "./assets/imagenes/apple/iphone13max/5.jpg"
-                ],
-                "stock": "151",
-                "precio": "546000",
-                "especificaciones": {
-                    "dimensionesPeso": "160,8 x 78,1 x 7,6 mm, \n238g",
-                    "pantalla": "Super Retina XDR OLED de 6,7 pulgadas, \nProMotion 120 Hz 2.778 x 1.284 px, 458 ppp",
-                    "procesador": "Apple A15 Bionic",
-                    "ram": "-",
-                    "almacenamiento": "512 GB",
-                    "camaraFrontal": "12 MP f/2.2",
-                    "camaraTrasera": "Telefoto: 12 MP f/2.8 77mm 3x óptico, OIS, \nUltrawide: 12 MP f/1.8 6P 120°, \nPrincipal: 12 MP f/1.5.",
-                    "bateria": "3.227 mAh, \nCarga rápida 20W",
-                    "sistemaOperativo": "iOS 15",
-                    "conectividad": "5G (sub-6 GHz), \nLTE Gigabit MIMO 4x4, \nNFC, \nBluetooth 5.0, \nChip de banda ultra ancha",
-                    "otros": "Resistencia IP68, \nFaceID, \nSonido estéreo."
-                }
-            },
-            {
-                "id": "fas5Fs",
-                "tipo": "smartphone",
-                "modelo": "Iphone SE",
-                "descripcion": "En la era de las 'pantallas infinitas' y con un 75% de los móviles presentados con pantallas a partir de 6,3 pulgadas, volvemos a las 4,7 pulgadas en el iPhone SE (2020) manteniendo una estetica dificil de no querer.",
-                "imgs": [
-                    "./assets/imagenes/apple/iphonese-producto.jpg",
-                    "./assets/imagenes/apple/iphonese/1.jpg",
-                    "./assets/imagenes/apple/iphonese/2.jpg",
-                    "./assets/imagenes/apple/iphonese/3.jpg",
-                    "./assets/imagenes/apple/iphonese/4.jpg",
-                    "./assets/imagenes/apple/iphonese/5.jpg",
-                    "./assets/imagenes/apple/iphonese/6.jpg"
-                ],
-                "stock": "151",
-                "precio": "143999",
-                "especificaciones": {
-                    "dimensionesPeso": "138,4 x 37,3 x 7,3 mm, \n148 gramos",
-                    "pantalla": "IPS LCD 4,7 pulgadas, \n1.334 x 750 px, \nTrue-tone",
-                    "procesador": "Apple A13 Bionic, 7nm+",
-                    "ram": "-",
-                    "almacenamiento": "256 GB",
-                    "camaraFrontal": "7 MP f/2.2",
-                    "camaraTrasera": "12 MP, f/1.8, OIS, \nVídeo 4K a 60 FPS.",
-                    "bateria": "Capacidad no disponible, \nCarga inálambrica y carga rápida",
-                    "sistemaOperativo": "iOS 13",
-                    "conectividad": "NFC, \nBluetooth 5.0, \nGPS",
-                    "otros": "Resistencia IP67, \nTouch ID, \nDual SIM: Nano SIM y eSIM."
-                }
+        },
+        {
+            "id": "asd1pb",
+            "marca": "LG",
+            "tipo": "smartphone",
+            "modelo": "LG Q60",
+            "descripcion": "Una buena construcción pero con fervor por las huellas hacen de este LG Q60 un teléfono atractivo, que cuenta con una pantalla brillante y a buen nivel. Buena batería, buen sonido sin brillar y en general un teléfono de línea media que se mueve en la media del mercado.",
+            "imgs": [
+                "./assets/imagenes/lg/q60-producto.jpg",
+                "./assets/imagenes/lg/q60/1.jpg",
+                "./assets/imagenes/lg/q60/2.jpg",
+                "./assets/imagenes/lg/q60/3.webp"
+            ],
+            "stock": "5",
+            "precio": "79899",
+            "especificaciones": {
+                "dimensionesPeso": "161,3 x 77 x 8,7 milímetros",
+                "pantalla": "6,26 pulgadas, HD+ 19:9, FullVision",
+                "procesador": "Ocho núcleos a 2GHz",
+                "ram": "3GB",
+                "almacenamiento": "64GB, MicroSd hasta 2TB",
+                "camaraFrontal": "13 megapíxeles",
+                "camaraTrasera": "16 megapíxeles, 2 megapíxeles para profundidad, 5 megapíxeles super gran angular",
+                "bateria": "3.500 mAh",
+                "sistemaOperativo": "",
+                "conectividad": "Wifi",
+                "otros": "Lector de huellas, Sonido DTS:X 3D, Inteligencia artificial, Protección MIL-STD 810G"
             }
-        ]
-    },
-    {
-        "marca": "Huawei",
-        "descripcion": "lorem asd eona d saloerm",
-        "imgMarca": "./assets/imagenes/huaweimain.jpg",
-        "productos": [
-            {
-                "id": "fasJH8",
-                "tipo": "smartphone",
-                "modelo": "Mate 40 Pro",
-                "descripcion": "Huawei renueva su apuesta por la cámara cuádruple que hace del zoom su principal arma. Y la coloca sobre un renovado módulo de cámara circular que atrae todas las miradas. Además, el nuevo Mate también suma pantalla con tasa de refresco de 90Hz y por supuesto no le podía faltar la conectividad 5G.",
-                "imgs": [
-                    "./assets/imagenes/huawei/mate40pro-producto.jpg",
-                    "./assets/imagenes/huawei/mate40pro/1.jpg",
-                    "./assets/imagenes/huawei/mate40pro/2.jpg",
-                    "./assets/imagenes/huawei/mate40pro/3.jpg",
-                    "./assets/imagenes/huawei/mate40pro/4.jpg",
-                    "./assets/imagenes/huawei/mate40pro/5.jpg"
-                ],
-                "stock": "51",
-                "precio": "349999",
-                "especificaciones": {
-                    "dimensionesPeso": "138,4 x 37,3 x 7,3 mm, \n148 gramos",
-                    "pantalla": "OLED 6,76 pulgadas, \nFHD+ 2.772 x 1.344 píxeles, \nTasa de refresco 90 Hz",
-                    "procesador": "Kirin 9000 Octa-core:, \nGPU 24-core Mali-G78",
-                    "ram": "8 GB",
-                    "almacenamiento": "256 GB",
-                    "camaraFrontal": "13 MP gran angular f/2.4, \nselfie en slow motion, \nVideo 4K 60 fps, \nSensor 3D para desbloqueo facial",
-                    "camaraTrasera": "Sensor principal: 50MP Ultra Vision Camera f/1.9, \nUltra angular: 20MP Cine Camera f/1.8, \nTeleobjetivo: 12MP f/3.4 OIS.",
-                    "bateria": "4.400 mAh, \nSuperCharge 66W, \n50W inalámbrica",
-                    "sistemaOperativo": "EMUI 11 basado en Android 10 AOSP",
-                    "conectividad": "WiFi ac 2x2 MIMO, \nBluetooth 5.2, \nNFC, \n5G, \nGPS, \nUSB-C 3.1",
-                    "otros": " Altavoces estéreo, \nResistencia al agua IP68."
-                }
-            },
-            {
-                "id": "hp4aF3",
-                "tipo": "smartphone",
-                "modelo": "P40 Pro",
-                "descripcion": "Se trata de un móvil con el último procesador para la gama alta de Huawei, siendo una actualización centrada sobre todo en el diseño y en añadir parte de las mejoras en el apartado fotográfico que vemos en estos nuevos P40.",
-                "precio": "165000",
-                "imgs": [
-                    "./assets/imagenes/huawei/huaweip40pro-producto.jpg",
-                    "./assets/imagenes/huawei/p40pro/1.jpg",
-                    "./assets/imagenes/huawei/p40pro/2.jpg",
-                    "./assets/imagenes/huawei/p40pro/3.jpg",
-                    "./assets/imagenes/huawei/p40pro/4.jpg",
-                    "./assets/imagenes/huawei/p40pro/5.jpg",
-                    "./assets/imagenes/huawei/p40pro/6.jpg",
-                    "./assets/imagenes/huawei/p40pro/7.jpg"
-                ],
-                "stock": "51",
-                "especificaciones": {
-                    "dimensionesPeso": "138,4 x 37,3 x 7,3 mm, \n148 gramos",
-                    "pantalla": "OLED 6,58 pulgadas, \n2.640 x 1.200 píxeles, \n90 Hz",
-                    "procesador": "Kirin 990, \nGPU Mali-G76",
-                    "ram": "8 GB",
-                    "almacenamiento": "256 GB + tarjeta NM",
-                    "camaraFrontal": "32 MP f/2.2, \nSensor IR, \nVideo 4K 60 fps",
-                    "camaraTrasera": "Sensor RYYB 50 MP f/1.9 (1/1,28'), \nUltra gran angular 40 MP f/1.8, \nTelefoto 12 MP (RYYB) zoom óptico 5x OIS.",
-                    "bateria": "4.200 mAh, \nCarga rápida 40W, \nCarga inalámbrica 27W, \nCarga inalámbrica inversa",
-                    "sistemaOperativo": "Android, \nEMUI 10.1",
-                    "conectividad": "WIFI 6 Plusg, \nBluetooth, \nNFC, \n5G",
-                    "otros": "Lector de huellas en pantalla, \nIP68, \nDual SIM."
-                }
-            },
-            {
-                "id": "ddNND0",
-                "tipo": "smartphone",
-                "modelo": "P40 Pro Plus",
-                "descripcion": "Se trata de una configuración muy parecida a la del Huawei P40 Pro, pero con algún “plus” (nunca mejor dicho) centrado en el diseño y en las cámaras. El protagonista potencial: de nuevo un “súper” zoom", 
-                "imgs": [
-                    "./assets/imagenes/huawei/p40proplus-producto.jpg",
-                    "./assets/imagenes/huawei/p40proplus/1.jpg",
-                    "./assets/imagenes/huawei/p40proplus/2.jpg",
-                    "./assets/imagenes/huawei/p40proplus/3.jpg"
-                ],
-                "stock": "51",
-                "precio": "450299",
-                "especificaciones": {
-                    "dimensionesPeso": "158,2 x 72,6 x Resolución FullHD+ (2.640 x 1.200 píxeles), \n90 Hz",
-                    "pantalla": "OLED 6,58 pulgadas,",
-                    "procesador": "Kirin 990, \nGPU Mali-G76",
-                    "ram": "8 GB",
-                    "almacenamiento": "512 GB ampliables con NM Card",
-                    "camaraFrontal": "32 MP, \nSensor IR.",
-                    "camaraTrasera": "Sensor RYYB 50 MP f/1.9 (1/1,28') con OIS, \nUltra gran angular 40 MP f/1.8, \nTelefoto 8 MP (RYYB) zoom óptico 3x OIS, \nTelefoto 8 MP zoom óptico 10x + OIS, \nProfundidad, OIS+AIS",
-                    "bateria": "4.200 mAh, \nCarga rápida 40W, \nCarga inalámbrica 40W, \nCarga inalámbrica inversa",
-                    "sistemaOperativo": "Android 10 con EMUI 10.1",
-                    "conectividad": "WIFI 6 Plus, \nBluetooth, \nNFC, \n5G, \nGPS.",
-                    "otros": "Lector de huellas en pantalla, \nIP68, \nDual SIM."
-                }
+        },
+        {
+            "id": "s84hD",
+            "marca": "LG",
+            "tipo": "smartphone",
+            "modelo": "LG K71",
+            "descripcion": "Un nuevo modelo que mantiene el diseño clásico de LG con la cámara en horizontal y el lector de huellas a la espalda y la peculiaridad de incluir un stylus. El LG K71 toma como base el LG Stylo 6, aunque cuenta con una mayor cantidad de RAM y almacenamiento y mayor resolución en las cámaras.",
+            "imgs": [
+                "./assets/imagenes/lg/k71-producto.webp",
+                "./assets/imagenes/lg/k71/1.webp",
+                "./assets/imagenes/lg/k71/2.png",
+                "./assets/imagenes/lg/k71/3.webp",
+                "./assets/imagenes/lg/k71/4.jpg"
+            ],
+            "img": "assets/imagenes/lg/k71-producto.webp",
+            "stock": "74",
+            "precio": "36999",
+            "especificaciones": {
+                "dimensionesPeso": "171,4 x 77,7 x 8,7 mm, 220 g.",
+                "pantalla": " 6,8 pulgadas Full HD+",
+                "procesador": "Helio P35",
+                "ram": "4 GB",
+                "almacenamiento": "128GB",
+                "camaraFrontal": "32 megapíxeles",
+                "camaraTrasera": "48 megapíxeles, 5 megapíxeles gran angular, 5 megapíxeles bokeh",
+                "bateria": "4000 mAh",
+                "sistemaOperativo": "Android 10",
+                "conectividad": "4G, Wifi, Bluetooth 5.0, USB Tipo C",
+                "otros": "Stylus,Lector de huellas trasero, Altavoces estéreo, DTS:X 3D"
             }
-        ]
-    },
-    {
-        "marca": "Samsung",
-        "descripcion": "lorem asd eona d saloerm",
-        "imgMarca": "./assets/imagenes/samsungmain.webp",
-        "productos": [
-            {
-                "id": "NVX31X",
-                "tipo": "smartphone",
-                "modelo": "Galaxy S21 Ultra",
-                "descripcion": "Mejorado con respecto al S20 Ultra, mejor batería y un buen diseño. La tasa de refresco se puede configurar hasta 120 Hz",
-                "imgs": [
-                    "./assets/imagenes/samsung/galaxys21ultra-producto.jpg",
-                    "./assets/imagenes/samsung/galaxys21ultra/1.jpg",
-                    "./assets/imagenes/samsung/galaxys21ultra/2.jpg",
-                    "./assets/imagenes/samsung/galaxys21ultra/3.jpg",
-                    "./assets/imagenes/samsung/galaxys21ultra/4.jpg",
-                    "./assets/imagenes/samsung/galaxys21ultra/5.jpg",
-                    "./assets/imagenes/samsung/galaxys21ultra/6.jpg"
-                ],
-                "stock": "61",
-                "precio": "199999",
-                "especificaciones": {
-                    "dimensionesPeso": "165,1 x 75,6 x 8,9 mm 228, \n228 gramos",
-                    "pantalla": "6,8 pulgadas Dynamic AMOLED 2x, \nWQHD+, \n120 Hz",
-                    "procesador": "Exynos 2100",
-                    "ram": "12 GB",
-                    "almacenamiento": "512 GB",
-                    "camaraFrontal": "40 MP f/2.2.",
-                    "camaraTrasera": "108 MP f/1.8, \nUltra gran angular 12 MP f/2.2, \nTele 10 MP f/2.4, \nTele 10 MP f/4.9, \nLáser AF ToF",
-                    "bateria": "5.000 mAh, \nCarga rápida 25W, \nCarga inalámbrica 15W, \nWireless PowerShare",
-                    "sistemaOperativo": "Android 11 + One UI 3.0",
-                    "conectividad": "WIFI 6 y 6E, \nUBW tracking, \n5G.",
-                    "otros": "Altavoces estéreo, \nIP68, \nCompatibilidad con S Pen."
-                }
-            },
-            {
-                "id": "MN8snd",
-                "tipo": "smartphone",
-                "modelo": "Galaxy S20 FE",
-                "descripcion": "El Samsung Galaxy S20 FE es la propuesta del gigante coreano para cubrir un sector complicado como pocos. Su intento más serio viene con el nombre de la gran familia de gama alta de Samsung, mucho de su espíritu pero a un precio más asequible",
-                "imgs": [
-                    "./assets/imagenes/samsung/galaxys20fe-producto.png",
-                    "./assets/imagenes/samsung/galaxys20fe/1.png",
-                    "./assets/imagenes/samsung/galaxys20fe/2.png",
-                    "./assets/imagenes/samsung/galaxys20fe/3.png",
-                    "./assets/imagenes/samsung/galaxys20fe/4.png",
-                    "./assets/imagenes/samsung/galaxys20fe/5.png"
-                ],
-                "stock": "51",
-                "precio": "76999",
-                "especificaciones": {
-                    "dimensionesPeso": "165,1 x 75,6 x 8,9 mm 228, \n228 gramos",
-                    "pantalla": "6,5 pulgadas Super AMOLED, \n2.400 x 1.080p (20:9), \n120 Hz, \nGorilla Glass 3",
-                    "procesador": "Qualcomm Snapdragon 865 (5G)",
-                    "ram": "8 GB",
-                    "almacenamiento": "128 GB + micro SD hasta 1 TB",
-                    "camaraFrontal": "32 MP f/2.0.",
-                    "camaraTrasera": "Principal: 12 MP, f/1.8, \nGran angular: 12 MP f/2.2, \nTeleobjetivo: 8MP f/2.0.",
-                    "bateria": "4.500 mAh, \nCarga rápida, \nCarga inalámbrica.",
-                    "sistemaOperativo": "Android 10 + Samsung One UI 2.5",
-                    "conectividad": "WIFI, \nUBW tracking, \n5G, \nBluetooth 5.0, USB tipo C, NFC",
-                    "otros": "Lector de huellas bajo pantall, \nresistencia al agua y al polvo IP68."
-                }
-            },
-            {
-                "id": "FASL79",
-                "tipo": "smartphone",
-                "modelo": "Galaxy A71",
-                "descripcion": "Este enorme smartphone de casi 7 pulgadas estrena cámara cuádruple al tiempo que mantiene su grandes argumentos de compra como son la pantalla o el diseño llamativo.", 
-                "imgs": [
-                    "./assets/imagenes/samsung/galaxya71-producto.jpg",
-                    "./assets/imagenes/samsung/galaxya71/1.jpg",
-                    "./assets/imagenes/samsung/galaxya71/2.jpg",
-                    "./assets/imagenes/samsung/galaxya71/3.jpg",
-                    "./assets/imagenes/samsung/galaxya71/4.jpg"
-                ],
-                "stock": "51",
-                "precio": "66989",
-                "especificaciones": {
-                    "dimensionesPeso": "165,1 x 75,6 x 8,9 mm 228, \n228 gramos",
-                    "pantalla": "OLED de 6 pulgadas FHD+ 21:9, \n2.520 x 1.080p (20:9), \nGorilla Glass 6",
-                    "procesador": "Qualcomm Snapdragon 730 Octa Core",
-                    "ram": "8 GB",
-                    "almacenamiento": "128 GB + micro SD hasta 512 TB",
-                    "camaraFrontal": "32 MP f/2.2",
-                    "camaraTrasera": "64 MP f/1.8, \n5 MP f/2.4 macro, \n12 MP f/2.2 gran angular, \n5 MP f/2.2 profundidad",
-                    "bateria": "4.500 mAh, \nCarga rápida 25W.",
-                    "sistemaOperativo": "Android 10 + Samsung One UI 2.0",
-                    "conectividad": "WIFI, \nUBW tracking, \n4G Dual SIM, \nBluetooth 5.0, USB tipo C, \nMinijack",
-                    "otros": "Lector de huellas bajo pantalla."
-                }
-            },
-            {
-                "id": "Nxx515",
-                "tipo": "smartphone",
-                "modelo": "Galaxy Note 20 Ultra",
-                "descripcion": "Pantalla: la buena idea de una frecuencia adaptable choca con la elección entre resolución y refresco máximo. Rendimiento: potencia bruta con calor 'de verano'.", 
-                "imgs": [
-                    "./assets/imagenes/samsung/galaxynote20ultra-producto.jpg",
-                    "./assets/imagenes/samsung/galaxynote20ultra/1.jpg",
-                    "./assets/imagenes/samsung/galaxynote20ultra/2.jpg",
-                    "./assets/imagenes/samsung/galaxynote20ultra/3.jpg",
-                    "./assets/imagenes/samsung/galaxynote20ultra/4.jpg",
-                    "./assets/imagenes/samsung/galaxynote20ultra/5.jpg",
-                    "./assets/imagenes/samsung/galaxynote20ultra/6.jpg",
-                    "./assets/imagenes/samsung/galaxynote20ultra/7.jpg",
-                    "./assets/imagenes/samsung/galaxynote20ultra/8.jpg"
-                ],
-                "stock": "62",
-                "precio": "289899",
-                "especificaciones": {
-                    "dimensionesPeso": "77,2 x 164,8 x 8,1 mm, \n208 gramos",
-                    "pantalla": "Dynamic AMOLED 6,9 6 pulgadas, \n3.088 x 1.440px WQHD+, \n496 ppp, 120 Hz, 19,3:9, HDR10+",
-                    "procesador": "Exynos 990",
-                    "ram": "12 GB",
-                    "almacenamiento": "256/512 GB (con MicroSD)",
-                    "camaraFrontal": "10 MP (1/3,24' 1,22 µm) AF, f/2.2",
-                    "camaraTrasera": "Principal: 108 MP (1/1,33' 1,8 µm) f/1.8 OIS, \nGran angular: 12 MP (1/2,55' 1,4 µm) f/2.2, \nTelefoto: 12 MP (1/3,6' 1 µm) f/3.0, \nSensor profundidad: Láser AF",
-                    "bateria": "4.500 mAh 25W, \nCarga rápida 15W, \nCarga inversa 4.5W",
-                    "sistemaOperativo": "Android 10 + Samsung One UI",
-                    "conectividad": "WIFI, \nUBW tracking, \n5G, \nBluetooth 5.0, USB tipo C, \nNFC",
-                    "otros": "S Pen, \nIP68, \nAltavoces estéreo con decodificación Dolby Atmos."
-                }
+        },
+        {
+            "id": "dad5w1",
+            "marca": "LG",
+            "tipo": "smartwatch",
+            "modelo": "LG Watch W7",
+            "descripcion": "Teniendo en cuenta que funciona con un mecanismo de cuarzo como los relojes analógicos, es prescindible las funciones digitales. Es decir, podemos convertirlo en un reloj 'normal' apagando las áreas digitales y funcionará correctamente para indicar la hora. Lo hará aproximadamente cien días sin cargarlo.",
+            "imgs": [
+                "./assets/imagenes/lg/lgwatchw7-producto.jpg",
+                "./assets/imagenes/lg/lgwatchw7/1.jpg",
+                "./assets/imagenes/lg/lgwatchw7/2.jpg",
+                "./assets/imagenes/lg/lgwatchw7/3.jpg",
+                "./assets/imagenes/lg/lgwatchw7/4.png"
+            ],
+            "stock": "15",
+            "precio": "39989",
+            "especificaciones": {
+                "dimensionesPeso": "44,5 x 45,4 x 12,9 mm, 79,5 g",
+                "pantalla": "LCD 1.2 pulgadas",
+                "procesador": "Qualcomm Snapdragon Wear 2100",
+                "ram": "768 MB LPDDR3",
+                "almacenamiento": "4 GB",
+                "bateria": "240 mAh",
+                "sistemaOperativo": "Wear OS",
+                "conectividad": "Wi-Fi 802.11 b, g, \n Bluetooth 4.2 BLE \n USB-C",
+                "otros": "IP68"
             }
-        ]
-    },
-    {
-        "marca": "Otros",
-        "descripcion": "lorem asd eona d saloerm",
-        "imgMarca": "./assets/imagenes/otrosmain.jpg",
-        "productos": [
-            {
-                "id": "bxcSD4",
-                "tipo": "smartphone",
-                "modelo": "Xiami Mi 11",
-                "descripcion": "Xiaomi quiso adelantarse a todos y ser la marca que lanzase el primer móvil con el Snapdragon 888 de Qualcomm, uno de los procesadores que veremos con más frecuencia en la gama alta de 2021 de Android.",
-                "imgs": [
-                    "./assets/imagenes/otros/xiaomimi11-producto.jpg",
-                    "./assets/imagenes/otros/xiaomimi11/1.jpg",
-                    "./assets/imagenes/otros/xiaomimi11/2.jpg",
-                    "./assets/imagenes/otros/xiaomimi11/3.jpg",
-                    "./assets/imagenes/otros/xiaomimi11/4.jpg",
-                    "./assets/imagenes/otros/xiaomimi11/5.jpg"
-                ],
-                "stock": "51",
-                "precio": "169900",
-                "especificaciones": {
-                    "dimensionesPeso": "164,3 x 74,6 x 8,06 mm, \n196 gramos",
-                    "pantalla": "6,81 pulgadas AMOLED, \n120 Hz, \nWQHD+ (3.200 x 1.440 px), \n515 ppp, 20:9, \nHDR10+, 480 Hz táctil",
-                    "procesador": "Qualcomm Snapdragon 888",
-                    "ram": "8 GB",
-                    "almacenamiento": "256 GB",
-                    "camaraFrontal": "20 MP f/2.2",
-                    "camaraTrasera": "108 MP f/1.85 7P, \nUltra gran angular 12 MP f/2.4, \nTelemacro 5 MP f/2.4.",
-                    "bateria": "4.600 mAh 25W, \nCarga rápida 55W, \nCarga inalámbrica 50 W",
-                    "sistemaOperativo": "Android 11 + MIUI 12",
-                    "conectividad": "5G, \nWIFI 6, \nGPS, \nBluetooth 5.2, \nUSB tipo C, \nNFC",
-                    "otros": "Lector de huellas en pantalla, \nAltavoces estéreo."
-                }
-            },
-            {
-                "id": "hp4aF3",
-                "tipo": "smartphone",
-                "modelo": "Xiaomi Redmi Note 10 Pro",
-                "descripcion": "el Xiaomi Mi 11, la marca ha pasado a su gama más competitiva en relación calidad precio, con el permiso de POCO.",
-                "imgs": [
-                    "./assets/imagenes/otros/xiaominote10pro-producto.jpg",
-                    "./assets/imagenes/otros/xiaominote10pro/1.jpg",
-                    "./assets/imagenes/otros/xiaominote10pro/2.jpg",
-                    "./assets/imagenes/otros/xiaominote10pro/3.jpg",
-                    "./assets/imagenes/otros/xiaominote10pro/4.jpg",
-                    "./assets/imagenes/otros/xiaominote10pro/5.jpg",
-                    "./assets/imagenes/otros/xiaominote10pro/6.jpg",
-                    "./assets/imagenes/otros/xiaominote10pro/7.jpg"
-                ],
-                "stock": "35",
-                "precio": "114999",
-                "especificaciones": {
-                    "dimensionesPeso": "164,3 x 74,6 x 8,06 mm, \n196 gramos",
-                    "pantalla": "6,67” 120 Hz, \nHDR10.",
-                    "procesador": "Qualcomm Snapdragon 732G",
-                    "ram": "8 GB",
-                    "almacenamiento": "128 GB",
-                    "camaraFrontal": "16 MP f/2.45",
-                    "camaraTrasera": "108 MP f/1.9, \nUGA 8 MP f/2.2, \n5 MP telemacro f/2.4, \n2 MP profundidad.",
-                    "bateria": "5.020 mAh + 33W",
-                    "sistemaOperativo": "Android 11 + MIUI 12",
-                    "conectividad": "WIFI, \nBluetooth, \nNFC",
-                    "otros": "Lector de huellas lateral, \nestéreo, \nIP53, \nDual SIM."
-                }
-            },
-            {
-                "id": "hp4aF3",
-                "tipo": "smartphone",
-                "modelo": "One Plus 9 Pro",
-                "descripcion": "El OnePlus 9 Pro llega con mejoras a prácticamente todos los niveles, pero se centra especialmente en el fotográfico, donde destaca la nueva colaboración con Hasselblad, fabricante mítico de cámaras fotográficas.", 
-                "precio": "34000",
-                "imgs": [
-                    "./assets/imagenes/otros/oneplus9pro-producto.jpg",
-                    "./assets/imagenes/otros/oneplus9pro/1.jpg",
-                    "./assets/imagenes/otros/oneplus9pro/2.jpg",
-                    "./assets/imagenes/otros/oneplus9pro/3.jpg",
-                    "./assets/imagenes/otros/oneplus9pro/4.jpg",
-                    "./assets/imagenes/otros/oneplus9pro/5.jpg",
-                    "./assets/imagenes/otros/oneplus9pro/6.jpg",
-                    "./assets/imagenes/otros/oneplus9pro/7.jpg"
-                ],
-                "stock": "63",
-                "especificaciones": {
-                    "dimensionesPeso": "163.2 x 73.6 x 8.7 mm, \n197 gramos",
-                    "pantalla": "6,7 pulgadas 20,1:9, \nQHD+ 3216 x 1440, 525 ppp, \nTasa de refresco 1-120Hz.",
-                    "procesador": "Snapdragon 888",
-                    "ram": "12 GB",
-                    "almacenamiento": "256 GB",
-                    "camaraFrontal": "Sensor Sony IMX471 16 megapíxeles",
-                    "camaraTrasera": "Gran angular: Sony IMX766 1/1,56' 50 megapíxeles lente 14 mm f/2.2, \nSensor principal: Sony IMX789 1/1,43' 48 megapíxeles, \nTeleobjetivo: 8 megapíxeles (píxeles 1μm) f/2.4, \nSensor monocromo: 2 megapíxeles.",
-                    "bateria": "4.500 mAh",
-                    "sistemaOperativo": "OxygenOS basado en Android 11",
-                    "conectividad": "WIFI, \nBluetooth 5.2, \nNFC, \nUSB-C 3.1, \n5G",
-                    "otros": "Colores: Morning Mist, Pine Green, Stellar Black, \nSensor de huellas en pantalla, \nDesbloqueo facial 2D, \nAltavoces estéreo Dolby Atmos."
-                }
+        },
+        {
+            "id": "asd34S",
+            "marca": "Motorola",
+            "tipo": "smartwatch",
+            "modelo": "Moto 360 3ra gen...",
+            "descripcion": "Los nuevos Moto 360 de tercera generación llegan como decíamos de la mano de un desconocido fabricante llamado eBuyNow. Esta empresa se comportará en esta alianza como lo hace por ejemplo HMD Global con Nokia: aprovecha la marca y se encarga de la fabricación.",
+            "imgs": [
+                "./assets/imagenes/motorola/moto360-producto.jpg",
+                "./assets/imagenes/motorola/moto360/1.jpg",
+                "./assets/imagenes/motorola/moto360/2.jpg",
+                "./assets/imagenes/motorola/moto360/3.jpg",
+                "./assets/imagenes/motorola/moto360/4.jpg",
+                "./assets/imagenes/motorola/moto360/5.jpg",
+                "./assets/imagenes/motorola/moto360/6.jpg",
+                "./assets/imagenes/motorola/moto360/7.jpg"
+            ],
+            "stock": "18",
+            "precio": "72300",
+            "especificaciones": {
+                "dimensionesPeso": "42,8 x 42,8 x 11,68 mm, \n52 gramos",
+                "pantalla": "OLED de 1,2 pulgadas, \nResolución 390 x 390 píxeles, \nCircular, \nGorilla Glass 3",
+                "procesador": "Snapdragon 3100",
+                "ram": "1 GB",
+                "almacenamiento": "8 GB",
+                "bateria": "355 mAh",
+                "sistemaOperativo": "Wear OS",
+                "conectividad": "Bluetooth 4.2, \nWi-Fi b/g/n, \nNFC, \nGPS, GLONASS, Beidou, Galileo",
+                "otros": "Resistencia de tres atmósferas, \nCompatibilidad con iOS y Android"
             }
-        ]
-    }
-]
+        },
+        {
+            "id": "SF24SA",
+            "marca": "Motorola",
+            "tipo": "smartphone",
+            "modelo": "Moto Edge 20 Pro",
+            "descripcion": "El Motorola Edge llegó en septiembre de 2020, con un nombre que indicaba pantalla curva y rozando con los dedos la gama alta. Motorola ha querido darle una vuelta de tuerca a esta familia Edge dejando a un lado la curva, subiendo el listón en potencia y ofreciendo al mercado una alternativa de gama alta a un precio relativamente contenido.",
+            "imgs": [
+                "./assets/imagenes/motorola/edge20pro-producto.jpg",
+                "./assets/imagenes/motorola/edge20pro/1.jpg",
+                "./assets/imagenes/motorola/edge20pro/2.jpg",
+                "./assets/imagenes/motorola/edge20pro/3.jpg",
+                "./assets/imagenes/motorola/edge20pro/4.jpg",
+                "./assets/imagenes/motorola/edge20pro/5.jpg",
+                "./assets/imagenes/motorola/edge20pro/6.jpg",
+                "./assets/imagenes/motorola/edge20pro/7.jpg"
+            ],
+            "stock": "89",
+            "precio": "109999",
+            "especificaciones": {
+                "dimensionesPeso": "163 x 76 x 7,99 mm, \n190 gramos, \n185 gramo (cuero vegano)",
+                "pantalla": " OLED de 6,7 pulgadas, \nResolución FullHD+, \nTasa de refresco: 144 Hz, \nTáctil de refresco táctil: 576 Hz, \nFormato 20:9, \nHDR10+, \nDCI-P3",
+                "procesador": "Snapdragon 870",
+                "ram": "12 GB LPDDR5",
+                "almacenamiento": "256 GB UFS 3.1",
+                "camaraFrontal": "32 megapíxeles",
+                "camaraTrasera": "108 MP (1/1,52', 0,7μm) f/1.9 \nTele 8 MP, zoom óptico 5x f/3.4, OIS, \nUGA-macro 16 MP (119º), f/2.2",
+                "bateria": "4.500 mAh Carga rápida 30 W",
+                "sistemaOperativo": "Android 11",
+                "conectividad": "Wi-Fi 6, \n2.4/5 GHz, \nBluetooth 5.1, \nNFC, \nGPS, AGPS, LTEPP, SUPL, Glonass, Galileo, \ndual SIM",
+                "otros": "IP52, \n3 micrófonos"
+            }
+        },
+        {
+            "id": "f3S3df",
+            "marca": "Motorola",
+            "tipo": "smartphone",
+            "modelo": "Moto g60s",
+            "descripcion": "Se trata de un dispositivo de gama media, sencillo, con un precio suculento y que destaca por montar una enorme pantalla de 6,8 pulgadas con 120 Hz.",
+            "imgs": [
+                "./assets/imagenes/motorola/motog60s-producto.png",
+                "./assets/imagenes/motorola/g60s/1.jpg",
+                "./assets/imagenes/motorola/g60s/2.jpg",
+                "./assets/imagenes/motorola/g60s/3.png",
+                "./assets/imagenes/motorola/g60s/4.webp"
+            ],
+            "stock": "46",
+            "precio": "49999",
+            "especificaciones": {
+                "dimensionesPeso": "169,61 x 75,88 x 9,6 mm, \n212 gramos",
+                "pantalla": "IPS/LCD de 6,8 pulgadas, \nResolución FullHD+ (2.460 x 1.080 píxeles), \nFormato 20:09, \nTasa de refresco: 120 Hz",
+                "procesador": "MediaTek Helio G95 mejorado, GPU ARM Mali-G76",
+                "ram": "4 GB",
+                "almacenamiento": "128 GB ampliables con microSD",
+                "camaraFrontal": "16 MP f/2.25",
+                "camaraTrasera": "64 MP f/1.7, \nGran angular 8 MP f/2.2, 118º, \nMacro 5 MP f/2.4, \nProfundidad 2 MP f/2.4, \nFlash LED",
+                "bateria": "5.000 mAh Carga rápida de 50W",
+                "sistemaOperativo": "Android 11 con My UX",
+                "conectividad": "Wi-Fi ac, \n2.4/5 GHz, \nBluetooth 5.0, \nNFC, \nGPS, AGPS, LTEPP, SUPL, Glonass, Galileo, \nDual SIM híbrida, \nUSB tipo C",
+                "otros": "Jack de auriculares, \nTecla para Google Assistant, \nResistencia IP52, \nLector de huellas, \nDesbloqueo facial"
+            }
+        },
+        {
+            "id": "fa4dDd",
+            "marca": "Motorola",
+            "tipo": "smartphone",
+            "modelo": "Moto g9 Plus",
+            "descripcion": "El teléfono que llegó para revolucionar la gama media allá por 2013 ya es todo un anciano y es que ya son nueve (sí, nueve) las generaciones de la familia Moto G, que se dice pronto. Modelo más avanzado de esta nueva gama: el Moto G9 Plus. Motorola ha apostado por un perfil técnico que se enmarca en la gama media, pero que apuesta por puntos fuertes como el procesador Snapdragon 730G o una enorme batería de 5.000 mAh de capacidad.",
+            "imgs": [
+                "./assets/imagenes/motorola/motog9plus-producto.jpg",
+                "./assets/imagenes/motorola/g9plus/1.jpg",
+                "./assets/imagenes/motorola/g9plus/2.jpg",
+                "./assets/imagenes/motorola/g9plus/3.jpg",
+                "./assets/imagenes/motorola/g9plus/4.jpg",
+                "./assets/imagenes/motorola/g9plus/5.jpg",
+                "./assets/imagenes/motorola/g9plus/6.jpg",
+                "./assets/imagenes/motorola/g9plus/7.jpg"
+            ],
+            "stock": "126",
+            "precio": "49999",
+            "especificaciones": {
+                "dimensionesPeso": "169,61 x 75,88 x 9,6 mm",
+                "pantalla": "LCD de 6,8 pulgadas, \nFullHD+ (2.400 x 1.080 píxeles) 386 ppp, \nRatio 20:09, \nHDR10",
+                "procesador": "Snapdragon 730G",
+                "ram": "4 GB",
+                "almacenamiento": "128 GB",
+                "camaraFrontal": "16 MP f/0",
+                "camaraTrasera": "Sensor principal: 64 MP (1/1.73') f/1, \nUltra angular 8 MP (1/4.0') f/2.2, \nProfundidad: 2 MP f/2.2, \nMacro 2 MP f/2.2.",
+                "bateria": "5.000 mAh Carga rápida de 30W",
+                "sistemaOperativo": "Android 10",
+                "conectividad": "Wi-Fi ac, \nBluetooth 5.0, \nNFC, \nDual SIM híbrida, \nUSB tipo C, \nMinijack, \n4G",
+                "otros": "Lector de huellas en un lateral"
+            }
+        },
+        {
+            "id": "SDS2Hx",
+            "marca": "Motorola",
+            "tipo": "smartphone",
+            "modelo": "Moto g30",
+            "descripcion": "El Moto G30 presenta un diseño continuista con una trasera que, aunque es de plástico, tiene un acabado mate que resulta atractivo a la vista y muy agradable al tacto. Además, al haber prescindido del cristal y del brillo, Motorola ha logrado que las huellas no ensucien el terminal.",
+            "imgs": [
+                "./assets/imagenes/motorola/motog30-producto.webp",
+                "./assets/imagenes/motorola/g30/1.webp",
+                "./assets/imagenes/motorola/g30/2.webp",
+                "./assets/imagenes/motorola/g30/3.webp",
+                "./assets/imagenes/motorola/g30/4.webp",
+                "./assets/imagenes/motorola/g30/5.webp",
+                "./assets/imagenes/motorola/g30/6.webp"
+            ],
+            "stock": "26",
+            "precio": "87389",
+            "especificaciones": {
+                "dimensionesPeso": "165,22 x 75,73 x 9,14 mm, \n197g",
+                "pantalla": "LCD IPS de 6,5 pulgadas, \nHD+ (1600 x 720 píxeles), \nTasa de refresco: 90Hz",
+                "procesador": "Snapdragon 662",
+                "ram": "4 GB",
+                "almacenamiento": "128 GB + microSD hasta 512 GB",
+                "camaraFrontal": "13 MP f/2.2",
+                "camaraTrasera": "64 MP (1/1.7') f/1,7, \nUltra angular 8 MP f/2.2, \nProfundidad: 2 MP f/2.4, \nMacro 2 MP f/2.4.",
+                "bateria": "5.000 + mAh Carga rápida de 15W",
+                "sistemaOperativo": "Android 11",
+                "conectividad": "Wi-Fi ac, \nBluetooth 5.0, \nNFC, \nDual SIM, \nUSB tipo C, \nJack 3,5mm, \n4G/LTE",
+                "otros": "Lector de huellas trasero, \nreconocimiento facial, \nIP52, \nbotón Google Assistant"
+            }
+        },
+        {
+            "id": "sad84X",
+            "marca": "Apple",
+            "tipo": "smartwatch",
+            "modelo": "Apple Watch Series 7",
+            "descripcion": "Presume de una pantalla mejor aprovechada y mantiene su surtido de sensores que le permiten registrar muchos valores de la actividad y estado del usuario. Veamos qué tan con el tras unos días.",
+            "imgs": [
+                "./assets/imagenes/apple/watchseries7-producto.jpg",
+                "./assets/imagenes/apple/watchseries7/1.jpg",
+                "./assets/imagenes/apple/watchseries7/2.jpg",
+                "./assets/imagenes/apple/watchseries7/3.jpg",
+                "./assets/imagenes/apple/watchseries7/4.jpg",
+                "./assets/imagenes/apple/watchseries7/5.jpg",
+                "./assets/imagenes/apple/watchseries7/6.jpg",
+                "./assets/imagenes/apple/watchseries7/7.jpg"
+            ],
+            "stock": "13",
+            "precio": "217444",
+            "especificaciones": {
+                "dimensionesPeso": "45,08 x 38,21 x 10,7 mm, 38,8 g, \n38,8g",
+                "pantalla": "41 mm: Ion-X glass (LTPO) OLED Always-On Retina display, \n1000 nits, \n352 x 430 px",
+                "procesador": "S7 64-bit dual-core",
+                "ram": "n/a",
+                "almacenamiento": "32 GB",
+                "bateria": "Hasta 18 horas, Carga rápida",
+                "sistemaOperativo": "Android 11",
+                "conectividad": "Wi-Fi, \nBluetooth 5.0.",
+                "otros": "Función llamada de emergencia, \ndetección de caídas, \nIPS6X, \nResistencia al agua hasta 50 metros"
+            }
+        },
+        {
+            "id": "s0dr84",
+            "marca": "Apple",
+            "tipo": "smartwatch",
+            "modelo": "Apple Watch Series 6",
+            "descripcion": "El que hereda el testigo del Apple Watch Series 5 se actualiza con la medición de la saturación de oxígeno y el altímetro, incorporando nuevos sensores y manteniendo el diseño. También tiene un procesador nuevo y se estrena con una edición Product Red.",
+            "imgs": [
+                "./assets/imagenes/apple/watchseries6-producto.jpg",
+                "./assets/imagenes/apple/watchseries6/1.jpg",
+                "./assets/imagenes/apple/watchseries6/2.jpg",
+                "./assets/imagenes/apple/watchseries6/3.jpg",
+                "./assets/imagenes/apple/watchseries6/4.jpg"
+            ],
+            "stock": "2",
+            "precio": "64999",
+            "especificaciones": {
+                "dimensionesPeso": "39,8 x 34,4 x 10,7 mm, \n30,5g",
+                "pantalla": "41 mm: Ion-X glass (LTPO) OLED Always-On Retina display, \n1000 nits, \n324 x 394 px",
+                "procesador": "S6 64-bit dual-core",
+                "ram": "n/a",
+                "almacenamiento": "32 GB",
+                "bateria": "Hasta 18 horas",
+                "sistemaOperativo": "WatchOS",
+                "conectividad": "Wi-Fi, \nBluetooth 5.0",
+                "otros": "SpO2, \nRitmo cardiaco, \nECG, \nAcelerómetro, \nGiroscopio, \nAltímetro, \nGPS/GNSS, \nBrújula, \nSensor de luz ambientalFunción llamada de emergencia, \ndetección de caídas, \nIPS6X, \nResistencia al agua hasta 50 metros"
+            }
+        },
+        {
+            "id": "SAD8sa",
+            "marca": "Apple",
+            "tipo": "smartwatch",
+            "modelo": "Apple Watch SE",
+            "descripcion": "Por primera vez, Apple propone un nuevo Apple Watch. Lo hace recortando en características relacionadas con los sensores avanzados para conseguir un precio más ajustado.",
+            "imgs": [
+                "./assets/imagenes/apple/watchse-producto.jpg",
+                "./assets/imagenes/apple/watchse/1.jpg",
+                "./assets/imagenes/apple/watchse/2.jpg",
+                "./assets/imagenes/apple/watchse/3.jpg",
+                "./assets/imagenes/apple/watchse/4.jpg",
+                "./assets/imagenes/apple/watchse/5.jpg",
+                "./assets/imagenes/apple/watchse/6.jpg",
+                "./assets/imagenes/apple/watchse/7.jpg"
+            ],
+            "stock": "0",
+            "precio": "64895",
+            "especificaciones": {
+                "dimensionesPeso": "40 x 34 x 10,7 mm, \n30,49g",
+                "pantalla": "Tipo: 44mm: 368 x 448 píxeles Superficie de pantalla de 977 mm²",
+                "procesador": "S5 SiP con procesador de doble núcleo de 64 bits",
+                "ram": "n/a",
+                "almacenamiento": "32 GB",
+                "bateria": "Hasta 18 horas",
+                "sistemaOperativo": "WatchOS",
+                "conectividad": "Wi-Fi, \nBluetooth 5.0, \n4G LTE y UMTS",
+                "otros": "Ritmo cardiaco, \nGiroscopio, \nAltímetro, \ndetección de caídas."
+            }
+        },
+        {
+            "id": "SD2Jn5",
+            "marca": "Apple",
+            "tipo": "smartphone",
+            "modelo": "Iphone 13",
+            "descripcion": "el iPhone 13 tiene mucho que decir: monta lo último de lo último en procesadores Apple, tiene el modo cinemático que tanto ruido ha hecho en redes sociales y mejora sustancialmente la autonomía.",
+            "imgs": [
+                "./assets/imagenes/apple/iphone13-producto.jpg",
+                "./assets/imagenes/apple/iphone13/1.jpg",
+                "./assets/imagenes/apple/iphone13/2.jpg",
+                "./assets/imagenes/apple/iphone13/3.jpg",
+                "./assets/imagenes/apple/iphone13/4.jpg",
+                "./assets/imagenes/apple/iphone13/5.jpg",
+                "./assets/imagenes/apple/iphone13/6.jpg"
+            ],
+            "stock": "351",
+            "precio": "375999",
+            "especificaciones": {
+                "dimensionesPeso": "146,7 x 71,5 x 7,6 mm, \n173g",
+                "pantalla": "Super Retina XDR OLED de 6,1 pulgadas, \nResolución FullHD+ (2.532 x 1.170 píxeles) 460pp, \nTrue-Tone, \nHDR",
+                "procesador": "Apple A15 Bionic GPU cuatro núcleos",
+                "ram": "4 GB",
+                "almacenamiento": "512 GB",
+                "camaraFrontal": "12 MP f/2.2",
+                "camaraTrasera": "12 MP f/1.6, OIS, \nGran angular: 12 MP f/2.4, 120º FOV, \nVídeo: 4K Dolby Vision.",
+                "bateria": "3.227 mAh, \nCarga rápida 20W",
+                "sistemaOperativo": "iOS 15",
+                "conectividad": "5G (sub-6 GHz), \nLTE Gigabit MIMO 4x4, \nNFC, \nNanoSIM y eSIM, \nGPS, GLONASS, Galileo, QZSS, BeiDou, \nBluetooth 5.0, \nChip UWB",
+                "otros": "Resistencia IP68, \nFaceID, \nAltavoces estéreo, \nDolby Atmos"
+            }
+        },
+        {
+            "id": "NFB752",
+            "marca": "Apple",
+            "tipo": "smartphone",
+            "modelo": "Iphone 13 Pro Max",
+            "descripcion": "El iPhone 13 Pro mejora la autonomía con respecto al iPhone 12 Pro, introduciendo mejoras en fotografía. Un buen Diseño, pantalla y sonido: parece un iPhone y suena como un iPhone",
+            "imgs": [
+                "./assets/imagenes/apple/iphone13promax-producto.jpg",
+                "./assets/imagenes/apple/iphone13max/1.jpg",
+                "./assets/imagenes/apple/iphone13max/2.jpg",
+                "./assets/imagenes/apple/iphone13max/3.jpg",
+                "./assets/imagenes/apple/iphone13max/4.jpg",
+                "./assets/imagenes/apple/iphone13max/5.jpg"
+            ],
+            "stock": "151",
+            "precio": "546000",
+            "especificaciones": {
+                "dimensionesPeso": "160,8 x 78,1 x 7,6 mm, \n238g",
+                "pantalla": "Super Retina XDR OLED de 6,7 pulgadas, \nProMotion 120 Hz 2.778 x 1.284 px, 458 ppp",
+                "procesador": "Apple A15 Bionic",
+                "ram": "-",
+                "almacenamiento": "512 GB",
+                "camaraFrontal": "12 MP f/2.2",
+                "camaraTrasera": "Telefoto: 12 MP f/2.8 77mm 3x óptico, OIS, \nUltrawide: 12 MP f/1.8 6P 120°, \nPrincipal: 12 MP f/1.5.",
+                "bateria": "3.227 mAh, \nCarga rápida 20W",
+                "sistemaOperativo": "iOS 15",
+                "conectividad": "5G (sub-6 GHz), \nLTE Gigabit MIMO 4x4, \nNFC, \nBluetooth 5.0, \nChip de banda ultra ancha",
+                "otros": "Resistencia IP68, \nFaceID, \nSonido estéreo."
+            }
+        },
+        {
+            "id": "fas5Fs",
+            "marca": "Apple",
+            "tipo": "smartphone",
+            "modelo": "Iphone SE",
+            "descripcion": "En la era de las 'pantallas infinitas' y con un 75% de los móviles presentados con pantallas a partir de 6,3 pulgadas, volvemos a las 4,7 pulgadas en el iPhone SE (2020) manteniendo una estetica dificil de no querer.",
+            "imgs": [
+                "./assets/imagenes/apple/iphonese-producto.jpg",
+                "./assets/imagenes/apple/iphonese/1.jpg",
+                "./assets/imagenes/apple/iphonese/2.jpg",
+                "./assets/imagenes/apple/iphonese/3.jpg",
+                "./assets/imagenes/apple/iphonese/4.jpg",
+                "./assets/imagenes/apple/iphonese/5.jpg",
+                "./assets/imagenes/apple/iphonese/6.jpg"
+            ],
+            "stock": "151",
+            "precio": "143999",
+            "especificaciones": {
+                "dimensionesPeso": "138,4 x 37,3 x 7,3 mm, \n148 gramos",
+                "pantalla": "IPS LCD 4,7 pulgadas, \n1.334 x 750 px, \nTrue-tone",
+                "procesador": "Apple A13 Bionic, 7nm+",
+                "ram": "-",
+                "almacenamiento": "256 GB",
+                "camaraFrontal": "7 MP f/2.2",
+                "camaraTrasera": "12 MP, f/1.8, OIS, \nVídeo 4K a 60 FPS.",
+                "bateria": "Capacidad no disponible, \nCarga inálambrica y carga rápida",
+                "sistemaOperativo": "iOS 13",
+                "conectividad": "NFC, \nBluetooth 5.0, \nGPS",
+                "otros": "Resistencia IP67, \nTouch ID, \nDual SIM: Nano SIM y eSIM."
+            }
+        },
+        {
+            "id": "fasJH8",
+            "marca": "Huawei",
+            "tipo": "smartphone",
+            "modelo": "Mate 40 Pro",
+            "descripcion": "Huawei renueva su apuesta por la cámara cuádruple que hace del zoom su principal arma. Y la coloca sobre un renovado módulo de cámara circular que atrae todas las miradas. Además, el nuevo Mate también suma pantalla con tasa de refresco de 90Hz y por supuesto no le podía faltar la conectividad 5G.",
+            "imgs": [
+                "./assets/imagenes/huawei/mate40pro-producto.jpg",
+                "./assets/imagenes/huawei/mate40pro/1.jpg",
+                "./assets/imagenes/huawei/mate40pro/2.jpg",
+                "./assets/imagenes/huawei/mate40pro/3.jpg",
+                "./assets/imagenes/huawei/mate40pro/4.jpg",
+                "./assets/imagenes/huawei/mate40pro/5.jpg"
+            ],
+            "stock": "51",
+            "precio": "349999",
+            "especificaciones": {
+                "dimensionesPeso": "138,4 x 37,3 x 7,3 mm, \n148 gramos",
+                "pantalla": "OLED 6,76 pulgadas, \nFHD+ 2.772 x 1.344 píxeles, \nTasa de refresco 90 Hz",
+                "procesador": "Kirin 9000 Octa-core:, \nGPU 24-core Mali-G78",
+                "ram": "8 GB",
+                "almacenamiento": "256 GB",
+                "camaraFrontal": "13 MP gran angular f/2.4, \nselfie en slow motion, \nVideo 4K 60 fps, \nSensor 3D para desbloqueo facial",
+                "camaraTrasera": "Sensor principal: 50MP Ultra Vision Camera f/1.9, \nUltra angular: 20MP Cine Camera f/1.8, \nTeleobjetivo: 12MP f/3.4 OIS.",
+                "bateria": "4.400 mAh, \nSuperCharge 66W, \n50W inalámbrica",
+                "sistemaOperativo": "EMUI 11 basado en Android 10 AOSP",
+                "conectividad": "WiFi ac 2x2 MIMO, \nBluetooth 5.2, \nNFC, \n5G, \nGPS, \nUSB-C 3.1",
+                "otros": " Altavoces estéreo, \nResistencia al agua IP68."
+            }
+        },
+        {
+            "id": "hp4aF3",
+            "marca": "Huawei",
+            "tipo": "smartphone",
+            "modelo": "P40 Pro",
+            "descripcion": "Se trata de un móvil con el último procesador para la gama alta de Huawei, siendo una actualización centrada sobre todo en el diseño y en añadir parte de las mejoras en el apartado fotográfico que vemos en estos nuevos P40.",
+            "precio": "165000",
+            "imgs": [
+                "./assets/imagenes/huawei/huaweip40pro-producto.jpg",
+                "./assets/imagenes/huawei/p40pro/1.jpg",
+                "./assets/imagenes/huawei/p40pro/2.jpg",
+                "./assets/imagenes/huawei/p40pro/3.jpg",
+                "./assets/imagenes/huawei/p40pro/4.jpg",
+                "./assets/imagenes/huawei/p40pro/5.jpg",
+                "./assets/imagenes/huawei/p40pro/6.jpg",
+                "./assets/imagenes/huawei/p40pro/7.jpg"
+            ],
+            "stock": "51",
+            "especificaciones": {
+                "dimensionesPeso": "138,4 x 37,3 x 7,3 mm, \n148 gramos",
+                "pantalla": "OLED 6,58 pulgadas, \n2.640 x 1.200 píxeles, \n90 Hz",
+                "procesador": "Kirin 990, \nGPU Mali-G76",
+                "ram": "8 GB",
+                "almacenamiento": "256 GB + tarjeta NM",
+                "camaraFrontal": "32 MP f/2.2, \nSensor IR, \nVideo 4K 60 fps",
+                "camaraTrasera": "Sensor RYYB 50 MP f/1.9 (1/1,28'), \nUltra gran angular 40 MP f/1.8, \nTelefoto 12 MP (RYYB) zoom óptico 5x OIS.",
+                "bateria": "4.200 mAh, \nCarga rápida 40W, \nCarga inalámbrica 27W, \nCarga inalámbrica inversa",
+                "sistemaOperativo": "Android, \nEMUI 10.1",
+                "conectividad": "WIFI 6 Plusg, \nBluetooth, \nNFC, \n5G",
+                "otros": "Lector de huellas en pantalla, \nIP68, \nDual SIM."
+            }
+        },
+        {
+            "id": "ddNND0",
+            "marca": "Huawei",
+            "tipo": "smartphone",
+            "modelo": "P40 Pro Plus",
+            "descripcion": "Se trata de una configuración muy parecida a la del Huawei P40 Pro, pero con algún “plus” (nunca mejor dicho) centrado en el diseño y en las cámaras. El protagonista potencial: de nuevo un “súper” zoom", 
+            "imgs": [
+                "./assets/imagenes/huawei/p40proplus-producto.jpg",
+                "./assets/imagenes/huawei/p40proplus/1.jpg",
+                "./assets/imagenes/huawei/p40proplus/2.jpg",
+                "./assets/imagenes/huawei/p40proplus/3.jpg"
+            ],
+            "stock": "51",
+            "precio": "450299",
+            "especificaciones": {
+                "dimensionesPeso": "158,2 x 72,6 x Resolución FullHD+ (2.640 x 1.200 píxeles), \n90 Hz",
+                "pantalla": "OLED 6,58 pulgadas,",
+                "procesador": "Kirin 990, \nGPU Mali-G76",
+                "ram": "8 GB",
+                "almacenamiento": "512 GB ampliables con NM Card",
+                "camaraFrontal": "32 MP, \nSensor IR.",
+                "camaraTrasera": "Sensor RYYB 50 MP f/1.9 (1/1,28') con OIS, \nUltra gran angular 40 MP f/1.8, \nTelefoto 8 MP (RYYB) zoom óptico 3x OIS, \nTelefoto 8 MP zoom óptico 10x + OIS, \nProfundidad, OIS+AIS",
+                "bateria": "4.200 mAh, \nCarga rápida 40W, \nCarga inalámbrica 40W, \nCarga inalámbrica inversa",
+                "sistemaOperativo": "Android 10 con EMUI 10.1",
+                "conectividad": "WIFI 6 Plus, \nBluetooth, \nNFC, \n5G, \nGPS.",
+                "otros": "Lector de huellas en pantalla, \nIP68, \nDual SIM."
+            }
+        },
+        {
+            "id": "NVX31X",
+            "marca": "Samsung",
+            "tipo": "smartphone",
+            "modelo": "Galaxy S21 Ultra",
+            "descripcion": "Mejorado con respecto al S20 Ultra, mejor batería y un buen diseño. La tasa de refresco se puede configurar hasta 120 Hz",
+            "imgs": [
+                "./assets/imagenes/samsung/galaxys21ultra-producto.jpg",
+                "./assets/imagenes/samsung/galaxys21ultra/1.jpg",
+                "./assets/imagenes/samsung/galaxys21ultra/2.jpg",
+                "./assets/imagenes/samsung/galaxys21ultra/3.jpg",
+                "./assets/imagenes/samsung/galaxys21ultra/4.jpg",
+                "./assets/imagenes/samsung/galaxys21ultra/5.jpg",
+                "./assets/imagenes/samsung/galaxys21ultra/6.jpg"
+            ],
+            "stock": "61",
+            "precio": "199999",
+            "especificaciones": {
+                "dimensionesPeso": "165,1 x 75,6 x 8,9 mm 228, \n228 gramos",
+                "pantalla": "6,8 pulgadas Dynamic AMOLED 2x, \nWQHD+, \n120 Hz",
+                "procesador": "Exynos 2100",
+                "ram": "12 GB",
+                "almacenamiento": "512 GB",
+                "camaraFrontal": "40 MP f/2.2.",
+                "camaraTrasera": "108 MP f/1.8, \nUltra gran angular 12 MP f/2.2, \nTele 10 MP f/2.4, \nTele 10 MP f/4.9, \nLáser AF ToF",
+                "bateria": "5.000 mAh, \nCarga rápida 25W, \nCarga inalámbrica 15W, \nWireless PowerShare",
+                "sistemaOperativo": "Android 11 + One UI 3.0",
+                "conectividad": "WIFI 6 y 6E, \nUBW tracking, \n5G.",
+                "otros": "Altavoces estéreo, \nIP68, \nCompatibilidad con S Pen."
+            }
+        },
+        {
+            "id": "MN8snd",
+            "marca": "Samsung",
+            "tipo": "smartphone",
+            "modelo": "Galaxy S20 FE",
+            "descripcion": "El Samsung Galaxy S20 FE es la propuesta del gigante coreano para cubrir un sector complicado como pocos. Su intento más serio viene con el nombre de la gran familia de gama alta de Samsung, mucho de su espíritu pero a un precio más asequible",
+            "imgs": [
+                "./assets/imagenes/samsung/galaxys20fe-producto.png",
+                "./assets/imagenes/samsung/galaxys20fe/1.png",
+                "./assets/imagenes/samsung/galaxys20fe/2.png",
+                "./assets/imagenes/samsung/galaxys20fe/3.png",
+                "./assets/imagenes/samsung/galaxys20fe/4.png",
+                "./assets/imagenes/samsung/galaxys20fe/5.png"
+            ],
+            "stock": "51",
+            "precio": "76999",
+            "especificaciones": {
+                "dimensionesPeso": "165,1 x 75,6 x 8,9 mm 228, \n228 gramos",
+                "pantalla": "6,5 pulgadas Super AMOLED, \n2.400 x 1.080p (20:9), \n120 Hz, \nGorilla Glass 3",
+                "procesador": "Qualcomm Snapdragon 865 (5G)",
+                "ram": "8 GB",
+                "almacenamiento": "128 GB + micro SD hasta 1 TB",
+                "camaraFrontal": "32 MP f/2.0.",
+                "camaraTrasera": "Principal: 12 MP, f/1.8, \nGran angular: 12 MP f/2.2, \nTeleobjetivo: 8MP f/2.0.",
+                "bateria": "4.500 mAh, \nCarga rápida, \nCarga inalámbrica.",
+                "sistemaOperativo": "Android 10 + Samsung One UI 2.5",
+                "conectividad": "WIFI, \nUBW tracking, \n5G, \nBluetooth 5.0, USB tipo C, NFC",
+                "otros": "Lector de huellas bajo pantall, \nresistencia al agua y al polvo IP68."
+            }
+        },
+        {
+            "id": "FASL79",
+            "marca": "Samsung",
+            "tipo": "smartphone",
+            "modelo": "Galaxy A71",
+            "descripcion": "Este enorme smartphone de casi 7 pulgadas estrena cámara cuádruple al tiempo que mantiene su grandes argumentos de compra como son la pantalla o el diseño llamativo.", 
+            "imgs": [
+                "./assets/imagenes/samsung/galaxya71-producto.jpg",
+                "./assets/imagenes/samsung/galaxya71/1.jpg",
+                "./assets/imagenes/samsung/galaxya71/2.jpg",
+                "./assets/imagenes/samsung/galaxya71/3.jpg",
+                "./assets/imagenes/samsung/galaxya71/4.jpg"
+            ],
+            "stock": "51",
+            "precio": "66989",
+            "especificaciones": {
+                "dimensionesPeso": "165,1 x 75,6 x 8,9 mm 228, \n228 gramos",
+                "pantalla": "OLED de 6 pulgadas FHD+ 21:9, \n2.520 x 1.080p (20:9), \nGorilla Glass 6",
+                "procesador": "Qualcomm Snapdragon 730 Octa Core",
+                "ram": "8 GB",
+                "almacenamiento": "128 GB + micro SD hasta 512 TB",
+                "camaraFrontal": "32 MP f/2.2",
+                "camaraTrasera": "64 MP f/1.8, \n5 MP f/2.4 macro, \n12 MP f/2.2 gran angular, \n5 MP f/2.2 profundidad",
+                "bateria": "4.500 mAh, \nCarga rápida 25W.",
+                "sistemaOperativo": "Android 10 + Samsung One UI 2.0",
+                "conectividad": "WIFI, \nUBW tracking, \n4G Dual SIM, \nBluetooth 5.0, USB tipo C, \nMinijack",
+                "otros": "Lector de huellas bajo pantalla."
+            }
+        },
+        {
+            "id": "Nxx515",
+            "marca": "Samsung",
+            "tipo": "smartphone",
+            "modelo": "Galaxy Note 20 Ultra",
+            "descripcion": "Pantalla: la buena idea de una frecuencia adaptable choca con la elección entre resolución y refresco máximo. Rendimiento: potencia bruta con calor 'de verano'.", 
+            "imgs": [
+                "./assets/imagenes/samsung/galaxynote20ultra-producto.jpg",
+                "./assets/imagenes/samsung/galaxynote20ultra/1.jpg",
+                "./assets/imagenes/samsung/galaxynote20ultra/2.jpg",
+                "./assets/imagenes/samsung/galaxynote20ultra/3.jpg",
+                "./assets/imagenes/samsung/galaxynote20ultra/4.jpg",
+                "./assets/imagenes/samsung/galaxynote20ultra/5.jpg",
+                "./assets/imagenes/samsung/galaxynote20ultra/6.jpg",
+                "./assets/imagenes/samsung/galaxynote20ultra/7.jpg",
+                "./assets/imagenes/samsung/galaxynote20ultra/8.jpg"
+            ],
+            "stock": "62",
+            "precio": "289899",
+            "especificaciones": {
+                "dimensionesPeso": "77,2 x 164,8 x 8,1 mm, \n208 gramos",
+                "pantalla": "Dynamic AMOLED 6,9 6 pulgadas, \n3.088 x 1.440px WQHD+, \n496 ppp, 120 Hz, 19,3:9, HDR10+",
+                "procesador": "Exynos 990",
+                "ram": "12 GB",
+                "almacenamiento": "256/512 GB (con MicroSD)",
+                "camaraFrontal": "10 MP (1/3,24' 1,22 µm) AF, f/2.2",
+                "camaraTrasera": "Principal: 108 MP (1/1,33' 1,8 µm) f/1.8 OIS, \nGran angular: 12 MP (1/2,55' 1,4 µm) f/2.2, \nTelefoto: 12 MP (1/3,6' 1 µm) f/3.0, \nSensor profundidad: Láser AF",
+                "bateria": "4.500 mAh 25W, \nCarga rápida 15W, \nCarga inversa 4.5W",
+                "sistemaOperativo": "Android 10 + Samsung One UI",
+                "conectividad": "WIFI, \nUBW tracking, \n5G, \nBluetooth 5.0, USB tipo C, \nNFC",
+                "otros": "S Pen, \nIP68, \nAltavoces estéreo con decodificación Dolby Atmos."
+            }
+        },
+        {
+            "id": "bxcSD4",
+            "marca": "Otros",
+            "tipo": "smartphone",
+            "modelo": "Xiami Mi 11",
+            "descripcion": "Xiaomi quiso adelantarse a todos y ser la marca que lanzase el primer móvil con el Snapdragon 888 de Qualcomm, uno de los procesadores que veremos con más frecuencia en la gama alta de 2021 de Android.",
+            "imgs": [
+                "./assets/imagenes/otros/xiaomimi11-producto.jpg",
+                "./assets/imagenes/otros/xiaomimi11/1.jpg",
+                "./assets/imagenes/otros/xiaomimi11/2.jpg",
+                "./assets/imagenes/otros/xiaomimi11/3.jpg",
+                "./assets/imagenes/otros/xiaomimi11/4.jpg",
+                "./assets/imagenes/otros/xiaomimi11/5.jpg"
+            ],
+            "stock": "51",
+            "precio": "169900",
+            "especificaciones": {
+                "dimensionesPeso": "164,3 x 74,6 x 8,06 mm, \n196 gramos",
+                "pantalla": "6,81 pulgadas AMOLED, \n120 Hz, \nWQHD+ (3.200 x 1.440 px), \n515 ppp, 20:9, \nHDR10+, 480 Hz táctil",
+                "procesador": "Qualcomm Snapdragon 888",
+                "ram": "8 GB",
+                "almacenamiento": "256 GB",
+                "camaraFrontal": "20 MP f/2.2",
+                "camaraTrasera": "108 MP f/1.85 7P, \nUltra gran angular 12 MP f/2.4, \nTelemacro 5 MP f/2.4.",
+                "bateria": "4.600 mAh 25W, \nCarga rápida 55W, \nCarga inalámbrica 50 W",
+                "sistemaOperativo": "Android 11 + MIUI 12",
+                "conectividad": "5G, \nWIFI 6, \nGPS, \nBluetooth 5.2, \nUSB tipo C, \nNFC",
+                "otros": "Lector de huellas en pantalla, \nAltavoces estéreo."
+            }
+        },
+        {
+            "id": "hp4aF3",
+            "marca": "Otros",
+            "tipo": "smartphone",
+            "modelo": "Xiaomi Redmi Note 10 Pro",
+            "descripcion": "el Xiaomi Mi 11, la marca ha pasado a su gama más competitiva en relación calidad precio, con el permiso de POCO.",
+            "imgs": [
+                "./assets/imagenes/otros/xiaominote10pro-producto.jpg",
+                "./assets/imagenes/otros/xiaominote10pro/1.jpg",
+                "./assets/imagenes/otros/xiaominote10pro/2.jpg",
+                "./assets/imagenes/otros/xiaominote10pro/3.jpg",
+                "./assets/imagenes/otros/xiaominote10pro/4.jpg",
+                "./assets/imagenes/otros/xiaominote10pro/5.jpg",
+                "./assets/imagenes/otros/xiaominote10pro/6.jpg",
+                "./assets/imagenes/otros/xiaominote10pro/7.jpg"
+            ],
+            "stock": "35",
+            "precio": "114999",
+            "especificaciones": {
+                "dimensionesPeso": "164,3 x 74,6 x 8,06 mm, \n196 gramos",
+                "pantalla": "6,67” 120 Hz, \nHDR10.",
+                "procesador": "Qualcomm Snapdragon 732G",
+                "ram": "8 GB",
+                "almacenamiento": "128 GB",
+                "camaraFrontal": "16 MP f/2.45",
+                "camaraTrasera": "108 MP f/1.9, \nUGA 8 MP f/2.2, \n5 MP telemacro f/2.4, \n2 MP profundidad.",
+                "bateria": "5.020 mAh + 33W",
+                "sistemaOperativo": "Android 11 + MIUI 12",
+                "conectividad": "WIFI, \nBluetooth, \nNFC",
+                "otros": "Lector de huellas lateral, \nestéreo, \nIP53, \nDual SIM."
+            }
+        },
+        {
+            "id": "hp4aF3",
+            "marca": "Otros",
+            "tipo": "smartphone",
+            "modelo": "One Plus 9 Pro",
+            "descripcion": "El OnePlus 9 Pro llega con mejoras a prácticamente todos los niveles, pero se centra especialmente en el fotográfico, donde destaca la nueva colaboración con Hasselblad, fabricante mítico de cámaras fotográficas.", 
+            "precio": "34000",
+            "imgs": [
+                "./assets/imagenes/otros/oneplus9pro-producto.jpg",
+                "./assets/imagenes/otros/oneplus9pro/1.jpg",
+                "./assets/imagenes/otros/oneplus9pro/2.jpg",
+                "./assets/imagenes/otros/oneplus9pro/3.jpg",
+                "./assets/imagenes/otros/oneplus9pro/4.jpg",
+                "./assets/imagenes/otros/oneplus9pro/5.jpg",
+                "./assets/imagenes/otros/oneplus9pro/6.jpg",
+                "./assets/imagenes/otros/oneplus9pro/7.jpg"
+            ],
+            "stock": "63",
+            "especificaciones": {
+                "dimensionesPeso": "163.2 x 73.6 x 8.7 mm, \n197 gramos",
+                "pantalla": "6,7 pulgadas 20,1:9, \nQHD+ 3216 x 1440, 525 ppp, \nTasa de refresco 1-120Hz.",
+                "procesador": "Snapdragon 888",
+                "ram": "12 GB",
+                "almacenamiento": "256 GB",
+                "camaraFrontal": "Sensor Sony IMX471 16 megapíxeles",
+                "camaraTrasera": "Gran angular: Sony IMX766 1/1,56' 50 megapíxeles lente 14 mm f/2.2, \nSensor principal: Sony IMX789 1/1,43' 48 megapíxeles, \nTeleobjetivo: 8 megapíxeles (píxeles 1μm) f/2.4, \nSensor monocromo: 2 megapíxeles.",
+                "bateria": "4.500 mAh",
+                "sistemaOperativo": "OxygenOS basado en Android 11",
+                "conectividad": "WIFI, \nBluetooth 5.2, \nNFC, \nUSB-C 3.1, \n5G",
+                "otros": "Colores: Morning Mist, Pine Green, Stellar Black, \nSensor de huellas en pantalla, \nDesbloqueo facial 2D, \nAltavoces estéreo Dolby Atmos."
+            }
+        }
+    ]
+}
