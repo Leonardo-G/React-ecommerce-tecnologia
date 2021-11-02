@@ -44,6 +44,7 @@
         }
         .description-true{
             transform: translateY(0%);
+            visibility: visible;
             transition: .1s transform ease-in-out;
             padding: 0 2rem;
             span{
@@ -76,4 +77,14 @@
     .description-zoom{
         cursor: pointer;
     }
+}
+
+.icon--back{
+    width: 10rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #18171749;
+    margin: 2rem 0;
+    display: flex;
+    column-gap: 1rem;
 }

@@ -5,6 +5,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+import { Search } from '../components/busqueda/Search';
 import { Item } from '../components/catalogo/Item';
 import { ItemListContainer } from '../components/catalogo/ItemListContainer';
 import { Header } from '../components/header/Header';
@@ -21,6 +22,7 @@ export const AppRouter = () => {
 
                 <Switch>
                     
+                    <Route exact path="/busqueda" component={ Search } />
                     <Route exact path="/category/:id" component={ Item } />
                     <Route exact path="/Item/:id" component={ ItemDetailContainer } />
                     <Route exact path="/" component={ ItemListContainer } />

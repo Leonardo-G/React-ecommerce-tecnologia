@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import catalogo from "../../data/catalogo.json";
+import catalogo from "../../data/";
 import { useConsultApi } from '../../hooks/useConsultApi';
 import { Header } from '../header/Header';
 
-import { ItemDetailContainer } from '../producto/ItemDetailContainer';
 import { ItemList } from './ItemList';
 
 export const ItemListContainer = () => {
@@ -12,8 +11,7 @@ export const ItemListContainer = () => {
     const [arrayProducts, setArrayProducts] = useState([]);
 
     
-    const [idProduct, setIdProduct] = useState("")
-    const [detailProduct, setDetailProduct] = useState({})
+    const [idProduct, setIdProduct] = useState("");
 
     const [showProducts, setShowProducts] = useState({
         show: false,
@@ -39,8 +37,7 @@ export const ItemListContainer = () => {
         }
 
         const devolver = arrayProducts.filter(product => product.marca === brand)
-        setArrayProducts([...devolver])
-        console.log(devolver)
+        setArrayProducts([...devolver]);
     }
 
     const handleReverse = () => {

@@ -6,10 +6,11 @@ import { ItemCount } from '../catalogo/ItemCount'
 import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';
 import { ZoomImg } from './ZoomImg';
+import { useHistory, useParams } from 'react-router';
 
 
 export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especificaciones}) => {
-
+    
     const [idxImg, setIdxImg] = useState(0)
     const [imgShow, setImgShow] = useState({
         lengthImg: imgs.length,
@@ -34,13 +35,12 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
 
     
     useEffect(() => {
-        if(imgShow){
+        if(imgShow.show){
             const src = imgs.find((img, idx) => idx === idxImg);
             setImgShow({...imgShow, imgZoom: src})
         }
 
-        // eslint-disable-next-line
-    }, [idxImg])
+    }, [idxImg, imgShow.show])
 
     return (
         <>
@@ -54,7 +54,7 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
                 </div>
                 <div className="itemDetail__description">
                     <h1>{ modelo }</h1>
-                    <p className="description-price"> $ {  Number(precio).toFixed(2) }</p>
+                    <p className="description-price"> $ {  Number(precio).toFixed(2) } ARS</p>
                     <p>{ descripcion }</p>
                     {
                         <ItemCount stock={ stock }/>

@@ -10,9 +10,9 @@ export const Navegacion = () => {
                     <Link to="/">X Tecnol</Link>
                 </div>
                 <div className="navegacion__enlaces">
+                    <Link to="/">Inicio</Link>
                     <a href="?#">Enlace</a>
-                    <a href="?#">Enlace</a>
-                    <a href="?#">Enlace</a>
+                    <Link to="/busqueda">Buscar</Link>
                 </div>
                 
                 <CartWidget />

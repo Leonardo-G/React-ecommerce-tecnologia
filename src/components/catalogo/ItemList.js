@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Item } from './Item'
+import { Link } from 'react-router-dom';
 
-export const ItemList = ({id, descripcion, img, handleShowProduct, showProducts, productos, handleShowDetailProduct}) => {
+export const ItemList = ({id, descripcion, img, showProducts}) => {
     
     return (
         <>

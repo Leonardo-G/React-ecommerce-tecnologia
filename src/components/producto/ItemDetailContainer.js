@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import catalogo from "../../data/catalogo.json";
-import { useParams } from 'react-router'
+import { useHistory, useParams } from 'react-router'
 import { useConsultApi } from '../../hooks/useConsultApi';
-import { ItemDetail } from './ItemDetail'
+import { ItemDetail } from './ItemDetail';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBackward } from '@fortawesome/free-solid-svg-icons';
 
 export const ItemDetailContainer = () => {
+
+    const {goBack} = useHistory()
 
     const [ productDetail, setProductDetail ] = useState({})
     const getItem =  useConsultApi(catalogo)
@@ -29,6 +33,10 @@ export const ItemDetailContainer = () => {
     return (
         <main className="main">
             <div className="container">
+                <div className="icon--back" onClick={() => goBack()}>
+                    <FontAwesomeIcon icon={ faBackward }/>
+                    <p>Atrás</p>
+                </div>
                 {   productDetail.id &&
                     <ItemDetail { ...productDetail }/>
                 }
