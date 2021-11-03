@@ -3,12 +3,15 @@ import catalogo from "../../data/catalogo.json";
 import { useParams } from 'react-router'
 import { useConsultApi } from '../../hooks/useConsultApi';
 import { ItemProduct } from './ItemProduct';
+import { ButtonBack } from '../UI/ButtonBack';
+import { Spinner } from '../UI/Spinner';
 
 export const Item = () => {
 
-    const [arrayProducts, setArrayProducts] = useState([])
-
     const {id: idParam} = useParams();
+    
+    const [arrayProducts, setArrayProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const consultJSON = useConsultApi(catalogo);
 
@@ -19,17 +22,26 @@ export const Item = () => {
                 const result = resp.productos.filter( r => r.marca === idParam)
                 setArrayProducts([...result]);
             })
+            .finally(fin => setLoading(false));
+
+        // eslint-disable-next-line
     }, [idParam])
     console.log(arrayProducts)
 
     return (
         <main className="main">
-            <div className="container gridMain">
-                {
-                    arrayProducts.map( product => (
-                        <ItemProduct key={ product.id} { ...product }/>
-                    ))
+            <div className="container">
+                <ButtonBack />
+                {   loading &&
+                    <Spinner />
                 }
+                <div className="gridMain">
+                    {
+                        arrayProducts.map( product => (
+                            <ItemProduct key={ product.id} { ...product }/>
+                        ))
+                    }
+                </div>
             </div>
         </main>
     )

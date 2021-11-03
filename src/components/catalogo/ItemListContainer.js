@@ -2,61 +2,35 @@ import React, { useEffect, useState } from 'react';
 import catalogo from "../../data/catalogo.json";
 import { useConsultApi } from '../../hooks/useConsultApi';
 import { Header } from '../header/Header';
+import { Spinner } from '../UI/Spinner';
 
 import { ItemList } from './ItemList';
 
 export const ItemListContainer = () => {
 
-    //Guardar la consulta del Api
     const [arrayProducts, setArrayProducts] = useState([]);
-
+    const [loading, setLoading] = useState(true);
     
-    const [idProduct, setIdProduct] = useState("");
-
-    const [showProducts, setShowProducts] = useState({
-        show: false,
-        brand: ""
-    })
-    const handleShowProduct = (id) => {
-        setShowProducts({show: true, brand: id});
-        productsShow(id)
-    }
-    
+    //Promise desde la carpeta HOOKS
     const consultApi = useConsultApi(catalogo);
 
     useEffect(() => {
         consultApi
             .then(res => setArrayProducts(res.marcas))
+            .finally(fin => setLoading(false));
+
+        // eslint-disable-next-line
     }, [])
-
-
-    const productsShow = (brand) => {
-        if(brand === ""){
-            setArrayProducts([...catalogo]);
-            return;
-        }
-
-        const devolver = arrayProducts.filter(product => product.marca === brand)
-        setArrayProducts([...devolver]);
-    }
-
-    const handleReverse = () => {
-        setShowProducts({
-            show: false,
-            brand: ""
-        })
-        productsShow("")
-    }
-
-    const handleShowDetailProduct = (id) => {
-        setIdProduct(id)
-    }
     
     return (
         <>
             <Header />
             <main className="main">
                 <div className="container">
+                    {
+                        loading &&
+                        <Spinner />
+                    }
                     <div className="gridMain">
                         {   
                             arrayProducts.map( product => (
@@ -64,21 +38,12 @@ export const ItemListContainer = () => {
                                     key={product.marca} 
                                     id={product.marca} 
                                     descripcion={product.descripcion} 
-                                    img={product.imgMarca} 
-                                    handleShowProduct={handleShowProduct} 
-                                    setShowProducts={setShowProducts} 
-                                    showProducts={showProducts} 
-                                    productsShow={productsShow}
+                                    img={product.imgMarca}
                                     productos={product.productos}
-                                    handleShowDetailProduct={handleShowDetailProduct}
                                 />
                             ))
                         }
                     </div>
-                    {
-                        showProducts.brand !== "" && 
-                            <div className="btn btn--reverse" onClick={handleReverse}>Atras</div>
-                    }
                 </div>
             </main>
         </>

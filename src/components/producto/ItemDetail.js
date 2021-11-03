@@ -6,7 +6,6 @@ import { ItemCount } from '../catalogo/ItemCount'
 import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';
 import { ZoomImg } from './ZoomImg';
-import { useHistory, useParams } from 'react-router';
 
 
 export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especificaciones}) => {

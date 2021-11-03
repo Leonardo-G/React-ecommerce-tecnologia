@@ -27,7 +27,11 @@ export const ItemCount = ({ stock }) => {
                     className="btn btn--producto"
                     onClick={ handleDecrement }
                     > - 1</button>
-                <p className="description-quantity">{ quantity }</p>
+                    {
+                        stock === "0"
+                        ?   <p>Sin Stock</p>
+                        :   <p className="description-quantity">{ quantity }</p>                       
+                    }
                 <button 
                     className="btn btn--producto"
                     onClick={ handleIncrement }

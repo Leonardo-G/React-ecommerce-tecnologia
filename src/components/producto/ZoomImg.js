@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleLeft, faChevronCircleRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -31,21 +31,29 @@ export const ZoomImg = ({ imgShow, setImgShow, idxImg, setIdxImg }) => {
             >
                 <FontAwesomeIcon icon={ faTimes }/>
             </div>
-            <div 
-                className="zoom__icon icon--previous"
-                onClick={ handlePreviousImg }    
-            >
-                <FontAwesomeIcon icon={ faChevronCircleLeft }/>
-            </div>
+            {
+                idxImg !== 0 &&
+
+                <div 
+                    className="zoom__icon icon--previous"
+                    onClick={ handlePreviousImg }    
+                >
+                    <FontAwesomeIcon icon={ faChevronCircleLeft }/>
+                </div>
+            }
             <div className="zoom__container">
                 <img src={ `../${imgShow.imgZoom}` } alt=""/>
             </div>
-            <div 
-                className="zoom__icon icon--next"
-                onClick={ handleNextImg }    
-            >
-                <FontAwesomeIcon icon={ faChevronCircleRight }/>
-            </div>
+            {
+                idxImg < (imgShow.lengthImg - 1) &&
+
+                <div 
+                    className="zoom__icon icon--next"
+                    onClick={ handleNextImg }    
+                >
+                    <FontAwesomeIcon icon={ faChevronCircleRight }/>
+                </div>
+            }
         </div>
     )
 }

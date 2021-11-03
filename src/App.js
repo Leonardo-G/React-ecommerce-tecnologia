@@ -1,5 +1,4 @@
-import { ItemListContainer } from "./components/catalogo/ItemListContainer";
-import { Header } from "./components/header/Header";
+import React from 'react'
 import { AppRouter } from "./router/AppRouter";
 
 function App() {
