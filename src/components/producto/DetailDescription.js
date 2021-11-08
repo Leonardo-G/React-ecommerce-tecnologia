@@ -2,7 +2,7 @@ import React from 'react'
 
 export const DetailDescription = ({tipo, pantalla, dimensionesPeso, procesador, ram, almacenamiento, camaraFontral, camaraTrasera, bateria, sistemaOperativo, conectividad, otros}) => {
     return (
-        <div>
+        <div className="description--info">
             <p><span>Pantalla: </span>{ pantalla }</p>
             <p><span>Dimensiones: </span>{ dimensionesPeso }</p>
             <p><span>Procesador: </span>{ procesador }</p>

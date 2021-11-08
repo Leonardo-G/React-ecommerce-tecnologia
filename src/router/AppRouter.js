@@ -6,6 +6,7 @@ import {
     Redirect
   } from "react-router-dom";
 import { Search } from '../components/busqueda/Search';
+import { Cart } from '../components/cart/Cart';
 import { Item } from '../components/catalogo/Item';
 import { ItemListContainer } from '../components/catalogo/ItemListContainer';
 import { Navegacion } from '../components/header/Navegacion';
@@ -21,6 +22,7 @@ export const AppRouter = () => {
                     <Route exact path="/busqueda" component={ Search } />
                     <Route exact path="/category/:id" component={ Item } />
                     <Route exact path="/Item/:id" component={ ItemDetailContainer } />
+                    <Route exact path="/cart" component={ Cart } />
                     <Route exact path="/" component={ ItemListContainer } />
 
                     <Redirect to="/"/>

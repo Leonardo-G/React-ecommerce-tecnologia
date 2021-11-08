@@ -36,17 +36,21 @@
             font-size: 3rem;
             font-weight: 400;
         }
+        .description--info{
+            overflow: hidden;
+        }
         .description-false{
             opacity: 0;
             visibility: hidden;
             transform: translateY(-100%);
-            transition: .1s all ease-in-out;
+            transition: .2s all ease-in-out;
         }
         .description-true{
-            transform: translateY(0%);
             visibility: visible;
-            transition: .1s transform ease-in-out;
+            transform: translateY(0%);
+            transition: .2s transform ease-in-out;
             padding: 0 2rem;
+            overflow: hidden;
             span{
                 color: #000;
             }

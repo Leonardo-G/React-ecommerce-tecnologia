@@ -11,6 +11,7 @@ import { ZoomImg } from './ZoomImg';
 export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especificaciones}) => {
     
     const [idxImg, setIdxImg] = useState(0)
+    const [productAdded, setProductAdded] = useState(false)
     const [imgShow, setImgShow] = useState({
         lengthImg: imgs.length,
         imgZoom: "",
@@ -39,7 +40,21 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
             setImgShow({...imgShow, imgZoom: src})
         }
 
-    }, [idxImg, imgShow.show])
+    }, [idxImg, imgShow.show]);
+
+    
+    //Luego este estado estara como valor en el UseContext
+    const [cart, setCart] = useState([]);
+
+
+    const handleAddProduct = ( quantity ) => {
+        setCart([...cart, {
+            modelo,
+            imgs: imgs[0],
+            precioFinal: quantity * precio
+        }])
+        setProductAdded(true);
+    }
 
     return (
         <>
@@ -55,19 +70,21 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
                     <h1>{ modelo }</h1>
                     <p className="description-price"> $ {  Number(precio).toFixed(2) } ARS</p>
                     <p>{ descripcion }</p>
-                    {
-                        <ItemCount stock={ stock }/>
-                    }
+                    
+                    <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } productAdded={ productAdded }/>
+                    
                     <div className="description-button"
                          onClick={handleShowDescription}
                     >
                         <p>Especificaciones</p>
                         <FontAwesomeIcon className="icon-rotate" icon={ faPlus }/>
                     </div>
-                    <div className={!showDescription ? "description-false" : "description-true"}>
-                        {
-                            <DetailDescription {...especificaciones}/>
-                        }
+                    <div className="description--info">
+                        <div className={!showDescription ? "description-false" : "description-true"}>
+                            {
+                                <DetailDescription {...especificaciones}/>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
