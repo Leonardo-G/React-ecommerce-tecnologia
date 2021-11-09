@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -6,12 +6,14 @@ import { ItemCount } from '../catalogo/ItemCount'
 import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';
 import { ZoomImg } from './ZoomImg';
+import { CartContext } from '../context/CartContext';
 
 
-export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especificaciones}) => {
+export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}) => {
     
+    const { cart, setCart } = useContext( CartContext )
     const [idxImg, setIdxImg] = useState(0)
-    const [productAdded, setProductAdded] = useState(false)
+    const [showButtonAdd, setShowButtonAdd] = useState(false)
     const [imgShow, setImgShow] = useState({
         lengthImg: imgs.length,
         imgZoom: "",
@@ -32,6 +34,16 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
         setIdxImg(parseInt(id));
         setImgShow({...imgShow, show:true})
     }
+    
+    const showButton = () => {
+        const probar = cart.some( c => c.id === id);
+        setShowButtonAdd(probar)
+    }
+
+    useEffect(() => {
+        showButton();
+    }, [cart])
+
 
     
     useEffect(() => {
@@ -42,18 +54,16 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
 
     }, [idxImg, imgShow.show]);
 
-    
-    //Luego este estado estara como valor en el UseContext
-    const [cart, setCart] = useState([]);
 
 
     const handleAddProduct = ( quantity ) => {
-        setCart([...cart, {
+        setCart(cart => [...cart, {
+            id,
             modelo,
-            imgs: imgs[0],
-            precioFinal: quantity * precio
+            quantity,
+            precio,
+            imgs: imgs[0]
         }])
-        setProductAdded(true);
     }
 
     return (
@@ -70,8 +80,8 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
                     <h1>{ modelo }</h1>
                     <p className="description-price"> $ {  Number(precio).toFixed(2) } ARS</p>
                     <p>{ descripcion }</p>
-                    
-                    <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } productAdded={ productAdded }/>
+
+                    <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } showButtonAdd={ showButtonAdd } />
                     
                     <div className="description-button"
                          onClick={handleShowDescription}
@@ -88,7 +98,8 @@ export const ItemDetail = ({modelo, imgs, stock, descripcion, precio, especifica
                     </div>
                 </div>
             </div>
-            {   imgShow.show &&
+            {   
+                imgShow.show &&
                 <ZoomImg imgShow={ imgShow } setImgShow={ setImgShow } idxImg={ idxImg } setIdxImg={ setIdxImg }/>
             }
         </>

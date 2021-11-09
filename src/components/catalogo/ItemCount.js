@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
-//Futuro  contador en el producto
-export const ItemCount = ({ stock, handleAddProduct, productAdded }) => {
+
+export const ItemCount = ({ stock, handleAddProduct, showButtonAdd }) => {
 
     const [quantity, setQuantity] = useState(1);
 
@@ -20,7 +20,7 @@ export const ItemCount = ({ stock, handleAddProduct, productAdded }) => {
     return (
         <>
             {
-                !productAdded 
+                !showButtonAdd 
 
                 ?   <>  
                         <div className="description-buttons">
