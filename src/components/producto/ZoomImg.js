@@ -6,6 +6,7 @@ export const ZoomImg = ({ imgShow, setImgShow, idxImg, setIdxImg }) => {
     
     const handleCloseZoom = () => {
         setImgShow({
+            ...imgShow,
             imgZoom: "",
             show: false
         })

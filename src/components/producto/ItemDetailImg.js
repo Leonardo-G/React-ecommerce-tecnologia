@@ -7,7 +7,7 @@ export const ItemDetailImg = ({ id, img, handleZoomImage }) => {
             className="description-zoom"
             onClick={ () => handleZoomImage(id)}
         >
-            <img src={ `../${img}` } alt= "" data-img={ id }/>
+            <img src={ `../${img}` } alt= "" />
         </div>
     )
 }
