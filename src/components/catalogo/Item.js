@@ -18,15 +18,13 @@ export const Item = () => {
     useEffect(() => {
         consultJSON
             .then(resp => {
-                console.log(resp.productos)
                 const result = resp.productos.filter( r => r.marca === idParam)
                 setArrayProducts([...result]);
             })
             .finally(fin => setLoading(false));
 
         // eslint-disable-next-line
-    }, [idParam])
-    console.log(arrayProducts)
+    }, [idParam]);
 
     return (
         <main className="main">

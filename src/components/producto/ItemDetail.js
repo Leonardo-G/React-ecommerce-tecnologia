@@ -7,63 +7,75 @@ import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';
 import { ZoomImg } from './ZoomImg';
 import { CartContext } from '../context/CartContext';
+import { Alert } from '../UI/Alert';
 
 
 export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}) => {
     
     const { cart, setCart } = useContext( CartContext )
     const [idxImg, setIdxImg] = useState(0)
+
+    //UI state
     const [showButtonAdd, setShowButtonAdd] = useState(false)
+    const [showDescription, setShowDescription] = useState(false)
+    const [showAlert, setShowAlert] = useState(false)
+    
     const [imgShow, setImgShow] = useState({
         lengthImg: imgs.length,
         imgZoom: "",
         show: false
     })
 
-    const [showDescription, setShowDescription] = useState(false)
-
     const handleShowDescription = () => {
-        if(!showDescription){
-            setShowDescription(true)
-        }else{
-            setShowDescription(false)
-        }
+        setShowDescription(!showDescription);
     }
 
     const handleZoomImage = (id) => {
         setIdxImg(parseInt(id));
-        setImgShow({...imgShow, show:true})
+        setImgShow({...imgShow, show:true});
     }
     
     const showButton = () => {
-        const probar = cart.some( c => c.id === id);
-        setShowButtonAdd(probar)
+        const isExistProduct = cart.some( c => c.id === id);
+        setShowButtonAdd(isExistProduct)
     }
 
     useEffect(() => {
         showButton();
     }, [cart])
-
-
     
     useEffect(() => {
         if(imgShow.show){
             const src = imgs.find((img, idx) => idx === idxImg);
             setImgShow({...imgShow, imgZoom: src})
         }
-
+        //eslint-disable-next-line
     }, [idxImg, imgShow.show]);
 
 
 
     const handleAddProduct = ( quantity ) => {
-        setCart(cart => [...cart, {
+
+        const isExist = cart.some( c => c.id === id);
+        const objProduct = {
             id,
             modelo,
             quantity,
             precio,
             imgs: imgs[0]
-        }])
+        }
+
+        if(isExist){
+            const filterProduct = cart.filter( c => c.id !== id);
+            setCart([...filterProduct, objProduct]);
+
+            return;
+        }
+
+        setCart(cart => [...cart, objProduct]);
+
+        setShowAlert(true);
+        setTimeout(() => setShowAlert(false), 3000);
     }
 
     return (
@@ -81,7 +93,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                     <p className="description-price"> $ {  Number(precio).toFixed(2) } ARS</p>
                     <p>{ descripcion }</p>
 
-                    <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } showButtonAdd={ showButtonAdd } />
+                    <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } showButtonAdd={ showButtonAdd } setShowButtonAdd={ setShowButtonAdd }/>
                     
                     <div className="description-button"
                          onClick={handleShowDescription}
@@ -101,6 +113,10 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
             {   
                 imgShow.show &&
                 <ZoomImg imgShow={ imgShow } setImgShow={ setImgShow } idxImg={ idxImg } setIdxImg={ setIdxImg }/>
+            }
+            {
+                setShowAlert &&
+                <Alert showAlert={ showAlert }/>
             }
         </>
     )

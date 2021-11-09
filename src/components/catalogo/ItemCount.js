@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-export const ItemCount = ({ stock, handleAddProduct, showButtonAdd }) => {
+export const ItemCount = ({ stock, handleAddProduct, showButtonAdd, setShowButtonAdd }) => {
 
     const [quantity, setQuantity] = useState(1);
 
@@ -13,9 +13,13 @@ export const ItemCount = ({ stock, handleAddProduct, showButtonAdd }) => {
 
     const handleDecrement = () => {
        if( quantity !== 1 ) {
-           setQuantity( quantity - 1 )
+           setQuantity( quantity - 1 );
        } 
     } 
+
+    const handleEdit = () => {
+        setShowButtonAdd(false);
+    }
 
     return (
         <>
@@ -45,12 +49,18 @@ export const ItemCount = ({ stock, handleAddProduct, showButtonAdd }) => {
                         >Agregar Producto</button>
                     </>
 
-                :   <Link 
-                        className="btn btn--add"
-                        to="/cart"
-                    >
-                        Finalizar Compra
-                    </Link>
+                :   
+                    <>
+                        <p className="description-quantity">Agregado</p>
+                        <button className="btn btn--add"
+                            onClick={ handleEdit }>Editar</button>
+                        <Link 
+                            className="btn btn--add"
+                            to="/cart"
+                        >
+                            Finalizar Compra
+                        </Link>
+                    </>
             }
         </>
     )

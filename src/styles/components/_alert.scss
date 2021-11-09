@@ -1,0 +1,22 @@
+.alert{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    background-color: #30362F;
+    padding: 1.5rem 3rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s all ease;
+}
+
+.alert p{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.visible{
+    right: 5%;
+    visibility: visible;
+    opacity: 1;
+    transition: .2s all ease;
+}
