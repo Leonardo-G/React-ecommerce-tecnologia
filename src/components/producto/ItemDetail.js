@@ -14,7 +14,8 @@ import { ButtonEdit } from '../UI/ButtonEdit';
 export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}) => {
     
     const { cart, setCart } = useContext( CartContext )
-    const [idxImg, setIdxImg] = useState(0)
+    const [idxImg, setIdxImg] = useState(0);
+    const [quantity, setQuantity] = useState(1);
 
     //UI state
     const [showButtonAdd, setShowButtonAdd] = useState(false)
@@ -103,7 +104,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                     {
                         showButtonAdd 
                         ?   <ButtonEdit handleEdit={ handleEdit }/>
-                        :   <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } buttonAvailable={ buttonAvailable }/>
+                        :   <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } buttonAvailable={ buttonAvailable } quantity={ quantity} setQuantity={ setQuantity }/>
                     }
                     
                     <div className="description-button"

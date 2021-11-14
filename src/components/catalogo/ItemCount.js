@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
-export const ItemCount = ({quantityDefault = 1, stock, handleAddProduct, buttonAvailable = false }) => {
+export const ItemCount = ({ stock, handleAddProduct, buttonAvailable = false, quantity, setQuantity }) => {
     
-    const [quantity, setQuantity] = useState(quantityDefault);
 
     const handleIncrement = () => {
         if( quantity < stock ){
@@ -19,6 +18,7 @@ export const ItemCount = ({quantityDefault = 1, stock, handleAddProduct, buttonA
     return (
         <>
             <div className="description-buttons">
+                <p className="description-stock"> Stock : { stock }</p>
                 <button 
                     className="btn btn--producto"
                     onClick={ handleDecrement }
@@ -32,7 +32,6 @@ export const ItemCount = ({quantityDefault = 1, stock, handleAddProduct, buttonA
                     className="btn btn--producto"
                     onClick={ handleIncrement }
                     > + </button>
-                <p> Stock : { stock }</p>
             </div>
             {
                 buttonAvailable &&
