@@ -45,6 +45,9 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
 
     useEffect(() => {
         showButton();
+        return () => {
+            delete showButton();
+        }
     }, [cart])
     
     useEffect(() => {

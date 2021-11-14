@@ -1,18 +1,30 @@
 import { faDolly } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { CartItem } from './CartItem';
 
 export const Cart = () => {
-
+    const [total, setTotal] = useState(0)
     const { cart, setCart } = useContext( CartContext );
 
     const handleRemoveProduct = (id) => {
         const currentCart = cart.filter(c => c.id !== id);
         setCart(currentCart)
     }
+
+    const totalPrice = () => {
+        let total = 0
+        for (let i = 0; i < cart.length; i++) {
+            total += Number(cart[i].precio) * cart[i].quantity;
+        }
+        setTotal(total);
+    }
+
+    useEffect(() => {
+        totalPrice();
+    }, [cart])
 
     return (
         <main className="main">
@@ -28,6 +40,9 @@ export const Cart = () => {
                                 ))
                             }
                         </section>
+                        <div>
+                            <p>Subtotal : { total }</p>
+                        </div>
                     </>
                 
                 :   
