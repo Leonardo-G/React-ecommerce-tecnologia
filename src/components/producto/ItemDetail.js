@@ -8,6 +8,7 @@ import { DetailDescription } from './DetailDescription';
 import { ZoomImg } from './ZoomImg';
 import { CartContext } from '../context/CartContext';
 import { Alert } from '../UI/Alert';
+import { ButtonEdit } from '../UI/ButtonEdit';
 
 
 export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}) => {
@@ -19,6 +20,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
     const [showButtonAdd, setShowButtonAdd] = useState(false)
     const [showDescription, setShowDescription] = useState(false)
     const [showAlert, setShowAlert] = useState(false)
+    const [buttonAvailable, setButtonAvailable] = useState(true)
     
     const [imgShow, setImgShow] = useState({
         lengthImg: imgs.length,
@@ -53,15 +55,21 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
     }, [idxImg, imgShow.show]);
 
 
+    const handleEdit = () => {
+        setShowButtonAdd(false);
+    }
 
     const handleAddProduct = ( quantity ) => {
 
         const isExist = cart.some( c => c.id === id);
+
         const objProduct = {
             id,
             modelo,
             quantity,
             precio,
+            descripcion,
+            stock,
             imgs: imgs[0]
         }
 
@@ -92,8 +100,11 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                     <h1>{ modelo }</h1>
                     <p className="description-price"> $ {  Number(precio).toFixed(2) } ARS</p>
                     <p>{ descripcion }</p>
-
-                    <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } showButtonAdd={ showButtonAdd } setShowButtonAdd={ setShowButtonAdd }/>
+                    {
+                        showButtonAdd 
+                        ?   <ButtonEdit handleEdit={ handleEdit }/>
+                        :   <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } buttonAvailable={ buttonAvailable }/>
+                    }
                     
                     <div className="description-button"
                          onClick={handleShowDescription}

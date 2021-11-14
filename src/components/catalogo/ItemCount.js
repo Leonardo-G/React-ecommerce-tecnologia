@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-export const ItemCount = ({ stock, handleAddProduct, showButtonAdd, setShowButtonAdd }) => {
-
-    const [quantity, setQuantity] = useState(1);
+export const ItemCount = ({quantityDefault = 1, stock, handleAddProduct, buttonAvailable = false }) => {
+    
+    const [quantity, setQuantity] = useState(quantityDefault);
 
     const handleIncrement = () => {
         if( quantity < stock ){
@@ -17,50 +16,30 @@ export const ItemCount = ({ stock, handleAddProduct, showButtonAdd, setShowButto
        } 
     } 
 
-    const handleEdit = () => {
-        setShowButtonAdd(false);
-    }
-
     return (
         <>
+            <div className="description-buttons">
+                <button 
+                    className="btn btn--producto"
+                    onClick={ handleDecrement }
+                    > - </button>
+                    {
+                        stock === "0"
+                        ?   <p>Sin Stock</p>
+                        :   <p className="description-quantity">{ quantity }</p>                       
+                    }
+                <button 
+                    className="btn btn--producto"
+                    onClick={ handleIncrement }
+                    > + </button>
+                <p> Stock : { stock }</p>
+            </div>
             {
-                !showButtonAdd 
-
-                ?   <>  
-                        <div className="description-buttons">
-                            <button 
-                                className="btn btn--producto"
-                                onClick={ handleDecrement }
-                                > - 1</button>
-                                {
-                                    stock === "0"
-                                    ?   <p>Sin Stock</p>
-                                    :   <p className="description-quantity">{ quantity }</p>                       
-                                }
-                            <button 
-                                className="btn btn--producto"
-                                onClick={ handleIncrement }
-                                > + 1</button>
-                            <p> Stock : { stock }</p>
-                        </div>
-                        <button
-                            className="btn btn--add"
-                            onClick={ () => handleAddProduct( quantity ) }
-                        >Agregar Producto</button>
-                    </>
-
-                :   
-                    <>
-                        <p className="description-quantity">Agregado</p>
-                        <button className="btn btn--add"
-                            onClick={ handleEdit }>Editar</button>
-                        <Link 
-                            className="btn btn--add"
-                            to="/cart"
-                        >
-                            Finalizar Compra
-                        </Link>
-                    </>
+                buttonAvailable &&
+                <button
+                    className="btn btn--add"
+                    onClick={ () => handleAddProduct( quantity ) }
+                >Agregar Producto</button>    
             }
         </>
     )

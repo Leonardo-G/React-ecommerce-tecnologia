@@ -1,0 +1,36 @@
+.cart{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    align-items: center;
+}
+
+.cart__item{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    .item--info{
+        flex: 1;
+        text-align: left;
+        padding: 0 4rem;
+    }
+    .item--product{
+        width: 20rem;
+    }
+    img{
+        width: 10rem;
+    }
+    .itemDesc{
+        font-size: 1.6rem;
+    }
+
+    .itemTitle{
+        font-family: "Roboto", sans-serif;
+        font-size: 2rem;
+    }
+    .itemPrice{
+        color: rgba(39, 39, 39, 0.74);
+    }
+}
+
