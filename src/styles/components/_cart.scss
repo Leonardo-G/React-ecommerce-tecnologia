@@ -44,7 +44,9 @@
 
     .itemTitle{
         font-family: "Roboto", sans-serif;
-        font-size: 2rem;
+        font-size: 2.1rem;
+        font-weight: 700;
+        color: #000;
     }
     .itemPrice{
         color: rgba(39, 39, 39, 0.74);
@@ -58,6 +60,19 @@
     cursor: pointer;
     visibility: hidden;
     font-size: 2.5rem;
+}
+
+.divPrice{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.totalPrice{
+    padding: 0 3rem;
 }
 
 

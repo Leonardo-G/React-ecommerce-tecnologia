@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import { ItemCount } from '../catalogo/ItemCount';
 
 export const CartItem = ({ handleRemoveProduct, cart, setCart, ...propsItem }) => {
@@ -18,12 +20,14 @@ export const CartItem = ({ handleRemoveProduct, cart, setCart, ...propsItem }) =
         }]);
     }, [quantityItem]);
 
-
     return (
         <div className="cart__item">
             <img src={ imgs } alt={ modelo }/>
             <div className="item--info">
-                <h2 className="itemTitle">{ modelo }</h2>
+                <Link 
+                    className="itemTitle"
+                    to={`/item/${id}`}    
+                >{ modelo }</Link>
                 <p className="itemDesc"> { lengthDesc }... | <strong className="itemPrice"> $ { (Number(precio) * quantityItem).toFixed(2) } </strong></p>
             </div>
             <div className="item--buttons">

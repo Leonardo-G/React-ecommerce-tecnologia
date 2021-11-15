@@ -40,8 +40,9 @@ export const Cart = () => {
                                 ))
                             }
                         </section>
-                        <div>
-                            <p>Subtotal : { total }</p>
+                        <div className="divPrice">
+                            <p className="totalPrice">Subtotal : $ { total.toFixed(2) }</p>
+                            <button className="btn btn--add">Comprar</button>
                         </div>
                     </>
                 

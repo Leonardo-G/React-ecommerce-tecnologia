@@ -1,6 +1,76 @@
 .search{
     display: flex;
-    aside{
+    input{
+        font-size: 1.6rem;
+        font-family: "Roboto", sans-serif;
+        margin: 0 auto;
+        &:focus{
+            outline: none;
+        }
+    }
+    .busqueda{
+        margin-right: 2rem;
         flex-basis: 20%;
+        background-color: rgb(241, 238, 238);
+        height: 50rem;
+        border-radius: 10px;
+        padding: 2rem;
+    }
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        row-gap:    2rem;
+    }
+    .formulario__campo{
+        padding: 0.5rem 1rem;
+        background-color: rgb(241, 238, 238);
+        border: none;
+        border-bottom: 1px solid rgb(185, 179, 179);
+    }
+    .formulario__minmax{
+        display: flex;
+        column-gap: 4rem;
+        input{
+            width: 100%;
+        }
+    }
+    .showInputs{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(184, 181, 181);
+        cursor: pointer;
+        h2{
+            font-size: 1.6rem;
+        }
+        .icon--hidden{
+            font-size: 1.6rem;
+            color: rgb(85, 83, 83);
+            transition: .3s;
+        }
+    }
+    .formulario__inputs{
+        overflow: hidden;
+    }
+    .inputsCheck{
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: .3s;
+        label{
+            padding: 0.5rem 0;
+            font-size: 1.6rem;
+            font-family: "Roboto", sans-serif
+        };
+    }
+    .visible{
+        visibility: visible;
+        transform: translateY(0%);
+        transition: .3s;
+    }
+    .icon--show{
+        transform: rotate(180deg);
+        transition: .3s;
     }
 }
