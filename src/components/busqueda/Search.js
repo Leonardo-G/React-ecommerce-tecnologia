@@ -2,29 +2,30 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ItemSearchContainer } from './ItemSearchContainer';
 import { Spinner } from '../UI/Spinner';
-import { faArrowRight, faCaretRight, faCaretUp } from '@fortawesome/free-solid-svg-icons';
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 
 export const Search = () => {
-    const [showInputs, setShowInputs] = useState(false)
+
+    const [showInputs, setShowInputs] = useState(false);
     const [inputsValues, setInputsValues] = useState({
-        search: ""
-    })
+        search: "",
+        min: "0",
+        max: "",
+        marca: ""
+    });
     const [loading, setLoading] = useState(true);
 
-    const handleSearhProduct = (e) => {
+    const handleInputsChange = (e) => {
         setInputsValues({
             ...inputsValues,
             [e.target.name]: e.target.value
-        })
-    }
-
-    const handleVEr = (e) => {
-        console.log(e.target.value)
+        });
     }
 
     const handleShowInputs = () => {
-        setShowInputs(!showInputs)
+        setShowInputs(!showInputs);
     }
+
 
     return (
         <div className="main">
@@ -41,16 +42,20 @@ export const Search = () => {
                                 placeholder="Buscar Producto"
                                 type="search"
                                 name="search"
-                                onChange={ handleSearhProduct }
+                                onChange={ handleInputsChange }
                                 />
                             <div className="formulario__minmax">
                                 <input 
-                                    type="text"
+                                    type="number"
                                     placeholder="Min"
+                                    name="min"
+                                    onChange={ handleInputsChange }
                                 />
                                 <input 
-                                    type="text"
+                                    type="number"
                                     placeholder="Max"
+                                    name="max"
+                                    onChange={ handleInputsChange }
                                 />
                             </div>
                             <div 
@@ -64,45 +69,57 @@ export const Search = () => {
                                 <div className={`inputsCheck ${showInputs && "visible"}`}>
                                     <label>
                                         <input 
-                                            type="checkbox"
+                                            type="radio"
                                             value="LG"
+                                            name="marca"
+                                            onChange={ handleInputsChange }
                                         />  LG
                                     </label>
                                     <label>
                                         <input 
-                                            type="checkbox"
+                                            type="radio"
                                             value="Motorola"
+                                            name="marca"
+                                            onChange={ handleInputsChange }
                                         />  Motorola
                                     </label>
                                     <label>
                                         <input 
-                                            type="checkbox"
-                                            value="Hueawei"
+                                            type="radio"
+                                            value="Huawei"
+                                            name="marca"
+                                            onChange={ handleInputsChange }
                                         />  Hueawei
                                     </label>
                                     <label>
                                         <input 
-                                            type="checkbox"
+                                            type="radio"
                                             value="Apple"
+                                            name="marca"
+                                            onChange={ handleInputsChange }
                                         />  Apple
                                     </label>
                                     <label>
                                         <input 
-                                            type="checkbox"
+                                            type="radio"
                                             value="Samsung"
+                                            name="marca"
+                                            onChange={ handleInputsChange }
                                         />  Samsung
                                     </label>
                                     <label>
                                         <input 
-                                            type="checkbox"
+                                            type="radio"
                                             value="Otros"
+                                            name="marca"
+                                            onChange={ handleInputsChange }
                                         />  Otros
                                     </label>
                                 </div>
                             </div>
                         </form>
                     </aside>
-                    <main className="gridMain">
+                    <main>
                         <ItemSearchContainer inputsValues={ inputsValues } setLoading={ setLoading }/>
                     </main>
                 </div>
