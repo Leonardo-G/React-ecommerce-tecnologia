@@ -4,6 +4,7 @@ import catalogo from "../../data/catalogo.json";
 import { ItemProduct } from '../catalogo/ItemProduct';
 import { filterMarca, filterMax, filterMin, filterSearch } from '../../helpers/filters';
 import { Paginador } from './Paginador';
+import { getDocuments } from '../../helpers/getDocumets';
 
 export const ItemSearchContainer = ({inputsValues, setLoading}) => {
     const itemsPage = useRef(6)
@@ -13,15 +14,14 @@ export const ItemSearchContainer = ({inputsValues, setLoading}) => {
     const [currentPage, setCurrentPage] = useState(1)
     const [paginacion, setPaginacion] = useState(0)
     const [paginacionArray, setPaginacionArray] = useState([])
-    const consultApi = useConsultApi(catalogo);
 
     useEffect(() => {
         setLoading(true);
-        consultApi
+        getDocuments("productos")
             .then(resp => {
-                setTotalProducts([...resp.productos]);
-                setSearhTotalProducts([...resp.productos]);
-                const probar = resp.productos.filter( (product, idx) => idx >= ((itemsPage.current * currentPage) - 6) && idx < (itemsPage.current * currentPage));
+                setTotalProducts([...resp]);
+                setSearhTotalProducts([...resp]);
+                const probar = resp.filter( (product, idx) => idx >= ((itemsPage.current * currentPage) - 6) && idx < (itemsPage.current * currentPage));
                 setArrayProducts([...probar]);
             })
             .finally(() => setLoading(false));

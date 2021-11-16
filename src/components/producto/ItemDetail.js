@@ -96,7 +96,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                 <div className="itemDetail__imgs">
                     {
                         imgs.map( (img, idx) => (
-                            <ItemDetailImg key={ idx } id={ idx } img={ img } handleZoomImage={ handleZoomImage }/>
+                            <ItemDetailImg key={ idx } id={ idx } img={ img } modelo={ modelo } handleZoomImage={ handleZoomImage }/>
                         ))
                     }
                 </div>

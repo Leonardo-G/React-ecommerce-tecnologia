@@ -2,36 +2,35 @@
     "marcas": [
         {
             "marca": "LG",
-            "descripcion": "lorem asd eona d saloerm",
+            "descripcion": "Life´s Good",
             "imgMarca": "./assets/imagenes/lgmain.jpg"
         },
         {
             "marca": "Motorola",
-            "descripcion": "lorem asd eona d saloerm",
+            "descripcion": "HelloMoto",
             "imgMarca": "./assets/imagenes/motorolamain.png"
         },
         {
             "marca": "Apple",
-            "descripcion": "lorem asd eona d saloerm",
+            "descripcion": "Think Different",
             "imgMarca": "./assets/imagenes/applemain.jpg"
         },
         {
             "marca": "Samsung",
-            "descripcion": "lorem asd eona d saloerm",
+            "descripcion": "Designed For",
             "imgMarca": "./assets/imagenes/samsungmain.webp"
         },
         {    
             "marca": "Huawei",
-            "descripcion": "lorem asd eona d saloerm",
+            "descripcion": "For The Brave",
             "imgMarca": "./assets/imagenes/huaweimain.jpg"
         },
         {
             "marca": "Otros",
-            "descripcion": "lorem asd eona d saloerm",
+            "descripcion": "Como OnePlus... y más",
             "imgMarca": "./assets/imagenes/otrosmain.jpg"
         }
     ],
-    "probar": "3",
     "productos":[
         {
             "id": "faSS2S",

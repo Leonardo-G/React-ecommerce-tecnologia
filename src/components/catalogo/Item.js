@@ -5,6 +5,7 @@ import { useConsultApi } from '../../hooks/useConsultApi';
 import { ItemProduct } from './ItemProduct';
 import { ButtonBack } from '../UI/ButtonBack';
 import { Spinner } from '../UI/Spinner';
+import { getDocumentByMarca, getDocumentsById } from '../../helpers/getDocumets';
 
 export const Item = () => {
 
@@ -13,17 +14,11 @@ export const Item = () => {
     const [arrayProducts, setArrayProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const consultJSON = useConsultApi(catalogo);
-
     useEffect(() => {
-        consultJSON
-            .then(resp => {
-                const result = resp.productos.filter( r => r.marca === idParam)
-                setArrayProducts([...result]);
-            })
-            .finally(fin => setLoading(false));
+        getDocumentByMarca(idParam)
+            .then(resp => setArrayProducts(resp))
+            .finally(() => setLoading(false))
 
-        // eslint-disable-next-line
     }, [idParam]);
 
     return (
