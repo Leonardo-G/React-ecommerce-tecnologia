@@ -23,6 +23,7 @@ Herramientas utilizadas para crear este proyecto.
 - React: El framework mas popular
 - React-router-dom: Para realizar la navegación entre los distintos componentes a través de rutas
 - Sass: preprocesador css
+- Firestore Database: Realizando peticiones a la base de datos. 
 
 ### Gif navegabilidad
 
