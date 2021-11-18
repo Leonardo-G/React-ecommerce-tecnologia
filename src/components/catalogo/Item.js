@@ -1,41 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import catalogo from "../../data/catalogo.json";
-import { useParams } from 'react-router'
-import { useConsultApi } from '../../hooks/useConsultApi';
-import { ItemProduct } from './ItemProduct';
-import { ButtonBack } from '../UI/ButtonBack';
-import { Spinner } from '../UI/Spinner';
-import { getDocumentByMarca, getDocumentsById } from '../../helpers/getDocumets';
+import React from 'react'
+import { Link } from 'react-router-dom';
 
-export const Item = () => {
-
-    const {id: idParam} = useParams();
+export const Item = ({ id, imgs, modelo, marca, descripcion }) => {
     
-    const [arrayProducts, setArrayProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        getDocumentByMarca(idParam)
-            .then(resp => setArrayProducts(resp))
-            .finally(() => setLoading(false))
-
-    }, [idParam]);
+    const lengthDesc = descripcion.slice(0, 35);
 
     return (
-        <main className="main">
-            <div className="container">
-                <ButtonBack />
-                {   loading &&
-                    <Spinner />
-                }
-                <div className="gridMain">
-                    {
-                        arrayProducts.map( product => (
-                            <ItemProduct key={ product.id} { ...product }/>
-                        ))
-                    }
-                </div>
+        <div className="main__productos">
+            <img src={ `../${imgs[0]}` } alt={ modelo }/>
+            <div className="marca">
+                <h3 className="marca__modelo">{ `${modelo ? modelo : marca} ` }</h3>
+                <Link
+                    to={ modelo ? `/Item/${id}` : `/category/${marca}`}
+                    className="btn btn--marca"
+                >Ver Producto</Link>
+                <p className="empresa__info">{ lengthDesc }...</p>
             </div>
-        </main>
+        </div>
     )
 }

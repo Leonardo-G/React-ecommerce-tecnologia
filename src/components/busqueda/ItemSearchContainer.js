@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useConsultApi } from '../../hooks/useConsultApi';
-import catalogo from "../../data/catalogo.json";
-import { ItemProduct } from '../catalogo/ItemProduct';
+import { Item } from '../catalogo/Item';
 import { filterMarca, filterMax, filterMin, filterSearch } from '../../helpers/filters';
 import { Paginador } from './Paginador';
 import { getDocuments } from '../../helpers/getDocumets';
@@ -69,7 +67,7 @@ export const ItemSearchContainer = ({inputsValues, setLoading}) => {
             <div className="gridMain">
                 {
                     arrayProducts.map( product => (
-                        <ItemProduct key={ product.id } { ...product }/>
+                        <Item key={ product.id } { ...product }/>
                     ))
                 }
             </div>
