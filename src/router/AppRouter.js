@@ -20,7 +20,7 @@ export const AppRouter = () => {
                 <Navegacion />
                 <Switch>
                     <Route exact path="/busqueda" component={ Search } />
-                    <Route exact path="/category/:id" component={ Item } />
+                    <Route exact path="/category/:id" component={ ItemListContainer } />
                     <Route exact path="/Item/:id" component={ ItemDetailContainer } />
                     <Route exact path="/cart" component={ Cart } />
                     <Route exact path="/" component={ ItemListContainer } />
