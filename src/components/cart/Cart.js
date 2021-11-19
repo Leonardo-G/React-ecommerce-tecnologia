@@ -2,7 +2,7 @@ import { faDolly } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import { CartItem } from './CartItem';
 
 export const Cart = () => {
@@ -24,6 +24,8 @@ export const Cart = () => {
 
     useEffect(() => {
         totalPrice();
+        
+        //eslint-disable-next-line
     }, [cart])
 
     return (

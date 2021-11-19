@@ -1,5 +1,8 @@
-export const filterSearch = ( product , input) => {
-    return product.modelo.toLowerCase().includes(input.toLowerCase())
+export const filterSearch = ( product , input, arrayProducts) => {
+    if( input !== "" ){
+        return product.modelo.toLowerCase().includes(input.toLowerCase())
+    }
+    return arrayProducts
 }
 
 export const filterMin = ( product , input, arrayProducts) => {
@@ -22,4 +25,11 @@ export const filterMarca = ( product , input, arrayProducts) => {
       }
 
       return arrayProducts
+}
+
+export const filterItemsPage = ( products, itemsPage, currentPage ) => {
+    
+    const filterResolve = products.filter( (product, idx) => idx >= ((itemsPage.current * currentPage) - itemsPage.current) && idx < (itemsPage.current * currentPage));
+
+    return { filterResolve }
 }

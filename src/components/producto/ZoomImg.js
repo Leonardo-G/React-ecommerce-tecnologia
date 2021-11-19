@@ -42,9 +42,11 @@ export const ZoomImg = ({ imgShow, setImgShow, idxImg, setIdxImg }) => {
                     <FontAwesomeIcon icon={ faChevronCircleLeft }/>
                 </div>
             }
+            
             <div className="zoom__container">
                 <img src={ `../${imgShow.imgZoom}` } alt=""/>
             </div>
+
             {
                 idxImg < (imgShow.lengthImg - 1) &&
 

@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-import { ItemCount } from '../catalogo/ItemCount'
+import { ItemCount } from '../UI/ItemCount'
 import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';
 import { ZoomImg } from './ZoomImg';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import { Alert } from '../UI/Alert';
 import { ButtonEdit } from '../UI/ButtonEdit';
 
@@ -84,7 +84,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
             return;
         }
 
-        setCart(cart => [...cart, objProduct]);
+        setCart([...cart, objProduct]);
 
         setShowAlert(true);
         setTimeout(() => setShowAlert(false), 3000);
@@ -111,7 +111,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                     }
                     
                     <div className="description-button"
-                         onClick={handleShowDescription}
+                         onClick={ handleShowDescription }
                     >
                         <p>Especificaciones</p>
                         <FontAwesomeIcon className="icon-rotate" icon={ faPlus }/>
@@ -119,7 +119,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                     <div className="description--info">
                         <div className={!showDescription ? "description-false" : "description-true"}>
                             {
-                                <DetailDescription {...especificaciones}/>
+                                <DetailDescription { ...especificaciones} />
                             }
                         </div>
                     </div>

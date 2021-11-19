@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const Item = ({ id, imgs, modelo, marca, descripcion }) => {
     
     const lengthDesc = descripcion.slice(0, 35);
-
+    
     return (
         <div className="main__productos">
             <img src={ `../${imgs[0]}` } alt={ modelo }/>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Paginador = ({ page, setCurrentPage }) => {
+export const Paginador = ({ page, currentPage, setCurrentPage }) => {
     
     const handleChangePage = () => {
         setCurrentPage(page)
@@ -8,7 +8,7 @@ export const Paginador = ({ page, setCurrentPage }) => {
 
     return (
         <button 
-            className="btn btn--add page"
+            className={`btn btn--add page ${ page === currentPage && "pageCurrent"}`}
             onClick={ () => handleChangePage(page) }    
         >
             {page}
