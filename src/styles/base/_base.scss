@@ -29,8 +29,13 @@ video{
     height: 80vh;
 }
 
-p, h1, h2, h3{
+p, h1, h2, h3, li{
     font-family: "Roboto", sans-serif;
+}
+
+li{
+    list-style: none;
+    border: none;
 }
 
 .btn{

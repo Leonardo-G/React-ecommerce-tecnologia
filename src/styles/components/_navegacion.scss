@@ -23,11 +23,46 @@
         color: #000;
         text-transform: uppercase;
     }
-    .navegacion__enlaces a{
+    .navegacion__enlaces a, li{
         font-size: 1.5rem;
         text-transform: uppercase;
-        padding: 1rem 2rem;
         color: #000;
+        padding: 1rem 2rem;
+        &:hover{
+            background-color: #000;
+            color: #fff;
+        }
+    }
+    .navegacion__enlaces{
+        display: flex;
+        align-items: center;
+        .relativeNav{
+            position: relative;
+        }
+        .enlaceOculto{
+            overflow: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            visibility: hidden;
+            z-index: 5;
+            a{
+                display: block;
+            }
+            li{
+                padding: 0;
+            }
+        }
+        .overflowBox{
+            transform: translateY(-100%);
+            transition: .3s all ease;
+            background-color: #fff;
+        }
+        .relativeNav:hover .overflowBox{
+            visibility: visible;
+            transform: translateY(0%);
+            transition: .3s all ease;
+        }
     }
     .navegacion__icono{
         font-size: 2.5rem;

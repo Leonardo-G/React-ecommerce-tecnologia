@@ -54,7 +54,6 @@ export const ProductsFilter = ({inputsValues, setLoading}) => {
 
     }, [currentPage, searhTotalProducts])
 
-
     //Filtrando busqueda
     useEffect(() => {
         const results = totalProducts.filter(r => filterSearch(r, inputsValues.search, arrayProducts))
