@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleLeft, faChevronCircleRight, faTimes } from '@fortawesome/free-solid-svg-icons';
+import "./ZoomImg.scss"
 
 export const ZoomImg = ({ imgShow, setImgShow, idxImg, setIdxImg }) => {
     

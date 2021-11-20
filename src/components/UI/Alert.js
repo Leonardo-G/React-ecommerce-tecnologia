@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./Alert.scss"
 
 export const Alert = ({ showAlert }) => {
     return (

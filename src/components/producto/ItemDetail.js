@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
+import "./ItemDetail.scss"
 import { ItemCount } from '../UI/ItemCount'
 import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';

@@ -1,0 +1,18 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+@import "../../../node_modules/bootstrap/scss/carousel";
+
+.header__img{
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    margin: 0 auto;
+    height: 80vh;
+    width: min(100%, 150rem);
+}
+
+.coverHeader{
+    height: 40vh;
+}
+

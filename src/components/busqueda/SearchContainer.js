@@ -5,6 +5,7 @@ import { Spinner } from '../UI/Spinner';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { InputsMarcas } from './InputsMarcas';
 import { InputsOptions } from './InputsOptions';
+import "./SearchContainer.scss"
 
 export const SearchContainer = () => {
 

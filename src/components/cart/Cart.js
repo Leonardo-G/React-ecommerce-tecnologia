@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import { CartItem } from './CartItem';
+import "./Cart.scss"
 
 export const Cart = () => {
     const [total, setTotal] = useState(0)

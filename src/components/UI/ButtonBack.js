@@ -5,7 +5,6 @@ import { useHistory } from 'react-router';
 
 export const ButtonBack = () => {
 
-
     const {goBack} = useHistory()
 
     return (
