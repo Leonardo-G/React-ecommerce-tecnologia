@@ -38,47 +38,4 @@ li{
     border: none;
 }
 
-.btn{
-    background-color: transparent;
-    font-size: 1.5rem;
-    border: #000 1px solid;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    // text-transform: uppercase;
-    padding: 1rem 2rem;
-    transition: all .3s ease;
-    cursor: pointer;
-    &:hover{
-        background-color: #fff;
-        color: #000;
-        border: #fff 1px solid;
-        transition: all .3s ease;
-    }
-}
-
-.btn--marca{
-    color: #fff;
-
-}
-
-.btn--producto{
-    padding: 0;
-    height: 3rem;
-    width: 5rem;
-    &:hover{
-        color: #fff;
-        background-color: #000;
-    }
-}
-
-.btn--add{
-    color: #fff;
-    background-color: #000;
-    text-align: center;
-    &:hover{    
-        color: #000;
-        background-color: #fff;
-        border: 1px solid #000;
-    }
-}
 

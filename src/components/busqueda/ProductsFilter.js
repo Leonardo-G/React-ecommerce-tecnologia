@@ -56,10 +56,10 @@ export const ProductsFilter = ({inputsValues, setLoading}) => {
 
     //Filtrando busqueda
     useEffect(() => {
-        const results = totalProducts.filter(r => filterSearch(r, inputsValues.search, arrayProducts))
-                                     .filter(r => filterMin(r, inputsValues.min, arrayProducts) )
-                                     .filter(r => filterMax(r, inputsValues.max, arrayProducts))
-                                     .filter(r => filterMarca(r, inputsValues.marca, arrayProducts));
+        const results = totalProducts.filter(r => filterSearch(r, inputsValues.search, totalProducts))
+                                     .filter(r => filterMin(r, inputsValues.min, totalProducts) )
+                                     .filter(r => filterMax(r, inputsValues.max, totalProducts))
+                                     .filter(r => filterMarca(r, inputsValues.marca, totalProducts));
         
         setSearhTotalProducts([...results]);
 
