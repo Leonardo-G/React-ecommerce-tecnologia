@@ -38,4 +38,21 @@ li{
     border: none;
 }
 
+.main{
+    width: min(95%, 150rem);
+    margin: 6rem auto;
+}
+
+.container{
+    margin: 0 auto;
+    width: min(95%, 150rem);
+}
+
+.gridMain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 5rem;
+}
+
 

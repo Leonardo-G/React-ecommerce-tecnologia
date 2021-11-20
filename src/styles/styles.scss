@@ -5,20 +5,22 @@
 @import "./base/base";
 @import "./base/btn";
 
+//Components/navegacion/*.js
 @import "./components/navegacion";
 
-
+//Components/header/*.js
 @import "../../node_modules/bootstrap/scss/carousel";
-@import "../styles/components/HeaderCarrousel";
+@import "../styles/components/header";
 
-@import "./components/mainPrincipal";
-@import "./components/itemCatalogo";
+//Components/catalogo/*.js
+@import "./components/main";
 
-@import "./components/ItemDetail";
-@import "./components/ZoomImg";
+//Components/producto/*.js
+@import "./components/itemDetail";
+@import "./components/zoomImg";
 
-@import "./components/ItemSearch";
-@import "./components/Spinner";
+@import "./components/search";
+@import "./components/spinner";
 @import "./components/alert";
 @import "./components/cart";
 @import "./components/itemCount";

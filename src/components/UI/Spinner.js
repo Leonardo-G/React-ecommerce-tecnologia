@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Spinner = () => {
     return (
-        <div className="lds-circle"><div></div></div>
+        <div className="spinner lds-circle"><div></div></div>
     )
 }

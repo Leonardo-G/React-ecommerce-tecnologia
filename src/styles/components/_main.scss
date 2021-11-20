@@ -1,32 +1,3 @@
-.main{
-    width: min(95%, 150rem);
-    margin: 6rem auto;
-}
-
-.container{
-    margin: 0 auto;
-    width: min(95%, 150rem);
-}
-
-.gridMain{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 3rem;
-    row-gap: 5rem;
-}
-
-.btn--reverse{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    width: 15rem;
-    background-color: #010101;
-    color: #fff;
-    text-align: right;
-    &:hover{
-        border: 1px solid #010101;
-    }
-}
-
 .main__marca, .main__productos{
     height: 30rem;
     position: relative;

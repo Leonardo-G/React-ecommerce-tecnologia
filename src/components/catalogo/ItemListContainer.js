@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { getDocumentByMarca, getDocuments } from '../../helpers/getDocumets';
-import { Header } from '../header/Header';
+import { HeaderContainer } from '../header/HeaderContainer';
 import { ButtonBack } from '../UI/ButtonBack';
 import { Spinner } from '../UI/Spinner';
 import { ItemList } from './ItemList';
@@ -31,7 +31,7 @@ export const ItemListContainer = () => {
         <>
             {
                 !idParam &&
-                <Header />
+                <HeaderContainer />
             }
             <main className="main">
                 <div className="container">

@@ -3,7 +3,7 @@ import { CarrouselHeader } from './CarrouselHeader';
 import { ImgHeader } from './ImgHeader';
 import { VideoHeader } from './VideoHeader';
 
-export const Header = () => {
+export const HeaderContainer = () => {
     
     return (
         <section>

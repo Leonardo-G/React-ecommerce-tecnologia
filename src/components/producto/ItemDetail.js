@@ -8,7 +8,7 @@ import { DetailDescription } from './DetailDescription';
 import { ZoomImg } from './ZoomImg';
 import { CartContext } from '../../context/CartContext';
 import { Alert } from '../UI/Alert';
-import { ButtonEdit } from '../UI/ButtonEdit';
+import { ButtonEdit } from './ButtonEdit';
 
 
 export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}) => {
