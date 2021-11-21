@@ -75,10 +75,40 @@
     padding: 0 3rem;
 }
 
-.formOrder{
-    display: flex;
-    flex-direction: column;
+.order{
+    margin: 5rem auto;
+    width: 40rem;
+    h2{
+        font-size: 2rem;
+    }
+    .order__form{
+        display: flex;
+        flex-direction: column;
+        input{
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+        }
+    }
 }
+
+.sending{
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(228, 227, 227, 0.719);
+    z-index: 999;
+    .spinner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 
 
 

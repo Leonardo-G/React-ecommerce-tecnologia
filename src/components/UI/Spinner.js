@@ -3,6 +3,8 @@ import "./Spinner.scss";
 
 export const Spinner = () => {
     return (
-        <div className="spinner lds-circle"><div></div></div>
+        <div className="spinner lds-circle">
+            <div></div>
+        </div>
     )
 }

@@ -5,13 +5,19 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import { CartItem } from './CartItem';
 import { FormUser } from './FormUser';
+import { Sending } from "./Sending";
 import { setDocument, updateDocuments } from "../../helpers/getDocumets";
 import "./Cart.scss"
 
 export const Cart = () => {
     const { cart, setCart, removeItem } = useContext( CartContext );
     const [total, setTotal] = useState(0);
-    const [form, setForm] = useState(false)
+    const [formValues, setFormValues] = useState({
+        nombre: "",
+        email: "",
+        telefono: ""
+    })
+    const [sending, setSending] = useState(false)
 
     const totalPrice = () => {
         let total = 0;
@@ -27,8 +33,19 @@ export const Cart = () => {
         //eslint-disable-next-line
     }, [cart]);
 
-    const handleSetOrder = async ( ) => {
+    const handleChangeInputs = (e) => [
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value
+        })
+    ]
 
+    const handleSetOrder = async () => {
+
+        const { nombre, email, telefono } = formValues;
+        if( nombre === "" || email === "" || telefono === "" ) return;
+
+        setSending(true);
         const newOrder = {
             nombre: "",
             tel: "",
@@ -39,11 +56,14 @@ export const Cart = () => {
         
         const [ order, updateStock ] = await Promise.all([setDocument(newOrder), updateDocuments(cart)])
 
-        console.log(order.id)
-        console.log(updateStock)
+        setSending(false);
     }
     return (
         <main className="main">
+            {
+                sending &&
+                <Sending />
+            }
             {
                 cart.length > 0 
                 
@@ -61,8 +81,18 @@ export const Cart = () => {
                             <button 
                                 className="btn btn--add"
                                 onClick={ handleSetOrder }
-                            >Continuar Compra</button>
+                            >Vaciar Carrito</button>
                         </div>
+                        <section>
+                            <div className="order">
+                                <h2>Rellena los campos</h2>
+                                <FormUser handleChangeInputs={ handleChangeInputs }/>
+                                <button 
+                                    className="btn btn--add"
+                                    onClick={ handleSetOrder }
+                                >Comprar</button>
+                            </div>
+                        </section>
                     </>
                 
                 :   
@@ -75,13 +105,6 @@ export const Cart = () => {
                         </div>
                     </>
             }
-
-            <section>
-                <div>
-                    <h2>Rellena los campos</h2>
-                    <FormUser />
-                </div>
-            </section>
         </main>
     )
 }
