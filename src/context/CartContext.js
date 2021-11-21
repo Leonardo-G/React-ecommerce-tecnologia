@@ -6,6 +6,7 @@ export const CartContextProvider = ({ children }) => {
     const jsonArray = JSON.parse(localStorage.getItem("cartArray")) || [];
 
     const [cart, setCart] = useState(jsonArray);
+    const [totalProducts, setTotalProducts] = useState(0)
 
     //Funcion para agregar al estado CART
     const addProduct = (id, objProduct) => {
@@ -34,11 +35,18 @@ export const CartContextProvider = ({ children }) => {
 
     //Actualizamos el localStorage
     useEffect(() => {
-        localStorage.setItem("cartArray", JSON.stringify(cart))
+        localStorage.setItem("cartArray", JSON.stringify(cart));
+        
+        let totalQuantity = 0;
+        cart.forEach( c => {
+            totalQuantity = totalQuantity + c.quantity
+        })
+
+        setTotalProducts(totalQuantity)
     }, [cart])
 
     return (
-        <CartContext.Provider value={{ cart, setCart, addProduct, removeItem, clear }}>
+        <CartContext.Provider value={{ cart, setCart, addProduct, removeItem, clear, totalProducts }}>
             { children }
         </CartContext.Provider>
     )

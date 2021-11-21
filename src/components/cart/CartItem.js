@@ -18,6 +18,7 @@ export const CartItem = ({ removeItem, cart, setCart, ...propsItem }) => {
             ...propsItem,
             quantity: quantityItem
         }]);
+        // eslint-disable-next-line
     }, [quantityItem]);
 
     return (

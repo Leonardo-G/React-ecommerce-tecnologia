@@ -1,4 +1,4 @@
-import { collection, doc, getDoc, getDocs, query, where } from "@firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs, query, Timestamp, updateDoc, where, writeBatch } from "@firebase/firestore";
 import { db } from "../firebase/config";
 
 export const getDocuments = async (collectionData) => {
@@ -25,7 +25,6 @@ export const getDocumentByMarca = async (marcaDatabase) => {
                 ...data.data()
             })
     })
-    console.log(dataArray)
     return dataArray;
 }
 
@@ -35,4 +34,37 @@ export const getDocumentById = async (idDatabase) => {
         ...document.data(),
         id: document.id
     } 
+}
+
+export const setDocument = async (newOrder) => {
+
+    const { items, ...order } = newOrder;
+
+    const newArray = await items.map(item => {
+        
+        const { descripcion, stock, ...orderCart } = item;
+
+        return orderCart
+    })
+
+    const newDoc = await addDoc(collection(db, "orders"), {
+        products: newArray, 
+        date: Timestamp.fromDate(new Date()),
+        ...order
+    });
+
+    return newDoc;
+}
+
+export const updateDocuments = async (products) => {
+
+    const batch = writeBatch(db);
+
+    products.forEach(p => {
+        batch.update(doc(db, "productos", p.id), {
+            stock: Number(p.stock) - Number(p.quantity) 
+        })
+    })
+
+    await batch.commit();
 }

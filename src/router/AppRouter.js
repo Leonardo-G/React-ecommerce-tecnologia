@@ -9,7 +9,7 @@ import { SearchContainer } from '../components/busqueda/SearchContainer';
 import { Cart } from '../components/cart/Cart';
 import { ItemListContainer } from '../components/catalogo/ItemListContainer';
 import { Navegacion } from '../components/navegacion/Navegacion';
-import { ItemDetailContainer } from '../components/producto/ItemDetailContainer';
+import { ItemDetailContainer } from '../components/itemDetail/ItemDetailContainer';
 
 export const AppRouter = () => {
 

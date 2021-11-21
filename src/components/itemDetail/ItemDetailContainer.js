@@ -6,8 +6,8 @@ import { getDocumentById } from '../../helpers/getDocumets';
 
 export const ItemDetailContainer = () => {
 
-    const [ productDetail, setProductDetail ] = useState({})
-    const { id: idItem } =useParams();
+    const [ productDetail, setProductDetail ] = useState({});
+    const { id: idItem } = useParams();
 
     useEffect( () => {
         getDocumentById(idItem)
