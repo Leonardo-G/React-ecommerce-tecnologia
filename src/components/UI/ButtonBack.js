@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 
 export const ButtonBack = () => {
 
-    const {goBack} = useHistory()
+    const { goBack } = useHistory()
 
     return (
         <div className="icon--back" onClick={() => goBack()}>

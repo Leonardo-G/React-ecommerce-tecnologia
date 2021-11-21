@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { CartContext } from './context/CartContext';
+import React from 'react'
+import { CartContextProvider } from './context/CartContext';
 import { AppRouter } from "./router/AppRouter";
 
 function App() {
 
-  const jsonArray = JSON.parse(localStorage.getItem("cartArray")) || [];
-
-  const [cart, setCart] = useState(jsonArray);
-
-  useEffect(() => {
-    localStorage.setItem("cartArray", JSON.stringify(cart))
-  }, [cart])
-
   return (
-    <CartContext.Provider value={ { cart, setCart } }>
+    <CartContextProvider>
       <AppRouter />
-    </CartContext.Provider>
+    </CartContextProvider>
   );
 }
 

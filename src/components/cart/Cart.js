@@ -7,19 +7,14 @@ import { CartItem } from './CartItem';
 import "./Cart.scss"
 
 export const Cart = () => {
-    const [total, setTotal] = useState(0)
-    const { cart, setCart } = useContext( CartContext );
-
-    const handleRemoveProduct = (id) => {
-        const currentCart = cart.filter(c => c.id !== id);
-        setCart(currentCart)
-    }
+    const [total, setTotal] = useState(0);
+    const { cart, setCart, removeItem } = useContext( CartContext );
 
     const totalPrice = () => {
-        let total = 0
+        let total = 0;
         for (let i = 0; i < cart.length; i++) {
             total += Number(cart[i].precio) * cart[i].quantity;
-        }
+        };
         setTotal(total);
     }
 
@@ -39,7 +34,7 @@ export const Cart = () => {
                         <section className="cart">
                             {
                                 cart.map( c => (
-                                    <CartItem key={ c.id } { ...c } cart={ cart } setCart={ setCart } handleRemoveProduct={ handleRemoveProduct }/>
+                                    <CartItem key={ c.id } { ...c } cart={ cart } setCart={ setCart } removeItem={ removeItem }/>
                                 ))
                             }
                         </section>

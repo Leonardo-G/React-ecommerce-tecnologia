@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import { ItemCount } from '../UI/ItemCount';
 
-export const CartItem = ({ handleRemoveProduct, cart, setCart, ...propsItem }) => {
+export const CartItem = ({ removeItem, cart, setCart, ...propsItem }) => {
     
     const { id, imgs, modelo, precio, descripcion, quantity, stock } = propsItem;
 
@@ -35,7 +35,7 @@ export const CartItem = ({ handleRemoveProduct, cart, setCart, ...propsItem }) =
             </div>
             <div 
                 className="icon--remove"
-                onClick={ () => handleRemoveProduct(id) }    
+                onClick={ () => removeItem(id) }    
             >
                 <FontAwesomeIcon icon={ faWindowClose }/>
             </div>

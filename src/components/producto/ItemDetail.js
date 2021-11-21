@@ -14,7 +14,7 @@ import { ButtonEdit } from './ButtonEdit';
 
 export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}) => {
     
-    const { cart, setCart } = useContext( CartContext )
+    const { cart, setCart, addProduct, removeItem } = useContext( CartContext )
     const [idxImg, setIdxImg] = useState(0);
     const [quantity, setQuantity] = useState(1);
 
@@ -43,12 +43,14 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
         const isExistProduct = cart.some( c => c.id === id);
         setShowButtonAdd(isExistProduct)
     }
-
+    
     useEffect(() => {
         showButton();
+
         return () => {
-            delete showButton();
+            showButton()
         }
+        //eslint-disable-next-line
     }, [cart])
     
     useEffect(() => {
@@ -64,10 +66,13 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
         setShowButtonAdd(false);
     }
 
+    const handleRemove = () => {
+        removeItem(id)
+        setShowButtonAdd(false);
+    }
+
     const handleAddProduct = ( quantity ) => {
-
-        const isExist = cart.some( c => c.id === id);
-
+        
         const objProduct = {
             id,
             modelo,
@@ -76,16 +81,9 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
             descripcion,
             stock,
             imgs: imgs[0]
-        }
+        };
 
-        if(isExist){
-            const filterProduct = cart.filter( c => c.id !== id);
-            setCart([...filterProduct, objProduct]);
-
-            return;
-        }
-
-        setCart([...cart, objProduct]);
+        addProduct(id, objProduct);
 
         setShowAlert(true);
         setTimeout(() => setShowAlert(false), 3000);
@@ -107,7 +105,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                     <p>{ descripcion }</p>
                     {
                         showButtonAdd 
-                        ?   <ButtonEdit handleEdit={ handleEdit }/>
+                        ?   <ButtonEdit handleEdit={ handleEdit } handleRemove={ handleRemove }/>
                         :   <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } buttonAvailable={ buttonAvailable } quantity={ quantity} setQuantity={ setQuantity }/>
                     }
                     

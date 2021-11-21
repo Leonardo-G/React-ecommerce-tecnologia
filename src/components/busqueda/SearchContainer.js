@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ProductsFilter } from './ProductsFilter';
 import { Spinner } from '../UI/Spinner';
@@ -7,7 +7,7 @@ import { InputsMarcas } from './InputsMarcas';
 import { InputsOptions } from './InputsOptions';
 import "./SearchContainer.scss"
 
-export const SearchContainer = () => {
+export const SearchContainer = ({ history }) => {
 
     const [showInputs, setShowInputs] = useState(false);
     const [inputsValues, setInputsValues] = useState({
@@ -28,7 +28,6 @@ export const SearchContainer = () => {
     const handleShowInputs = () => {
         setShowInputs(!showInputs);
     }
-
 
     return (
         <div className="main">
