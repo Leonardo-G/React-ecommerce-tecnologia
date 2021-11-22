@@ -13,15 +13,17 @@ export const ItemListContainer = () => {
     const {id: idParam} = useParams();
 
     useEffect( () => {
-        setLoading(true)
-        setArrayProducts([])
+        setLoading(true);
+        setArrayProducts([]);
 
+        //Si existe el ID, mostraremos las marcas de los productos.
+        //Sino traeremos los productos de la marca que el usuario decidio navegar
         const isExistParam = !idParam ? getDocuments("tecnologias") : getDocumentByMarca(idParam)
             
         isExistParam
             .then(resp => setArrayProducts(resp))
             .catch(err => {
-                throw new Error(err)
+                throw new Error(err);
             })
             .finally(() => setLoading(false))
 
