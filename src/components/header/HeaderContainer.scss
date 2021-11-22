@@ -10,7 +10,24 @@
     margin: 0 auto;
     height: 80vh;
     width: min(100%, 150rem);
+    h3{
+        font-size: 2.5rem;
+        color: #fff;
+    }
 }
+
+
+.carouselAbsolute, .coverHeader{
+    position: relative;
+}
+.carouselText, .textAbsolute{
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+}
+
 
 .coverHeader{
     height: 40vh;

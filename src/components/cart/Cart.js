@@ -55,7 +55,7 @@ export const Cart = () => {
         }
         
         const [ order, updateStock ] = await Promise.all([setDocument(newOrder), updateDocuments(cart)])
-
+        
         setSending(false);
     }
     return (
