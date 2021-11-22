@@ -14,21 +14,21 @@ import { ButtonEdit } from './ButtonEdit';
 
 export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}) => {
     
-    const { cart, setCart, addProduct, removeItem } = useContext( CartContext )
+    const { cart, addProduct, removeItem } = useContext( CartContext );
     const [idxImg, setIdxImg] = useState(0);
     const [quantity, setQuantity] = useState(1);
 
     //UI state
-    const [showButtonAdd, setShowButtonAdd] = useState(false)
-    const [showDescription, setShowDescription] = useState(false)
-    const [showAlert, setShowAlert] = useState(false)
-    const [buttonAvailable, setButtonAvailable] = useState(true)
+    const [showButtonAdd, setShowButtonAdd] = useState(false);
+    const [showDescription, setShowDescription] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
+    const [buttonAvailable, ] = useState(true);
     
     const [imgShow, setImgShow] = useState({
         lengthImg: imgs.length,
         imgZoom: "",
         show: false
-    })
+    });
 
     const handleShowDescription = () => {
         setShowDescription(!showDescription);
@@ -41,12 +41,13 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
     
     const showButton = () => {
         const isExistProduct = cart.some( c => c.id === id);
-        setShowButtonAdd(isExistProduct)
+        setShowButtonAdd(isExistProduct);
     }
     
     useEffect(() => {
         showButton();
 
+        //Soluciona error cuando no desmontamos.
         return () => {
             showButton()
         }
@@ -104,9 +105,12 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                     <p className="description-price"> $ {  Number(precio).toFixed(2) } ARS</p>
                     <p>{ descripcion }</p>
                     {
-                        showButtonAdd 
-                        ?   <ButtonEdit handleEdit={ handleEdit } handleRemove={ handleRemove }/>
-                        :   <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } buttonAvailable={ buttonAvailable } quantity={ quantity} setQuantity={ setQuantity }/>
+                        stock === 0 
+                        ? <p>Por el momento no tenemos Stock del producto.</p>
+                        :
+                            showButtonAdd 
+                            ?   <ButtonEdit handleEdit={ handleEdit } handleRemove={ handleRemove }/>
+                            :   <ItemCount stock={ stock } handleAddProduct={ handleAddProduct } buttonAvailable={ buttonAvailable } quantity={ quantity} setQuantity={ setQuantity }/>
                     }
                     
                     <div className="description-button"

@@ -97,6 +97,10 @@ li{
     }
 }
 
+.btn--disabled{
+    cursor: not-allowed;
+}
+
 .btn--reverse{
     margin-top: 5rem;
     margin-bottom: 5rem;

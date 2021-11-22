@@ -37,7 +37,8 @@ export const ItemCount = ({ stock, handleAddProduct, buttonAvailable = false, qu
             {
                 buttonAvailable &&
                 <button
-                    className="btn btn--add"
+                    disabled={(stock === 0) && true}
+                    className={`btn btn--add ${(stock === 0) && "btn--disabled"}`}
                     onClick={ () => handleAddProduct( quantity ) }
                 >Agregar Producto</button>    
             }

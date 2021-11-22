@@ -6,8 +6,8 @@ export const Item = ({ id, img, modelo, marca, descripcion }) => {
     
     const lengthDesc = descripcion.slice(0, 35);
     
-    //Si existe la propiedada "modelo", lo imprimimos en el titulo.
-    //Sino mostraremos la marca del producto. 
+    //Si existe la propiedada "modelo", mostraremos los productos de la marca
+    //Sino mostraremos todas las marcas disponibles. 
     return (
         <div className="main__productos">
             <div className="hover--sombra">
