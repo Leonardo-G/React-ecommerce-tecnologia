@@ -8,16 +8,18 @@ import { FormUser } from './FormUser';
 import { Sending } from "./Sending";
 import { setDocument, updateDocuments } from "../../helpers/getDocumets";
 import "./Cart.scss"
+import { OrderUser } from './OrderUser';
 
 export const Cart = () => {
-    const { cart, setCart, removeItem } = useContext( CartContext );
+    const { cart, setCart, removeItem, clear } = useContext( CartContext );
     const [total, setTotal] = useState(0);
     const [formValues, setFormValues] = useState({
         nombre: "",
         email: "",
         telefono: ""
     })
-    const [sending, setSending] = useState(false)
+    const [sending, setSending] = useState(false);
+    const [idUserOrder, setIdUserOrder] = useState("");
 
     const totalPrice = () => {
         let total = 0;
@@ -47,15 +49,16 @@ export const Cart = () => {
 
         setSending(true);
         const newOrder = {
-            nombre: "",
-            tel: "",
-            email: "",
+            nombre,
+            telefono,
+            email,
             items: cart,
             total: total
         }
-        
-        const [ order, updateStock ] = await Promise.all([setDocument(newOrder), updateDocuments(cart)])
-        
+        console.log(newOrder)
+        const [ order ] = await Promise.all([setDocument(newOrder), updateDocuments(cart)])
+        setIdUserOrder(order.id);
+        clear();
         setSending(false);
     }
     return (
@@ -65,7 +68,11 @@ export const Cart = () => {
                 <Sending />
             }
             {
-                cart.length > 0 
+                idUserOrder !== ""
+
+                ?   <OrderUser idUserOrder={ idUserOrder } setIdUserOrder={ setIdUserOrder }/>
+                
+                :   (cart.length > 0)
                 
                 ?    <>
                         <h1 className="titleCart">Productos en el carrito</h1>
@@ -80,7 +87,7 @@ export const Cart = () => {
                             <p className="totalPrice">Subtotal : $ { total.toFixed(2) }</p>
                             <button 
                                 className="btn btn--add"
-                                onClick={ handleSetOrder }
+                                onClick={ clear }
                             >Vaciar Carrito</button>
                         </div>
                         <section>
