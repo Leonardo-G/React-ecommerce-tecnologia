@@ -71,7 +71,7 @@ export const ProductsFilter = ({inputsValues, setLoading}) => {
             <div className="gridMain">
                 {
                     arrayProducts.map( product => (
-                        <Item key={ product.id } { ...product }/>
+                        <Item key={ product.id } img={ product.imgs[0] } { ...product }/>
                     ))
                 }
             </div>

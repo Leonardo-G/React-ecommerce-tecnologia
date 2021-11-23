@@ -10,6 +10,7 @@ import { Cart } from '../components/cart/Cart';
 import { ItemListContainer } from '../components/catalogo/ItemListContainer';
 import { Navegacion } from '../components/navegacion/Navegacion';
 import { ItemDetailContainer } from '../components/itemDetail/ItemDetailContainer';
+import { Orden } from '../components/orden/Orden';
 
 export const AppRouter = () => {
 
@@ -20,6 +21,7 @@ export const AppRouter = () => {
                 <Route exact path="/busqueda" component={ SearchContainer } />
                 <Route exact path="/category/:id" component={ ItemListContainer } />
                 <Route exact path="/Item/:id" component={ ItemDetailContainer } />
+                <Route exact path="/order" component={ Orden } />
                 <Route exact path="/cart" component={ Cart } />
                 <Route exact path="/" component={ ItemListContainer } />
                 <Redirect to="/"/>

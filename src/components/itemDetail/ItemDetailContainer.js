@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
     const { id: idItem } = useParams();
 
     useEffect( () => {
-        getDocumentById(idItem)
+        getDocumentById(idItem, "productos")
             .then( resp => setProductDetail({...resp}))
             .catch(err => console.log("No se pudo encontrar el producto", err))
             .finally(() => setLoading(false))

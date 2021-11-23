@@ -1,4 +1,4 @@
-import { addDoc, collection, doc, getDoc, getDocs, query, Timestamp, updateDoc, where, writeBatch } from "@firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs, query, Timestamp, where, writeBatch } from "@firebase/firestore";
 import { db } from "../firebase/config";
 
 export const getDocuments = async (collectionData) => {
@@ -28,9 +28,10 @@ export const getDocumentByMarca = async (marcaDatabase) => {
     return dataArray;
 }
 
-export const getDocumentById = async (idDatabase) => {
-    const document = await getDoc( doc(db, "productos", idDatabase) );
+export const getDocumentById = async (idDatabase, collection) => {
+    const document = await getDoc( doc(db, collection, idDatabase) );
     return {
+        isExist: document.exists(),
         ...document.data(),
         id: document.id
     } 
