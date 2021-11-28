@@ -27,6 +27,14 @@
     width: 75%;
 }
 
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    height: 80vh;
+}
+
 .coverHeader{
     height: 40vh;
 }
@@ -41,5 +49,18 @@
         bottom: 5rem;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 865px) {
+    .header__img{
+        grid-template-columns: 1fr;
+        .coverHeader{
+            height: 25vh;
+        }
+        video{
+            height: 30vh;
+            display: block;
+        }
     }
 }

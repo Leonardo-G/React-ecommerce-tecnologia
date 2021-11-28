@@ -49,9 +49,9 @@
             transition: .2s transform ease-in-out;
             padding: 0 2rem;
             overflow: hidden;
-            span{
-                color: #000;
-            }
+        }
+        span{
+            color: #000;
         }
     }
     .description-button{
@@ -117,4 +117,31 @@
     margin: 2rem 0;
     display: flex;
     column-gap: 1rem;
+}
+
+@media (max-width: 865px) {
+    .itemDetail{
+        grid-template-columns: 1fr;
+        .itemDetail__description{
+            grid-row: 1 / 2;
+            margin-bottom: 5rem;
+            .description-false{
+                padding: 0 2rem;
+                visibility: visible;
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .itemDetail{
+        .itemDetail__imgs{
+            display: block;
+            img{
+                height: 25rem;
+            }
+        }
+    }
 }

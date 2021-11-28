@@ -105,7 +105,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                     <p className="description-price"> $ {  Number(precio).toFixed(2) } ARS</p>
                     <p>{ descripcion }</p>
                     {
-                        stock === 0 
+                        stock === 0 || stock < 0
                         ? <p>Por el momento no tenemos Stock del producto.</p>
                         :
                             showButtonAdd 

@@ -38,3 +38,12 @@
         transition: .3s all ease-in-out;
     }
 }
+
+@media (max-width: 865px) {
+    .main__productos, .main__marca{
+        .hover--sombra{
+            visibility: visible;
+            transform: translateX(0%);
+        }
+    }
+}
