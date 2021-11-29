@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { getDocumentById } from '../../helpers/getDocumets';
 import "./Orden.scss";
 
@@ -8,7 +8,8 @@ export const Orden = () => {
         order: {},
         newOrder: false,
         isExist: false,
-        errorInputId: false
+        errorInputId: false,
+        form: true
     })
 
     const [idInput, setIdInput] = useState("");
@@ -25,7 +26,7 @@ export const Orden = () => {
                 ...userOrder,
                 errorInputId: true
             });
-            setTimeout(() => setUserOrder({...userOrder, errorInputId: false}), 2500);
+            // setTimeout(() => setUserOrder({...userOrder, errorInputId: false}), 2500);
             return;
         }
 
@@ -35,20 +36,22 @@ export const Orden = () => {
                     setUserOrder({
                         ...userOrder,
                         isExist: false,
+                        errorInputId: false,
                         newOrder: true
                     });
-                    setTimeout(() => {
-                        setUserOrder({
-                            ...userOrder,
-                            isExist: false,
-                            newOrder: false
-                        });
-                    }, 2500);
+                    // setTimeout(() => {
+                    //     setUserOrder({
+                    //         ...userOrder,
+                    //         isExist: false,
+                    //         newOrder: false
+                    //     });
+                    // }, 2500);
                     return
                 }else{
                     setUserOrder({
                         ...userOrder,
                         order: {...resp},
+                        errorInputId: false,
                         isExist: true,
                         newOrder: true
                     });
@@ -58,23 +61,34 @@ export const Orden = () => {
 
     return (
         <main className="container">
-            <form className="orden">
-                <label>Escriba su ID del orden</label>
-                <input 
-                    type="text"
-                    name="id"
-                    onChange={ handleChangeId }   
-                    placeholder="Su ID"
-                />
-                <input 
-                    type="submit"
-                    onClick={ handleSearchOrder }
-                    className="btn btn--add"
-                    value="Buscar Orden"
-                />
-                { userOrder.errorInputId && <p className="error">Se requiere colocar un ID</p> }
-                { !userOrder.isExist & userOrder.newOrder && <p className="error">No existe un orden con su ID</p> }
-            </form>
+            {  !userOrder.isExist  &&
+                <form className="orden">
+                    <label>Escriba su ID del orden</label>
+                    <input 
+                        type="text"
+                        name="id"
+                        onChange={ handleChangeId }   
+                        placeholder="Su ID"
+                    />
+                    <input 
+                        type="submit"
+                        onClick={ handleSearchOrder }
+                        className="btn btn--add"
+                        value="Buscar Orden"
+                    />
+                    { userOrder.errorInputId && <p className="error">Se requiere colocar un ID</p> }
+                    { !userOrder.isExist & userOrder.newOrder && <p className="error">No existe un orden con su ID</p> }
+                </form>
+            }
+            {
+                userOrder.order.products &&
+                <div className="orderList">
+                    <h3>Su Pedido</h3>
+                    <p>Cantidad de Productos = {userOrder.order.products.length}</p>
+                    <p> Total : $ { userOrder.order.total }</p>
+                    <p> Estado <span className="orderList__pending">Pendiente</span></p>
+                </div>
+            }
         </main>
     )
 }
