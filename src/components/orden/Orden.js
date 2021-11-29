@@ -1,20 +1,80 @@
 import React, { useEffect, useState } from 'react'
-import { getDocumentById } from '../../helpers/getDocumets'
+import { getDocumentById } from '../../helpers/getDocumets';
+import "./Orden.scss";
 
 export const Orden = () => {
 
-    const [order, setOrder] = useState({})
+    const [userOrder, setUserOrder] = useState({
+        order: {},
+        newOrder: false,
+        isExist: false,
+        errorInputId: false
+    })
 
-    useEffect(() => {
-        getDocumentById("9ZaDxQ0b8Uy0iejW7GO3", "orders")
+    const [idInput, setIdInput] = useState("");
+
+    const handleChangeId = (e) => {
+        setIdInput(e.target.value);
+    }
+
+    const handleSearchOrder = (e) => {
+        e.preventDefault();
+
+        if(idInput === "") {
+            setUserOrder({
+                ...userOrder,
+                errorInputId: true
+            });
+            setTimeout(() => setUserOrder({...userOrder, errorInputId: false}), 2500);
+            return;
+        }
+
+        getDocumentById(idInput, "orders")
             .then(resp => {
-                setOrder(resp)
+                if(!resp.isExist){
+                    setUserOrder({
+                        ...userOrder,
+                        isExist: false,
+                        newOrder: true
+                    });
+                    setTimeout(() => {
+                        setUserOrder({
+                            ...userOrder,
+                            isExist: false,
+                            newOrder: false
+                        });
+                    }, 2500);
+                    return
+                }else{
+                    setUserOrder({
+                        ...userOrder,
+                        order: {...resp},
+                        isExist: true,
+                        newOrder: true
+                    });
+                }
             })
-    }, [])
+    }
 
     return (
-        <div>
-            
-        </div>
+        <main className="container">
+            <form className="orden">
+                <label>Escriba su ID del orden</label>
+                <input 
+                    type="text"
+                    name="id"
+                    onChange={ handleChangeId }   
+                    placeholder="Su ID"
+                />
+                <input 
+                    type="submit"
+                    onClick={ handleSearchOrder }
+                    className="btn btn--add"
+                    value="Buscar Orden"
+                />
+                { userOrder.errorInputId && <p className="error">Se requiere colocar un ID</p> }
+                { !userOrder.isExist & userOrder.newOrder && <p className="error">No existe un orden con su ID</p> }
+            </form>
+        </main>
     )
 }
