@@ -1,6 +1,7 @@
 import { faDolly } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useEffect, useState } from 'react';
+import validator from 'validator';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import { CartItem } from './CartItem';
@@ -12,6 +13,7 @@ import { OrderUser } from './OrderUser';
 
 export const Cart = () => {
     const { cart, setCart, removeItem, clear } = useContext( CartContext );
+    const [error, setError] = useState(false)
     const [total, setTotal] = useState(0);
     const [formValues, setFormValues] = useState({
         nombre: "",
@@ -45,7 +47,17 @@ export const Cart = () => {
     const handleSetOrder = async () => {
 
         const { nombre, email, telefono } = formValues;
-        if( nombre === "" || email === "" || telefono === "" ) return;
+        const nombreValidate = validator.isLength(nombre, {min: 3});
+        const emailValidate = validator.isEmail(email);
+        const telefonoValidate = validator.isNumeric(telefono, {no_symbols: false})
+        
+        if( !nombreValidate || !emailValidate || !telefonoValidate ) {
+            setError(true);
+            setTimeout(() => {
+                setError(false)
+            }, 2000);
+            return;
+        };
 
         setSending(true);
         const newOrder = {
@@ -55,12 +67,13 @@ export const Cart = () => {
             items: cart,
             total: total
         }
-        console.log(newOrder)
+        
         const [ order ] = await Promise.all([setDocument(newOrder), updateDocuments(cart)])
         setIdUserOrder(order.id);
         clear();
         setSending(false);
     }
+    
     return (
         <main className="main">
             {
@@ -98,6 +111,7 @@ export const Cart = () => {
                                     className="btn btn--add"
                                     onClick={ handleSetOrder }
                                 >Comprar</button>
+                            { error && <p className="error">Completa los campos correctamente</p> }
                             </div>
                         </section>
                     </>

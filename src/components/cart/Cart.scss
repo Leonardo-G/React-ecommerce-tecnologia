@@ -129,6 +129,46 @@
     }
 }
 
+.error{
+    margin-top: 2rem;
+    padding: 1rem 1rem;
+    background-color: red;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width: 965px) {
+    .icon--remove{
+        visibility: visible;
+    }
+}
+
+@media (max-width: 365px) {
+    .cart__item{
+        img{
+            display: none;
+        }
+        .item--info{
+            padding: 0;
+        }
+        .item--buttons{
+            flex: 0 0 30%;
+        }
+        .itemDesc{
+            display: none;
+        }
+    }
+    .divPrice{
+        flex-wrap: wrap;
+        justify-content: center;
+        .totalPrice{
+            font-size: 2.1rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    }
+}
 
 
 
