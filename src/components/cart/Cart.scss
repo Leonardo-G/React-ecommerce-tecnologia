@@ -144,6 +144,15 @@
     }
 }
 
+@media (max-width: 420px) {
+    .titleCart{
+        font-size: 2.5rem;
+    }
+    .order{
+        width: 100%;
+    }
+}
+
 @media (max-width: 365px) {
     .cart__item{
         img{

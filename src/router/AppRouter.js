@@ -12,7 +12,7 @@ import { Navegacion } from '../components/navegacion/Navegacion';
 import { ItemDetailContainer } from '../components/itemDetail/ItemDetailContainer';
 import { Orden } from '../components/orden/Orden';
 
-export const AppRouter = () => {
+export const AppRouter = (props) => {
 
     return (
         <Router>
