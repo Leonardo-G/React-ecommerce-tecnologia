@@ -124,3 +124,8 @@ li{
     color: #fff;
 }
 
+@media (max-width: 420px) {
+    .gridMain{
+        display: block;
+    }
+}

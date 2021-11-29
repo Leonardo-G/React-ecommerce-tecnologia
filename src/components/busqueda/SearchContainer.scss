@@ -79,10 +79,30 @@
     text-align: center;
     margin-top: 2rem;
     .page{
-        margin: 0 1rem;
+        margin: 0.5rem 1rem;
     }
     .pageCurrent{
         background-color: #fff;
         color: #000;
+    }
+}
+
+@media (max-width: 900px) {
+    .search{
+        flex-direction: column;
+        .busqueda{
+            margin-bottom: 2rem;
+            margin-right: 0;
+        }
+        .formulario__campo{
+            width: 100%;
+        }
+        .inputsCheck{
+            flex-direction: row;
+            flex-wrap: wrap;
+            label{
+                margin: 0 1rem;
+            }
+        }
     }
 }

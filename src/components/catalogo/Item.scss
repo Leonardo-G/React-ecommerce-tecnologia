@@ -41,9 +41,18 @@
 
 @media (max-width: 865px) {
     .main__productos, .main__marca{
+        .marca__modelo{
+            font-size: 2rem;
+        }
         .hover--sombra{
             visibility: visible;
             transform: translateX(0%);
         }
+    }
+}
+
+@media (max-width: 420px) {
+    .main__productos, .main__marca{
+        margin: 2rem 0;
     }
 }
