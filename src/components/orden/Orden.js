@@ -25,7 +25,9 @@ export const Orden = () => {
         if(idInput === "") {
             setUserOrder({
                 ...userOrder,
-                errorInputId: true
+                isExist: false,
+                errorInputId: true,
+                newOrder: false
             });
             return;
         }
