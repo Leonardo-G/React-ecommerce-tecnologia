@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Leonardo-G/React-ecommerce-tecnologia/static/css/main.cd123dcb.chunk.css",
+    "main.js": "/Leonardo-G/React-ecommerce-tecnologia/static/js/main.1d9530d1.chunk.js",
+    "main.js.map": "/Leonardo-G/React-ecommerce-tecnologia/static/js/main.1d9530d1.chunk.js.map",
+    "runtime-main.js": "/Leonardo-G/React-ecommerce-tecnologia/static/js/runtime-main.0bf0bc2e.js",
+    "runtime-main.js.map": "/Leonardo-G/React-ecommerce-tecnologia/static/js/runtime-main.0bf0bc2e.js.map",
+    "static/js/2.4f19fa41.chunk.js": "/Leonardo-G/React-ecommerce-tecnologia/static/js/2.4f19fa41.chunk.js",
+    "static/js/2.4f19fa41.chunk.js.map": "/Leonardo-G/React-ecommerce-tecnologia/static/js/2.4f19fa41.chunk.js.map",
+    "static/js/3.b246dcf5.chunk.js": "/Leonardo-G/React-ecommerce-tecnologia/static/js/3.b246dcf5.chunk.js",
+    "static/js/3.b246dcf5.chunk.js.map": "/Leonardo-G/React-ecommerce-tecnologia/static/js/3.b246dcf5.chunk.js.map",
+    "index.html": "/Leonardo-G/React-ecommerce-tecnologia/index.html",
+    "static/css/main.cd123dcb.chunk.css.map": "/Leonardo-G/React-ecommerce-tecnologia/static/css/main.cd123dcb.chunk.css.map",
+    "static/js/2.4f19fa41.chunk.js.LICENSE.txt": "/Leonardo-G/React-ecommerce-tecnologia/static/js/2.4f19fa41.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0bf0bc2e.js",
+    "static/js/2.4f19fa41.chunk.js",
+    "static/css/main.cd123dcb.chunk.css",
+    "static/js/main.1d9530d1.chunk.js"
+  ]
+}
