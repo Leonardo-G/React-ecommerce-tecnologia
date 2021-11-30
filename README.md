@@ -2,6 +2,8 @@
 
 Proyecto realizado con React, simulando una ecommerce de productos tecnológicos.
 
+[Link del proyecto React](https://61a5eb8bcf09e6e065256e6a--confident-noyce-b60f59.netlify.app/)
+
 ### Instalación
 
 Una vez clonado el repositorio, para poder iniciar la aplicación en tu entorno local, hay que instalar las dependencias necesarias con: 
