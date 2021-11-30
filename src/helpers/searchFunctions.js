@@ -1,3 +1,4 @@
+//Obtnemos el total de la paginas, segun la cantida de TOTAL PRODUCTS
 export const totalPaginacion = ( totalProducts, itemsPage ) => {
     const paginador = Math.ceil(totalProducts.length / itemsPage.current);
         

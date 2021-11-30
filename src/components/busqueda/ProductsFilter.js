@@ -47,7 +47,6 @@ export const ProductsFilter = ({inputsValues, setLoading}) => {
 
 
     useEffect(() => {
-
         //Mostraremos en pantalla la cantidad de productos segun lo indicado en el "ITEMSPAGE", guardado en el useRef
         const { filterResolve }= filterItemsPage(searhTotalProducts, itemsPage, currentPage);
         setArrayProducts([...filterResolve]);
@@ -56,10 +55,10 @@ export const ProductsFilter = ({inputsValues, setLoading}) => {
 
     //Filtrando busqueda
     useEffect(() => {
-        const results = totalProducts.filter(r => filterSearch(r, inputsValues.search, totalProducts))
-                                     .filter(r => filterMin(r, inputsValues.min, totalProducts) )
-                                     .filter(r => filterMax(r, inputsValues.max, totalProducts))
-                                     .filter(r => filterMarca(r, inputsValues.marca, totalProducts));
+        const results = totalProducts.filter(product => filterSearch(product, inputsValues.search, totalProducts))
+                                     .filter(product => filterMin(product, inputsValues.min, totalProducts) )
+                                     .filter(product => filterMax(product, inputsValues.max, totalProducts))
+                                     .filter(product => filterMarca(product, inputsValues.marca, totalProducts));
         
         setSearhTotalProducts([...results]);
 

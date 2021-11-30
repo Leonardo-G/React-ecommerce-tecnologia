@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"; 
 
+//Configuracion de FIREBASE V9.4.1
 const firebaseConfig = {
   apiKey: "AIzaSyCyT8ywSEGQeBUlEdDNt6r0f66B20wle48",
   authDomain: "react-tecnologia.firebaseapp.com",

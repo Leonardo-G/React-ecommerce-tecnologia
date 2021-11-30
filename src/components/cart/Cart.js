@@ -12,17 +12,19 @@ import "./Cart.scss"
 import { OrderUser } from './OrderUser';
 
 export const Cart = () => {
+
     const { cart, setCart, removeItem, clear } = useContext( CartContext );
-    const [error, setError] = useState(false)
+    const [error, setError] = useState(false);
     const [total, setTotal] = useState(0);
     const [formValues, setFormValues] = useState({
         nombre: "",
         email: "",
         telefono: ""
-    })
+    });
     const [sending, setSending] = useState(false);
     const [idUserOrder, setIdUserOrder] = useState("");
 
+    //Precio TOTAL de todos los productos
     const totalPrice = () => {
         let total = 0;
         for (let i = 0; i < cart.length; i++) {
@@ -37,21 +39,22 @@ export const Cart = () => {
         //eslint-disable-next-line
     }, [cart]);
 
-    const handleChangeInputs = (e) => [
+    const handleChangeInputs = (e) => {
         setFormValues({
             ...formValues,
             [e.target.name]: e.target.value
-        })
-    ]
+        });
+    }
 
     const handleSetOrder = async () => {
-
+        //Primero validamos campos del Formulario
         const { nombre, email, telefono } = formValues;
         const nombreValidate = validator.isLength(nombre, {min: 3});
         const emailValidate = validator.isEmail(email);
         const telefonoValidate = validator.isNumeric(telefono, {no_symbols: false})
         
         if( !nombreValidate || !emailValidate || !telefonoValidate ) {
+            //Error si no se completa correctamente los campos del formulario
             setError(true);
             setTimeout(() => {
                 setError(false)
@@ -68,8 +71,11 @@ export const Cart = () => {
             total: total
         }
         
-        const [ order ] = await Promise.all([setDocument(newOrder), updateDocuments(cart)])
+        //Enviar la orden nueva a Firebase, y actualizar los stocks de los productos
+        const [ order ] = await Promise.all([setDocument(newOrder), updateDocuments(cart)]);
         setIdUserOrder(order.id);
+
+        //Limpiar el carrito
         clear();
         setSending(false);
     }

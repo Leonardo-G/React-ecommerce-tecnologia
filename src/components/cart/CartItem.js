@@ -13,11 +13,13 @@ export const CartItem = ({ removeItem, cart, setCart, ...propsItem }) => {
     const [quantityItem, setQuantityItem] = useState(quantity);
 
     useEffect(() => {
+        //Actualizar la cantidad cuando lo cambie el usuario
         const items = cart.filter(c => c.id !== id);
         setCart([...items, {
             ...propsItem,
             quantity: quantityItem
         }]);
+        
         // eslint-disable-next-line
     }, [quantityItem]);
 

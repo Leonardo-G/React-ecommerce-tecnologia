@@ -6,8 +6,8 @@ export const Item = ({ id, img, modelo, marca, descripcion }) => {
     
     const lengthDesc = descripcion.slice(0, 35);
     
-    //Si existe la propiedada "modelo", mostraremos los productos de la marca
-    //Sino mostraremos todas las marcas disponibles. 
+    //Si existe la propiedada "modelo", mostraremos los productos de la marca en la etiqueta H3,
+    //Sino mostraremos las marcas disponibles. 
     return (
         <div className="main__productos">
             <div className="hover--sombra">
@@ -25,4 +25,3 @@ export const Item = ({ id, img, modelo, marca, descripcion }) => {
         </div>
     )
 }
-// https://drive.google.com/uc?export=view&id=1MtiCCOWHCJ7E1ESdkOozprmsnC8IRQG4

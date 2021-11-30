@@ -3,12 +3,14 @@ import { createContext, useEffect, useState } from "react";
 export const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
-    const jsonArray = JSON.parse(localStorage.getItem("cartArray")) || [];
+    
+    //Obtener los datos del LocalStorage en caso de que haya
+    const jsonArray = JSON.parse(localStorage.getItem("cartArrayTechnologyReact")) || [];
 
     const [cart, setCart] = useState(jsonArray);
     const [totalProducts, setTotalProducts] = useState(0)
 
-    //Funcion para agregar al estado CART
+    //Funcion para agregar productos al CART
     const addProduct = (id, objProduct) => {
         //Primero comprobamos que exista. Si existe, eliminamos el duplicado
         const isExist = cart.some( c => c.id === id);
@@ -20,23 +22,26 @@ export const CartContextProvider = ({ children }) => {
             return;
         }
 
-        //Sino agrega un nuevo producto al estado CART
+        //Si no existe, agrega un nuevo producto al estado CART
         setCart([...cart, objProduct]);
     }
 
+    //Funcion para eliminar un Item del Carrito
     const removeItem = (id) => {
         const filterProduct = cart.filter( c => c.id !== id);
         setCart(filterProduct)
     }
 
+    //Funcion para limpiar todo el Carrito
     const clear = () => {
         setCart([]);
     }
 
-    //Actualizamos el localStorage
     useEffect(() => {
-        localStorage.setItem("cartArray", JSON.stringify(cart));
+        //Actualizamos el localStorage cuando se modificar el carrito
+        localStorage.setItem("cartArrayTechnologyReact", JSON.stringify(cart));
         
+        //Obtnemos el total de la cantidad de productos que hay en el carrito
         let totalQuantity = 0;
         cart.forEach( c => {
             totalQuantity = totalQuantity + c.quantity

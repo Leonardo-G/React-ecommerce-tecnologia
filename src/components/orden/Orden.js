@@ -20,7 +20,8 @@ export const Orden = () => {
 
     const handleSearchOrder = (e) => {
         e.preventDefault();
-
+        
+        //Validar el input
         if(idInput === "") {
             setUserOrder({
                 ...userOrder,
@@ -31,6 +32,8 @@ export const Orden = () => {
 
         getDocumentById(idInput, "orders")
             .then(resp => {
+
+                //Comprobar si existe la ORDEN con su ID
                 if(!resp.isExist){
                     setUserOrder({
                         ...userOrder,
@@ -40,6 +43,8 @@ export const Orden = () => {
                     });
                     return
                 }else{
+
+                    //Guardar los datos en caso de que exista
                     setUserOrder({
                         ...userOrder,
                         order: {...resp},
@@ -76,8 +81,7 @@ export const Orden = () => {
                 userOrder.order.products &&
                 <div className="orderList">
                     <h3>Su Pedido</h3>
-                    <p>Cantidad de Productos = {userOrder.order.products.length}</p>
-                    <p> Total : $ { userOrder.order.total }</p>
+                    <p> Precio Total : $ { userOrder.order.total }</p>
                     <p> Estado <span className="orderList__pending">Pendiente</span></p>
                 </div>
             }

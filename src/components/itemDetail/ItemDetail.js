@@ -39,6 +39,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
         setImgShow({...imgShow, show:true});
     }
     
+    //En caso de que el usuario haya agregado el producto, puede editarlo en el mismo ITEM
     const showButton = () => {
         const isExistProduct = cart.some( c => c.id === id);
         setShowButtonAdd(isExistProduct);
@@ -49,7 +50,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
 
         //Soluciona error cuando no desmontamos.
         return () => {
-            showButton()
+            showButton();
         }
         //eslint-disable-next-line
     }, [cart])
@@ -86,6 +87,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
 
         addProduct(id, objProduct);
 
+        //Alerta al agregar Producto
         setShowAlert(true);
         setTimeout(() => setShowAlert(false), 3000);
     }

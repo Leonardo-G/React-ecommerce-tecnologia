@@ -4,7 +4,8 @@ import { faBackward } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router';
 
 export const ButtonBack = () => {
-
+    
+    //Regresa hacia la pagina anterios
     const { goBack } = useHistory()
 
     return (
