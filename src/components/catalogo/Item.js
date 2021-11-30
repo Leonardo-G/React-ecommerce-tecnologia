@@ -13,7 +13,7 @@ export const Item = ({ id, img, modelo, marca, descripcion }) => {
             <div className="hover--sombra">
 
             </div>
-            <img src={ `../${img}` } alt={ modelo }/>
+            <img src={ img } alt={ modelo }/>
             <div className="marca">
                 <h3 className="marca__modelo">{ `${modelo ? modelo : marca} ` }</h3>
                 <Link
@@ -25,3 +25,4 @@ export const Item = ({ id, img, modelo, marca, descripcion }) => {
         </div>
     )
 }
+// https://drive.google.com/uc?export=view&id=1MtiCCOWHCJ7E1ESdkOozprmsnC8IRQG4

@@ -45,7 +45,7 @@ export const ZoomImg = ({ imgShow, setImgShow, idxImg, setIdxImg }) => {
             }
             
             <div className="zoom__container">
-                <img src={ `../${imgShow.imgZoom}` } alt=""/>
+                <img src={ `${imgShow.imgZoom}` } alt=""/>
             </div>
 
             {

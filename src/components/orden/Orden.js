@@ -26,7 +26,6 @@ export const Orden = () => {
                 ...userOrder,
                 errorInputId: true
             });
-            // setTimeout(() => setUserOrder({...userOrder, errorInputId: false}), 2500);
             return;
         }
 
@@ -39,13 +38,6 @@ export const Orden = () => {
                         errorInputId: false,
                         newOrder: true
                     });
-                    // setTimeout(() => {
-                    //     setUserOrder({
-                    //         ...userOrder,
-                    //         isExist: false,
-                    //         newOrder: false
-                    //     });
-                    // }, 2500);
                     return
                 }else{
                     setUserOrder({

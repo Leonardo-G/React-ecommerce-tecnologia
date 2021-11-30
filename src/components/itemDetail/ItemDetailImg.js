@@ -9,7 +9,7 @@ export const ItemDetailImg = ({ id, img, modelo, handleZoomImage }) => {
             className="description-zoom"
             onClick={ () => handleZoomImage( id )}
         >
-            <img src={ `../${img}` } alt={ modelo } />
+            <img src={ img } alt={ modelo } />
             <div className="hover--sombra">
                 <FontAwesomeIcon className="icon--search" icon={ faSearchPlus }/>
             </div>
