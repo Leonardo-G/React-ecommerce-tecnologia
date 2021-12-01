@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Leonardo-G/React-ecommerce-tecnologia/static/css/main.cd123dcb.chunk.css",
-    "main.js": "/Leonardo-G/React-ecommerce-tecnologia/static/js/main.1d9530d1.chunk.js",
-    "main.js.map": "/Leonardo-G/React-ecommerce-tecnologia/static/js/main.1d9530d1.chunk.js.map",
-    "runtime-main.js": "/Leonardo-G/React-ecommerce-tecnologia/static/js/runtime-main.0bf0bc2e.js",
-    "runtime-main.js.map": "/Leonardo-G/React-ecommerce-tecnologia/static/js/runtime-main.0bf0bc2e.js.map",
-    "static/js/2.4f19fa41.chunk.js": "/Leonardo-G/React-ecommerce-tecnologia/static/js/2.4f19fa41.chunk.js",
-    "static/js/2.4f19fa41.chunk.js.map": "/Leonardo-G/React-ecommerce-tecnologia/static/js/2.4f19fa41.chunk.js.map",
-    "static/js/3.b246dcf5.chunk.js": "/Leonardo-G/React-ecommerce-tecnologia/static/js/3.b246dcf5.chunk.js",
-    "static/js/3.b246dcf5.chunk.js.map": "/Leonardo-G/React-ecommerce-tecnologia/static/js/3.b246dcf5.chunk.js.map",
-    "index.html": "/Leonardo-G/React-ecommerce-tecnologia/index.html",
-    "static/css/main.cd123dcb.chunk.css.map": "/Leonardo-G/React-ecommerce-tecnologia/static/css/main.cd123dcb.chunk.css.map",
-    "static/js/2.4f19fa41.chunk.js.LICENSE.txt": "/Leonardo-G/React-ecommerce-tecnologia/static/js/2.4f19fa41.chunk.js.LICENSE.txt"
+    "main.css": "//React-ecommerce-tecnologia/static/css/main.cd123dcb.chunk.css",
+    "main.js": "//React-ecommerce-tecnologia/static/js/main.b52901c2.chunk.js",
+    "main.js.map": "//React-ecommerce-tecnologia/static/js/main.b52901c2.chunk.js.map",
+    "runtime-main.js": "//React-ecommerce-tecnologia/static/js/runtime-main.36d476ac.js",
+    "runtime-main.js.map": "//React-ecommerce-tecnologia/static/js/runtime-main.36d476ac.js.map",
+    "static/js/2.6c56b138.chunk.js": "//React-ecommerce-tecnologia/static/js/2.6c56b138.chunk.js",
+    "static/js/2.6c56b138.chunk.js.map": "//React-ecommerce-tecnologia/static/js/2.6c56b138.chunk.js.map",
+    "static/js/3.b246dcf5.chunk.js": "//React-ecommerce-tecnologia/static/js/3.b246dcf5.chunk.js",
+    "static/js/3.b246dcf5.chunk.js.map": "//React-ecommerce-tecnologia/static/js/3.b246dcf5.chunk.js.map",
+    "index.html": "//React-ecommerce-tecnologia/index.html",
+    "static/css/main.cd123dcb.chunk.css.map": "//React-ecommerce-tecnologia/static/css/main.cd123dcb.chunk.css.map",
+    "static/js/2.6c56b138.chunk.js.LICENSE.txt": "//React-ecommerce-tecnologia/static/js/2.6c56b138.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0bf0bc2e.js",
-    "static/js/2.4f19fa41.chunk.js",
+    "static/js/runtime-main.36d476ac.js",
+    "static/js/2.6c56b138.chunk.js",
     "static/css/main.cd123dcb.chunk.css",
-    "static/js/main.1d9530d1.chunk.js"
+    "static/js/main.b52901c2.chunk.js"
   ]
 }
