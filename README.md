@@ -2,7 +2,7 @@
 
 Proyecto final de Coderhouse realizado con React, simulando una ecommerce de productos tecnológicos, donde el usuario escoge el producto y procede a realizar la compra con sus datos, obteniendo el ID de su compra. Los datos obtenidos y enviados esta alojado en Firebase.
 
-Si quieres ver la dema de este proyecto, visita [este link del DEPLOY de la Aplicación Web](https://confident-noyce-b60f59.netlify.app)
+Si quieres ver la dema de este proyecto, visita [este link del DEPLOY de la Aplicación Web](https://leonardo-g.github.io/React-ecommerce-tecnologia/)
 
 ### Instalación
 
