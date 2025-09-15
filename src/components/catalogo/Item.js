@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import "./Item.scss"
+import Link from 'next/link';
 
 export const Item = ({ id, img, modelo, marca, descripcion }) => {
     
@@ -17,7 +17,7 @@ export const Item = ({ id, img, modelo, marca, descripcion }) => {
             <div className="marca">
                 <h3 className="marca__modelo">{ `${modelo ? modelo : marca} ` }</h3>
                 <Link
-                    to={ modelo ? `/Item/${id}` : `/category/${marca}`}
+                    href={ modelo ? `/Item/${id}` : `/category/${marca}`}
                     className="btn btn--marca"
                 >Ver Producto</Link>
                 <p className="empresa__info">{ lengthDesc }...</p>

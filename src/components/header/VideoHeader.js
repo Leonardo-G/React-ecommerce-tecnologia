@@ -1,5 +1,5 @@
+import Link from 'next/link';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export const VideoHeader = () => {
     return (
@@ -7,7 +7,7 @@ export const VideoHeader = () => {
             <video src="./assets/imagenes/recortadofinal (1).mp4" autoPlay loop muted></video>
             <div className="video__relative">
                 <h3>Puedes ver el estado de tu entrega</h3>
-                    <Link className="btn btn--ok" to="/order">
+                    <Link className="btn btn--ok" href="/order">
                         Aca!
                     </Link>
             </div>
