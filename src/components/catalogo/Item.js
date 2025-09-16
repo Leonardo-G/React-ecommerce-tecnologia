@@ -17,7 +17,7 @@ export const Item = ({ id, img, modelo, marca, descripcion }) => {
             <div className="marca">
                 <h3 className="marca__modelo">{ `${modelo ? modelo : marca} ` }</h3>
                 <Link
-                    href={ modelo ? `/Item/${id}` : `/category/${marca}`}
+                    href={ modelo ? `/item/${id}` : `/category/${marca}`}
                     className="btn btn--marca"
                 >Ver Producto</Link>
                 <p className="empresa__info">{ lengthDesc }...</p>
