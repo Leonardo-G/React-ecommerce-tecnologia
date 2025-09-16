@@ -1,13 +1,15 @@
+"use client";
+
 import React from "react";
-import { useHistory } from "react-router";
 import { ArrowBigLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const ButtonBack = () => {
   //Regresa hacia la pagina anteriores
-  const { goBack } = useHistory();
+  const router = useRouter();
 
   return (
-    <div className="icon--back" onClick={() => goBack()}>
+    <div className="icon--back" onClick={() => router.back()}>
       <ArrowBigLeft />
       <p>Atrás</p>
     </div>
