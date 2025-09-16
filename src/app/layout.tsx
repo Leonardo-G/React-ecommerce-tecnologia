@@ -1,6 +1,6 @@
 import "../App.scss";
 import { Navegacion } from "../components/navegacion/Navegacion";
-import { CartContextProvider } from "../context/CartContext";
+import Providers from "@/provider";
 export default function RootLayout({
   children,
 }: {
@@ -13,11 +13,10 @@ export default function RootLayout({
         <meta name="description" content="Web site created..." />
       </head>
       <body>
-        <CartContextProvider>
+        <Providers>
           <Navegacion />
-        </CartContextProvider>
-
-        <div id="root">{children}</div>
+          <div id="root">{children}</div>
+        </Providers>
       </body>
     </html>
   );

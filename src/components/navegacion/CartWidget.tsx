@@ -2,8 +2,8 @@
 
 import React, { useContext } from 'react';
 import { ShoppingCart } from 'lucide-react';
-import { CartContext } from '../../context/CartContext';
 import Link from 'next/link';
+import { CartContext } from '@/context/CartContext';
 
 export const CartWidget = ({ handleCloseMenu }) => {
 

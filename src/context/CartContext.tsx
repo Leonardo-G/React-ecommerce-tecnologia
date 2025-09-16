@@ -5,7 +5,7 @@ import { createContext, useEffect, useState, ReactNode, Dispatch, SetStateAction
 type CartItem = {
   id: string | number;
   quantity: number;
-  // agrega las demás props de tus productos:
+  // agrega las demás props de los productos:
   [k: string]: any;
 };
 
@@ -27,18 +27,14 @@ export function CartContextProvider({ children }: { children: ReactNode }) {
   // Cargar desde localStorage al montar (solo cliente)
   useEffect(() => {
     try {
-      if (typeof window !== 'undefined') {
         const raw = localStorage.getItem('cartArrayTechnologyReact');
         if (raw) setCart(JSON.parse(raw));
-      }
     } catch {}
   }, []);
 
   // Persistir y recalcular totales cuando cambia el cart
   useEffect(() => {
-    if (typeof window !== 'undefined') {
       localStorage.setItem('cartArrayTechnologyReact', JSON.stringify(cart));
-    }
     const total = cart.reduce((acc, c) => acc + (c.quantity || 0), 0);
     setTotalProducts(total);
   }, [cart]);

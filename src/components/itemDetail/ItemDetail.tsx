@@ -1,18 +1,19 @@
+"use client"
+
 import React, { useContext, useEffect, useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 import "./ItemDetail.scss"
 import { ItemCount } from '../UI/ItemCount'
 import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';
 import { ZoomImg } from './ZoomImg';
-import { CartContext } from '../../context/CartContext';
 import { Alert } from '../UI/Alert';
 import { ButtonEdit } from './ButtonEdit';
+import { Plus } from 'lucide-react';
+import { CartContext } from '@/context/CartContext';
 
 
-export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}) => {
+export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}: any) => {
     
     const { cart, addProduct, removeItem } = useContext( CartContext );
     const [idxImg, setIdxImg] = useState(0);
@@ -36,7 +37,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
 
     const handleZoomImage = (id) => {
         setIdxImg(parseInt(id));
-        setImgShow({...imgShow, show:true});
+        setImgShow({...imgShow, show:true, imgZoom: id});
     }
     
     //En caso de que el usuario haya agregado el producto, puede editarlo en el mismo ITEM
@@ -119,7 +120,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                          onClick={ handleShowDescription }
                     >
                         <p>Especificaciones</p>
-                        <FontAwesomeIcon className="icon-rotate" icon={ faPlus }/>
+                        <Plus />
                     </div>
                     <div className="description--info">
                         <div className={!showDescription ? "description-false" : "description-true"}>
