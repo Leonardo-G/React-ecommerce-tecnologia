@@ -13,8 +13,7 @@ import { Plus } from 'lucide-react';
 import { CartContext } from '@/context/CartContext';
 
 
-export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones}: any) => {
-    
+export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones, stripe_price_id}: any) => {
     const { cart, addProduct, removeItem } = useContext( CartContext );
     const [idxImg, setIdxImg] = useState(0);
     const [quantity, setQuantity] = useState(1);
@@ -83,7 +82,8 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
             precio,
             descripcion,
             stock,
-            imgs: imgs[0]
+            imgs: imgs[0],
+            stripe_price_id,
         };
 
         addProduct(id, objProduct);

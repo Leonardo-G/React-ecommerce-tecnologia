@@ -5,6 +5,7 @@ import { createContext, useEffect, useState, ReactNode, Dispatch, SetStateAction
 type CartItem = {
   id: string | number;
   quantity: number;
+  stripe_price_id: string;
   // agrega las demás props de los productos:
   [k: string]: any;
 };

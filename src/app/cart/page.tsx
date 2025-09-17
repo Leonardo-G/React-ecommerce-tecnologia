@@ -10,7 +10,8 @@ import { Sending } from "@/components/cart/Sending";
 import { CartContext } from "@/context/CartContext";
 import { setDocument, updateDocuments } from "@/helpers/getDocumets";
 import validator from "validator";
-import "../../components/cart/Cart.scss"
+import "../../components/cart/Cart.scss";
+import { Spinner } from "@/components/UI/Spinner";
 
 export default function Cart() {
   const { cart, setCart, removeItem, clear } = useContext(CartContext);
@@ -47,47 +48,31 @@ export default function Cart() {
   };
 
   const handleSetOrder = async () => {
-    //Primero validamos campos del Formulario
-    const { nombre, email, telefono } = formValues;
-    const nombreValidate = validator.isLength(nombre, { min: 3 });
-    const emailValidate = validator.isEmail(email);
-    const telefonoValidate = validator.isNumeric(telefono, {
-      no_symbols: false,
-    });
-
-    if (!nombreValidate || !emailValidate || !telefonoValidate) {
-      //Error si no se completa correctamente los campos del formulario
-      setError(true);
-      setTimeout(() => {
-        setError(false);
-      }, 2000);
-      return;
-    }
-
     setSending(true);
-    const newOrder = {
-      nombre,
-      telefono,
-      email,
-      items: cart,
-      total: total,
-    };
-
-    //Enviar la orden nueva a Firebase, y actualizar los stocks de los productos
-    const [order] = await Promise.all([
-      setDocument(newOrder),
-      updateDocuments(cart),
-    ]);
-    setIdUserOrder(order.id);
-
-    //Limpiar el carrito
-    clear();
-    setSending(false);
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL_FRONT}/api/stripe/checkout`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(
+          cart.map((value) => ({
+            quantity: value.quantity,
+            price_id: value.stripe_price_id,
+          }))
+        ),
+      });
+      const session = await response.json();
+      window.location.href = session.url;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
     <main className="main">
-      {sending && <Sending />}
       {idUserOrder !== "" ? (
         <OrderUser idUserOrder={idUserOrder} setIdUserOrder={setIdUserOrder} />
       ) : cart.length > 0 ? (
@@ -105,23 +90,17 @@ export default function Cart() {
             ))}
           </section>
           <div className="divPrice">
-            <p className="totalPrice">Subtotal : $ {total.toFixed(2)}</p>
-            <button className="btn btn--add" onClick={clear}>
-              Vaciar Carrito
-            </button>
+            {!sending ? (
+              <>
+                <p className="totalPrice">Subtotal : $ {(total / 100).toFixed(2)}</p>
+                <button className="btn btn--add" onClick={handleSetOrder}>
+                  Comprar
+                </button>
+              </>
+            ) : (
+              <Spinner />
+            )}
           </div>
-          <section>
-            <div className="order">
-              <h2>Rellena los campos</h2>
-              <FormUser handleChangeInputs={handleChangeInputs} />
-              <button className="btn btn--add" onClick={handleSetOrder}>
-                Comprar
-              </button>
-              {error && (
-                <p className="error">Completa los campos correctamente</p>
-              )}
-            </div>
-          </section>
         </>
       ) : (
         <>
