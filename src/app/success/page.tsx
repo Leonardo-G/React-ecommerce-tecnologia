@@ -34,12 +34,12 @@ export default function SuccessPage() {
           </div>
 
           <div className="buttons">
-            <div className="w-full bg-black hover:bg-gray-800 text-white py-3 rounded-md font-medium">
+            <div className="w-full bg-black hover:bg-gray-800 text-white py-3 rounded-md font-medium button-black">
               <Link href="/">Continuar Comprando</Link>
             </div>
 
             <div
-              className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-md font-medium bg-transparent"
+              className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-md font-medium bg-transparent button-border"
             >
               <Link href="/orders">Ver mis pedidos</Link>
             </div>

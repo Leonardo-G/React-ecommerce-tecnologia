@@ -30,20 +30,14 @@ export default function CancelPage() {
           </div>
 
           <div className="buttons">
-            <div className="bg-black hover:bg-gray-800 text-white py-3 rounded-md font-medium">
+            <div className="bg-black hover:bg-gray-800 text-white py-3 rounded-md font-medium button-black">
               <Link href="/cart">Volver al Carrito</Link>
             </div>
 
             <div
-              className="border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-md font-medium bg-transparent"
+              className="border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-md font-medium bg-transparent button-border"
             >
               <Link href="/">Continuar Comprando</Link>
-            </div>
-
-            <div
-              className="text-gray-500 hover:text-gray-700 py-3 rounded-md font-medium"
-            >
-              <Link href="/support">Contactar Soporte</Link>
             </div>
           </div>
         </div>
