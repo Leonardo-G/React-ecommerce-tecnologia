@@ -1,0 +1,51 @@
+import Link from "next/link";
+import { CheckCircle } from "lucide-react";
+import "./styles.scss";
+
+export default function SuccessPage() {
+  return (
+    <div className="page">
+      <main className="main">
+        <div>
+          <CheckCircle className="icon" />
+          <h1 className="title">¡Pago Exitoso!</h1>
+          <p className="subtitle">
+            Tu compra ha sido procesada correctamente. Recibirás un email de confirmación en breve.
+          </p>
+
+          <div className="box">
+            <h2>Detalles de la compra</h2>
+            <div className="detail-row">
+              <span className="label">Número de orden:</span>
+              <span className="value">#12345</span>
+            </div>
+            <div className="detail-row">
+              <span className="label">Total pagado:</span>
+              <span className="value">$ 21,744.00 ARS</span>
+            </div>
+            <div className="detail-row">
+              <span className="label">Método de pago:</span>
+              <span className="value">Tarjeta de crédito</span>
+            </div>
+            <div className="detail-row">
+              <span className="label">Fecha:</span>
+              <span className="value">{new Date().toLocaleDateString("es-AR")}</span>
+            </div>
+          </div>
+
+          <div className="buttons">
+            <div className="w-full bg-black hover:bg-gray-800 text-white py-3 rounded-md font-medium">
+              <Link href="/">Continuar Comprando</Link>
+            </div>
+
+            <div
+              className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-md font-medium bg-transparent"
+            >
+              <Link href="/orders">Ver mis pedidos</Link>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
