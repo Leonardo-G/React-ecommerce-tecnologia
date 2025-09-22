@@ -5,7 +5,7 @@ import "./styles.scss";
 export default function CancelPage() {
   return (
     <div className="page">
-      <main className="main">
+      <main className="main_checkout_cancel">
         <div>
           <XCircle className="icon" />
           <h1 className="title">Pago Cancelado</h1>

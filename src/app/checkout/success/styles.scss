@@ -1,4 +1,4 @@
-.main {
+.main_checkout_success {
   max-width: 65rem;
   margin: 0 auto;
   padding: 4rem 1rem;
@@ -51,11 +51,14 @@
         font-size: 16px;
       }
 
-      &.value {
+      &.value, &.value_last4 {
         font-weight: 500;
         font-size: 16px;
         font-weight: 600;
       }
+    }
+    .value_last4{
+      margin-left: 5px;
     }
   }
 }

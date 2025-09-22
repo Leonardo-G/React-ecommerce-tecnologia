@@ -47,22 +47,36 @@ export default function Cart() {
     });
   };
 
+  const newOrder = {
+    items: cart,
+    total: total,
+    stripe_session_id: null,
+    status: "INCOMPLETED",
+  };
+
   const handleSetOrder = async () => {
     setSending(true);
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_URL_FRONT}/api/stripe/checkout`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(
-          cart.map((value) => ({
-            quantity: value.quantity,
-            price_id: value.stripe_price_id,
-          }))
-        ),
-      });
+      const createOrder = await setDocument(newOrder);
+      console.log(createOrder.id);
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_URL_FRONT}/api/stripe/checkout`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            items: cart.map((value) => ({
+              quantity: value.quantity,
+              price_id: value.stripe_price_id,
+            })),
+            order_id: createOrder.id,
+          }),
+        }
+      );
       const session = await response.json();
+      console.log(session)
       window.location.href = session.url;
     } catch (error) {
       console.log(error);
@@ -92,7 +106,9 @@ export default function Cart() {
           <div className="divPrice">
             {!sending ? (
               <>
-                <p className="totalPrice">Subtotal : $ {(total / 100).toFixed(2)}</p>
+                <p className="totalPrice">
+                  Subtotal : $ {(total / 100).toFixed(2)}
+                </p>
                 <button className="btn btn--add" onClick={handleSetOrder}>
                   Comprar
                 </button>

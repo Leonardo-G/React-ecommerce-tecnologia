@@ -60,7 +60,7 @@ export const setDocument = async (newOrder) => {
         date: Timestamp.fromDate(new Date()),
         ...order
     });
-
+    console.log(newDoc, "NEW DOC")
     return newDoc;
 }
 

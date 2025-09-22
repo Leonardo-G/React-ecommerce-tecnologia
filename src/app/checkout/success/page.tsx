@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import "./styles.scss";
-import Stripe from "stripe";
+import { IGetSession } from "@/app/interface/api/session";
+import { IGetPayment } from "@/app/interface/api/payment";
+import SuccessDetail from "./component/SuccessDetail";
 
 interface IProps {
   searchParams: Promise<{
@@ -9,45 +11,43 @@ interface IProps {
   }>;
 }
 
-async function getSession(sessionId: string) {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_URL_FRONT}/api/stripe/session/${sessionId}`,);
-  const session = await response.json();
-  return session as Stripe.Checkout.Session;
+async function getDetailSession(sessionId: string) {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL_FRONT}/api/stripe/session/${sessionId}`
+    );
+    const session: IGetSession = await response.json();
+
+    const paymentIntentResponse = await fetch(
+      `${process.env.NEXT_PUBLIC_URL_FRONT}/api/stripe/payment/${session.paymentIntentId}`
+    );
+
+    const paymentIntent: IGetPayment = await paymentIntentResponse.json();
+    return { ...session, ...paymentIntent };
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export default async function SuccessPage({ searchParams }: IProps) {
   const { session_id } = await searchParams;
-  const session = await getSession(session_id);
+  const { order_id, amount_total, paymentMethod } = await getDetailSession(
+    session_id
+  );
   return (
     <div className="page">
-      <main className="main">
+      <main className="main_checkout_success">
         <div>
           <CheckCircle className="icon" />
           <h1 className="title">¡Pago Exitoso!</h1>
           <p className="subtitle">Tu compra ha sido procesada correctamente.</p>
 
-          <div className="box">
-            <h2>Detalles de la compra</h2>
-            <div className="detail-row">
-              <span className="label">Número de orden:</span>
-              <span className="value">#12345</span>
-            </div>
-            <div className="detail-row">
-              <span className="label">Total pagado:</span>
-              <span className="value">$ {(session.amount_total / 100).toFixed(2)}</span>
-            </div>
-            <div className="detail-row">
-              <span className="label">Método de pago:</span>
-              <span className="value">Tarjeta de crédito</span>
-            </div>
-            <div className="detail-row">
-              <span className="label">Fecha:</span>
-              <span className="value">
-                {new Date().toLocaleDateString("es-AR")}
-              </span>
-            </div>
-          </div>
+          <SuccessDetail
+            amount_total={amount_total}
+            card={paymentMethod.card}
+            last4={paymentMethod.last4}
+            order_id={order_id}
+          />
 
           <div className="buttons">
             <div className="w-full bg-black hover:bg-gray-800 text-white py-3 rounded-md font-medium button-black">
