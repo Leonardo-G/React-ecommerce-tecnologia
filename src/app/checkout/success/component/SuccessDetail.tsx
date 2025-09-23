@@ -20,7 +20,14 @@ export default function SuccessDetail({
   const { clear } = useContext(CartContext);
 
   useEffect(() => {
-    console.log("limpio");
+    const orders: string[] = JSON.parse(localStorage.getItem("orders")) || [];
+
+    if (!orders.includes(order_id)) {
+      orders.push(order_id);
+    }
+
+    localStorage.setItem("orders", JSON.stringify(orders));
+
     clear();
   }, []);
 
