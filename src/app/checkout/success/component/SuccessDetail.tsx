@@ -15,6 +15,7 @@ export default function SuccessDetail({order_id, amount_total, card, last4}: IPr
     const { clear } = useContext(CartContext);
 
     useEffect(() => {
+        console.log("limpio")
         clear();
     }, [])
 

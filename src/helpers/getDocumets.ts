@@ -1,5 +1,5 @@
 //ARCHIVO de funciones CRUD con FIREBASE
-import { addDoc, collection, doc, getDoc, getDocs, query, Timestamp, where, writeBatch } from "@firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs, query, Timestamp, updateDoc, where, writeBatch } from "@firebase/firestore";
 import { db } from "../firebase/config";
 
 //Otenemos todos los documentos segun COLLECTION DATA
@@ -60,7 +60,6 @@ export const setDocument = async (newOrder) => {
         date: Timestamp.fromDate(new Date()),
         ...order
     });
-    console.log(newDoc, "NEW DOC")
     return newDoc;
 }
 
@@ -77,4 +76,9 @@ export const updateDocuments = async (products) => {
     })
 
     await batch.commit();
+}
+
+export const updateDocument = async (doc, id, bodyUpdate) => {
+    const toUpdateDoc = await updateDoc(doc(db, doc, id), bodyUpdate);
+    
 }
