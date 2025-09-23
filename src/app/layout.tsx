@@ -1,3 +1,4 @@
+import "./global.css";
 import "../App.scss";
 import { Navegacion } from "../components/navegacion/Navegacion";
 import Providers from "@/provider";

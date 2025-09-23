@@ -71,7 +71,7 @@ export default function OrdersPage() {
   };
   return (
     <main className="container">
-      <h2 className="title_orden">Tus Ordenes</h2>
+      <h2 className="font-bold text-5xl mt-10">Tus Ordenes</h2>
       {
         orders.map(order => (
           <div>
