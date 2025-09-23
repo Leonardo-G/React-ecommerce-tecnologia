@@ -76,7 +76,6 @@ export default function Cart() {
         }
       );
       const session = await response.json();
-      console.log(session)
       window.location.href = session.url;
     } catch (error) {
       console.log(error);

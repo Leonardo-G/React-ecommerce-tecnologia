@@ -31,9 +31,8 @@ async function getDetailSession(sessionId: string) {
 
 export default async function SuccessPage({ searchParams }: IProps) {
   const { session_id } = await searchParams;
-  const { order_id, amount_total, paymentMethod } = await getDetailSession(
-    session_id
-  );
+  const { order_id, amount_total, paymentDetail, paymentType } =
+    await getDetailSession(session_id);
   return (
     <div className="page">
       <main className="main_checkout_success">
@@ -44,19 +43,19 @@ export default async function SuccessPage({ searchParams }: IProps) {
 
           <SuccessDetail
             amount_total={amount_total}
-            card={paymentMethod.card}
-            last4={paymentMethod.last4}
+            paymentDetail={paymentDetail}
+            paymentType={paymentType}
             order_id={order_id}
           />
 
           <div className="buttons">
-            <div className="w-full bg-black hover:bg-gray-800 text-white py-3 rounded-md font-medium button-black">
-              <Link href="/">Continuar Comprando</Link>
-            </div>
+            <Link href="/" className="button-black">
+              <div>Continuar Comprando</div>
+            </Link>
 
-            <div className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-md font-medium bg-transparent button-border">
-              <Link href="/orders">Ver mis pedidos</Link>
-            </div>
+            <Link href="/orders" className="button-border">
+              <div>Ver mis pedidos</div>
+            </Link>
           </div>
         </div>
       </main>

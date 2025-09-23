@@ -35,7 +35,7 @@ export const CartItem = ({ removeItem, cart, setCart, ...propsItem }) => {
           {lengthDesc}... |{" "}
           <strong className="itemPrice">
             {" "}
-            $ {(Number(precio) * quantityItem).toFixed(2)}{" "}
+            $ {(Number(precio / 100) * quantityItem).toFixed(2)}{" "}
           </strong>
         </p>
       </div>

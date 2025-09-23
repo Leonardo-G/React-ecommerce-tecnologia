@@ -1,9 +1,11 @@
 export interface IGetPayment {
     id: string;
-    paymentMethod: IPaymentMethod;
+    paymentType: string[];
+    paymentDetail: IPaymentDetail;
 }
 
-interface IPaymentMethod {
-    card: string;
-    last4: string;
+export interface IPaymentDetail {
+    card: string | null;
+    last4: string | null;
+    email: string | null;
 }

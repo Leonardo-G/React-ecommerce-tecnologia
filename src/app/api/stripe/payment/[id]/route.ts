@@ -14,9 +14,17 @@ export async function GET(
   });
   return NextResponse.json({
     id: paymentIntent.id,
-    paymentMethod: {
-      card: (paymentIntent.payment_method as Stripe.PaymentMethod).card.brand,
-      last4: (paymentIntent.payment_method as Stripe.PaymentMethod).card.last4,
+    paymentType: paymentIntent.payment_method_types,
+    paymentDetail: {
+      card: paymentIntent.payment_method_types.includes("card")
+        ? (paymentIntent.payment_method as Stripe.PaymentMethod).card.brand
+        : null,
+      last4: paymentIntent.payment_method_types.includes("card")
+        ? (paymentIntent.payment_method as Stripe.PaymentMethod).card.last4
+        : null,
+      email: paymentIntent.payment_method_types.includes("link")
+        ? (paymentIntent.payment_method as Stripe.PaymentMethod).link.email
+        : null,
     },
   });
 }

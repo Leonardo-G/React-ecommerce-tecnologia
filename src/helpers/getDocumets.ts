@@ -78,7 +78,7 @@ export const updateDocuments = async (products) => {
     await batch.commit();
 }
 
-export const updateDocument = async (doc, id, bodyUpdate) => {
-    const toUpdateDoc = await updateDoc(doc(db, doc, id), bodyUpdate);
+export const updateDocument = async (collection, id, bodyUpdate) => {
+    const toUpdateDoc = await updateDoc(doc(db, collection, id), bodyUpdate);
     
 }

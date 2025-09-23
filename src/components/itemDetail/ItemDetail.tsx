@@ -105,7 +105,7 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
                 </div>
                 <div className="itemDetail__description">
                     <h1>{ modelo }</h1>
-                    <p className="description-price"> $ {  Number(precio).toFixed(2) } ARS</p>
+                    <p className="description-price"> $ {  Number((precio / 100)).toFixed(2) }</p>
                     <p>{ descripcion }</p>
                     {
                         stock === 0 || stock < 0

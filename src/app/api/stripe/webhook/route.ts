@@ -39,8 +39,8 @@ export async function POST(req: Request) {
       const updateOrder = {
         paid_at: Timestamp.fromDate(new Date()),
         status: "COMPLETED",
-        stripe_session_id: session,
-        payment_type: paymentIntent.payment_method_types,
+        stripe_session_id: session.id,
+        paymentType: paymentIntent.payment_method_types,
         paymentDetail: {
           card: paymentIntent.payment_method_types.includes("card")
             ? (paymentIntent.payment_method as Stripe.PaymentMethod).card.brand
