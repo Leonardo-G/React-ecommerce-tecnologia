@@ -4,6 +4,7 @@ import { getDocumentById } from "@/helpers/getDocumets";
 import { useEffect, useState } from "react";
 import "./order.scss";
 import { ordersService } from "@/services/orders/ordersService";
+
 export default function OrdersPage() {
   const [orders, setOrders] = useState([]);
   const [userOrder, setUserOrder] = useState({
@@ -22,7 +23,7 @@ export default function OrdersPage() {
       console.log(ordersId);
       if (ordersId.length) {
         const orders = await ordersService.getOrdersById(ordersId);
-        console.log(orders);
+        setOrders(orders);
       }
     };
 
@@ -72,46 +73,30 @@ export default function OrdersPage() {
   return (
     <main className="container">
       <h2 className="font-bold text-5xl mt-10">Tus Ordenes</h2>
-      {
-        orders.map(order => (
-          <div>
-            <div></div>
-          </div>
-        ))
-      }
-      {!userOrder.isExist && (
-        <form className="orden">
-          <label>Escriba su ID del orden</label>
-          <input
-            type="text"
-            name="id"
-            onChange={handleChangeId}
-            placeholder="Su ID"
-          />
-          <input
-            type="submit"
-            onClick={handleSearchOrder}
-            className="btn btn--add"
-            value="Buscar Orden"
-          />
-          {userOrder.errorInputId && (
-            <p className="error">Se requiere colocar un ID</p>
-          )}
-          {!userOrder.isExist & userOrder.newOrder && (
-            <p className="error">No existe un orden con su ID</p>
-          )}
-        </form>
-      )}
-      {userOrder.order.products && (
-        <div className="orderList">
-          <h3>Su Pedido</h3>
-          <p> Precio Total : $ {userOrder.order.total}</p>
-          <p>
-            {" "}
-            Estado <span className="orderList__pending">Pendiente</span>
-          </p>
-        </div>
-      )}
+      <div className="space-y-5 mt-10">
+        {orders.length &&
+          orders.map((order, idx) => (
+            <div
+              key={idx}
+              className="border-1 p-10 rounded-xl border-gray-200 flex justify-between"
+            >
+              <div>
+                <p className="text-2xl font-bold">Order {order.id}</p>
+                <p className="mt-2 text-gray-500">
+                  {order.products.map((product) => product.modelo).join(", ")}
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-right">
+                  $ {(order.products
+                    .map((product) => product.precio * product.quantity)
+                    .reduce((acc, cur) => acc + cur, 0)) / 100}
+                </p>
+                <p className="mt-2 text-gray-500">{order.paid_at.toDate().toLocaleString("es-AR")}</p>
+              </div>
+            </div>
+          ))}
+      </div>
     </main>
   );
 }
