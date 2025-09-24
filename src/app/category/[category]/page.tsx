@@ -16,11 +16,10 @@ export default async function CategoryPage({ params }: IProps) {
   const products = await getDocumentByMarca(category);
 
   return (
-    <div>
-      <main className="main">
-        <div className="container">
+      <main className="my-10">
+        <div>
           {category && <ButtonBack />}
-          <div className="gridMain">
+          <div className="grid md:grid-cols-2 gap-10">
             <Suspense
               fallback={
                 <div className="spinner-container">
@@ -33,6 +32,5 @@ export default async function CategoryPage({ params }: IProps) {
           </div>
         </div>
       </main>
-    </div>
   );
 }

@@ -13,7 +13,6 @@ interface IProps {
 export default async function ItemPage({ params }: IProps) {
   const { id } = await params;
   const productDetail = await getDocumentById(id, COLLECTION);
-  console.log(productDetail);
 
   return (
     <main className="w-[1200px] max-w-[95%] mx-auto pb-20">

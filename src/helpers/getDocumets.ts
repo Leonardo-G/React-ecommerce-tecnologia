@@ -35,7 +35,6 @@ export const getDocumentByIds = async (nameCollection, ids) => {
   const documents = await getDocs(search);
   const dataArray = [];
   documents.forEach((data) => {
-    console.log(data.data());
     dataArray.push({
       id: data.id,
       ...data.data(),

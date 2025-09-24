@@ -28,10 +28,10 @@ export default function HomePage() {
   return (
     <>
       <HeaderContainer />
-      <main className="main">
+      <main>
         <div className="w-[1200px] max-w-[95%] mx-auto">
           {loading && <Spinner />}
-          <section>
+          <section className="my-10">
             <h2 className="text-4xl text-center font-bold pb-10">
               Explorar por marca
             </h2>

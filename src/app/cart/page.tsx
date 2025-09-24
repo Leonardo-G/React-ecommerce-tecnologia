@@ -15,13 +15,7 @@ import { Spinner } from "@/components/UI/Spinner";
 
 export default function Cart() {
   const { cart, setCart, removeItem } = useContext(CartContext);
-  const [error, setError] = useState(false);
   const [total, setTotal] = useState(0);
-  const [formValues, setFormValues] = useState({
-    nombre: "",
-    email: "",
-    telefono: "",
-  });
   const [sending, setSending] = useState(false);
   const [idUserOrder, setIdUserOrder] = useState("");
 
@@ -40,13 +34,6 @@ export default function Cart() {
     //eslint-disable-next-line
   }, [cart]);
 
-  const handleChangeInputs = (e) => {
-    setFormValues({
-      ...formValues,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const newOrder = {
     items: cart,
     total: total,
@@ -58,7 +45,6 @@ export default function Cart() {
     setSending(true);
     try {
       const createOrder = await setDocument(newOrder);
-      console.log(createOrder.id);
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_URL_FRONT}/api/stripe/checkout`,
         {
@@ -85,7 +71,7 @@ export default function Cart() {
   };
 
   return (
-    <main className="w-[70%] mx-auto">
+    <main>
       {idUserOrder !== "" ? (
         <OrderUser idUserOrder={idUserOrder} setIdUserOrder={setIdUserOrder} />
       ) : cart.length > 0 ? (

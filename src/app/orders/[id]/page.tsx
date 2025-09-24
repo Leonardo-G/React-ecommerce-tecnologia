@@ -11,7 +11,6 @@ export default async function OrderByIdPage({ params }: IProps) {
   const { id } = await params;
 
   const order = await ordersService.getOrderById(id);
-  console.log(order);
   return (
     <main className="mt-10">
       <div className="border border-gray-300 rounded-xl">
