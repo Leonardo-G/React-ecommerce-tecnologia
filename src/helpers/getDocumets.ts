@@ -63,7 +63,7 @@ export const getDocumentByMarca = async (marcaDatabase) => {
 };
 
 //Obtenemos los documentos segun el ID = ID DATA BASE y segun la COLECCION = COLLECTION
-export const getDocumentById = async (idDatabase, collection) => {
+export const getDocumentById = async (idDatabase, collection): Promise<any> => {
   const document = await getDoc(doc(db, collection, idDatabase));
   return {
     isExist: document.exists(),
