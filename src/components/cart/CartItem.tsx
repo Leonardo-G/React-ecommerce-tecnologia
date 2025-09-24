@@ -49,6 +49,7 @@ export const CartItem = ({ removeItem, cart, setCart, ...propsItem }) => {
             stock={stock}
             quantity={quantityItem}
             setQuantity={setQuantityItem}
+            handleAddProduct={() => {}}
           />
         </div>
         <div className="icon--remove" onClick={() => removeItem(id)}>
