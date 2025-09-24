@@ -13,7 +13,7 @@ export default async function OrderByIdPage({ params }: IProps) {
   const order = await ordersService.getOrderById(id);
   console.log(order);
   return (
-    <main className="mt-10 max-w-[95%] mx-auto w-[50%]">
+    <main className="mt-10 max-w-[95%] mx-auto md:w-[50%]">
       <div></div>
       <div className="border border-gray-300 rounded-xl">
         <div className="flex justify-between p-10">
@@ -32,9 +32,9 @@ export default async function OrderByIdPage({ params }: IProps) {
         <div className="h-px bg-gray-300"></div>
         <div className="p-10">
           <p className="text-gray-600 text-2xl font-bold">Productos</p>
-          <div className="mt-10">
+          <div className="flex flex-col mt-8 divide-gray-200 divide-y">
             {order.products.map((product) => (
-              <div key={product.modelo} className="flex justify-between">
+              <div key={product.modelo} className="flex justify-between py-5">
                 <div>
                   <p className="text-gray-600 text-xl font-bold">
                     {product.modelo}
@@ -45,7 +45,7 @@ export default async function OrderByIdPage({ params }: IProps) {
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-gray-700">
-                    $ {(order.total / 100).toFixed(2)}
+                    $ {(product.precio / 100).toFixed(2)}
                   </p>
                 </div>
               </div>
@@ -64,7 +64,9 @@ export default async function OrderByIdPage({ params }: IProps) {
             </div>
             <div>
               <p className="text-gray-700 text-xl font-bold">Orden realizada</p>{" "}
-              <p className="text-gray-500 text-lg">{order.paid_at.toDate().toLocaleString()}</p>
+              <p className="text-gray-500 text-lg">
+                {order.paid_at.toDate().toLocaleString()}
+              </p>
             </div>
           </div>
         </div>

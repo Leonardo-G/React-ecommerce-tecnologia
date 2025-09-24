@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { DollarSign } from "lucide-react";
+import { ArrowRight, DollarSign, ShoppingCart } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { CartItem } from "@/components/cart/CartItem";
 import { FormUser } from "@/components/cart/FormUser";
@@ -14,7 +14,7 @@ import "../../components/cart/Cart.scss";
 import { Spinner } from "@/components/UI/Spinner";
 
 export default function Cart() {
-  const { cart, setCart, removeItem, clear } = useContext(CartContext);
+  const { cart, setCart, removeItem } = useContext(CartContext);
   const [error, setError] = useState(false);
   const [total, setTotal] = useState(0);
   const [formValues, setFormValues] = useState({
@@ -85,13 +85,15 @@ export default function Cart() {
   };
 
   return (
-    <main className="main">
+    <main className="w-[70%] mx-auto">
       {idUserOrder !== "" ? (
         <OrderUser idUserOrder={idUserOrder} setIdUserOrder={setIdUserOrder} />
       ) : cart.length > 0 ? (
         <>
-          <h1 className="titleCart">Productos en el carrito</h1>
-          <section className="cart">
+          <h1 className="mt-10 text-center text-5xl font-bold">
+            Productos en el carrito
+          </h1>
+          <section className="mt-10 space-y-10">
             {cart.map((c) => (
               <CartItem
                 key={c.id}
@@ -102,14 +104,19 @@ export default function Cart() {
               />
             ))}
           </section>
-          <div className="divPrice">
+          <div className="w-full border-t mt-20 border-gray-200"></div>
+          <div className="flex justify-between mt-10 items-end">
             {!sending ? (
               <>
-                <p className="totalPrice">
+                <p className="text-3xl font-bold">
                   Subtotal : $ {(total / 100).toFixed(2)}
                 </p>
-                <button className="btn btn--add" onClick={handleSetOrder}>
+                <button
+                  className="flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85"
+                  onClick={handleSetOrder}
+                >
                   Comprar
+                  <ShoppingCart size={20} className="mb-0.5" />
                 </button>
               </>
             ) : (
@@ -119,17 +126,19 @@ export default function Cart() {
         </>
       ) : (
         <>
-          <h1 className="titleCart">
-            Oops.. No encontramos productos en el carrito
+          <h1 className="mt-10 text-5xl font-bold text-center">
+            Carrito de compras
           </h1>
-          <div className="icon">
-            <DollarSign />
-            <p>
-              Vuelve a nuestro catálogo que hay muchos productos que te estan
-              esperando
+          <div className="mt-50 text-center flex flex-col justify-center items-center gap-5">
+            <ShoppingCart size={60} className="text-gray-500 fill-gray-500" />
+            <p className="text-3xl text-center">Tu carrito está vacío</p>
+            <p className="text-2xl text-gray-500">
+              Parece que no has añadido nada a tu carrito. ¡Explora nuestros
+              productos y encuentra algo que te guste!
             </p>
-            <Link href="/busqueda" className="btn btn--add">
-              Ver los productos
+            <Link href="/" className="mt-5 flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85">
+              Seguir comprando
+              <ArrowRight size={20} className="mb-0.5" />
             </Link>
           </div>
         </>

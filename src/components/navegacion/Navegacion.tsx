@@ -68,8 +68,8 @@ export const Navegacion = () => {
               </ul>
             </li>
           </ul>
-          <Link href="/busqueda" onClick={handleCloseMenu}>
-            Buscar
+          <Link href="/orders" onClick={handleCloseMenu}>
+            Mis ordenes
           </Link>
         </div>
         <CartWidget handleCloseMenu={handleCloseMenu} />
