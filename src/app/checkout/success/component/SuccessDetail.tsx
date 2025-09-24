@@ -1,6 +1,6 @@
 "use client";
 
-import { IPaymentDetail } from "@/app/interface/api/payment";
+import { IPaymentDetail } from "@/interface/api/payment";
 import { CartContext } from "@/context/CartContext";
 import { useContext, useEffect } from "react";
 

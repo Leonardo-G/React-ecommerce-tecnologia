@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import "./styles.scss";
-import { IGetSession } from "@/app/interface/api/session";
-import { IGetPayment } from "@/app/interface/api/payment";
+import { IGetSession } from "@/interface/api/session";
+import { IGetPayment } from "@/interface/api/payment";
 import SuccessDetail from "./component/SuccessDetail";
 
 interface IProps {

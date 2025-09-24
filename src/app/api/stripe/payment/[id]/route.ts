@@ -1,4 +1,4 @@
-import { IGetPayment } from "@/app/interface/api/payment";
+import { IGetPayment } from "@/interface/api/payment";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 

@@ -13,8 +13,7 @@ export default async function OrderByIdPage({ params }: IProps) {
   const order = await ordersService.getOrderById(id);
   console.log(order);
   return (
-    <main className="mt-10 max-w-[95%] mx-auto md:w-[50%]">
-      <div></div>
+    <main className="mt-10">
       <div className="border border-gray-300 rounded-xl">
         <div className="flex justify-between p-10">
           <div>

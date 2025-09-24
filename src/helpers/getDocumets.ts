@@ -33,7 +33,6 @@ export const getDocumentByIds = async (nameCollection, ids) => {
     where(documentId(), "in", ids)
   );
   const documents = await getDocs(search);
-  console.log(documents);
   const dataArray = [];
   documents.forEach((data) => {
     console.log(data.data());

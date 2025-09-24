@@ -1,100 +1,56 @@
 "use client";
 
 import { getDocumentById } from "@/helpers/getDocumets";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import "./order.scss";
 import { ordersService } from "@/services/orders/ordersService";
 import Link from "next/link";
+import ListOrders from "./components/ListOrders";
 
 export default function OrdersPage() {
   const [orders, setOrders] = useState([]);
-  const [userOrder, setUserOrder] = useState({
-    order: {},
-    newOrder: false,
-    isExist: false,
-    errorInputId: false,
-    form: true,
-  });
-
-  const [idInput, setIdInput] = useState("");
-
+  const [loadingOrders, setLoadingOrders] = useState(true);
   useEffect(() => {
     const fetchOrders = async () => {
-      const ordersId = JSON.parse(localStorage.getItem("orders") || "[]");
-      console.log(ordersId);
-      if (ordersId.length) {
-        const orders = await ordersService.getOrdersById(ordersId);
-        setOrders(orders);
+      try {
+        const ordersId = JSON.parse(localStorage.getItem("orders") || "[]");
+        if (ordersId.length) {
+          const orders = await ordersService.getOrdersById(ordersId);
+          setOrders(orders);
+        }
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoadingOrders(false);
       }
     };
 
     fetchOrders();
   }, []);
 
-  const handleSearchOrder = (e) => {
-    e.preventDefault();
-
-    //Validar el input
-    if (idInput === "") {
-      setUserOrder({
-        ...userOrder,
-        isExist: false,
-        errorInputId: true,
-        newOrder: false,
-      });
-      return;
-    }
-
-    getDocumentById(idInput, "orders").then((resp) => {
-      //Comprobar si existe la ORDEN con su ID
-      if (!resp.isExist) {
-        setUserOrder({
-          ...userOrder,
-          isExist: false,
-          errorInputId: false,
-          newOrder: true,
-        });
-        return;
-      } else {
-        //Guardar los datos en caso de que exista
-        setUserOrder({
-          ...userOrder,
-          order: { ...resp },
-          errorInputId: false,
-          isExist: true,
-          newOrder: true,
-        });
-      }
-    });
-  };
   return (
-    <main className="container">
-      <h2 className="font-bold text-5xl mt-10">Tus Ordenes</h2>
-      <div className="space-y-5 mt-10">
-        {orders.length &&
-          orders.map((order, idx) => (
-            <Link
-              href={`/orders/${order.id}`}
-              key={idx}
-              className="border-1 p-10 rounded-xl border-gray-200 flex justify-between hover:shadow-xl transition-300 transition-all shadow-gray-100"
-            >
-              <div>
-                <p className="text-2xl font-bold">Order {order.id}</p>
-                <p className="mt-2 text-gray-500">
-                  {order.products.map((product) => product.modelo).join(", ")}
-                </p>
+    <main>
+      <h2 className="font-bold text-5xl mt-20">Tus Ordenes</h2>
+      {loadingOrders ? (
+        <div>
+          {Array.from({ length: 5 }, (_, idx) => idx).map((order) => (
+            <div className="space-y-5 mt-10" key={order}>
+              <div className="border p-10 rounded-xl border-gray-200 flex justify-between animate-pulse">
+                <div className="space-y-3 w-full">
+                  <div className="h-5 w-100 bg-gray-300 rounded"></div>
+                  <div className="h-4 w-20 bg-gray-200 rounded"></div>
+                </div>
+                <div className="space-y-3 flex flex-col items-end">
+                  <div className="h-6 w-24 bg-gray-300 rounded"></div>
+                  <div className="h-4 w-16 bg-gray-200 rounded"></div>
+                </div>
               </div>
-              <div>
-                <p className="text-2xl font-bold text-right">
-                  $ {(order.products
-                    .map((product) => product.precio * product.quantity)
-                    .reduce((acc, cur) => acc + cur, 0)) / 100}
-                </p>
-                <p className="mt-2 text-gray-500">{order.paid_at.toDate().toLocaleString("es-AR")}</p>
-              </div>
-            </Link>
+            </div>
           ))}
-      </div>
+        </div>
+      ) : (
+        <ListOrders orders={orders} />
+      )}
     </main>
   );
 }

@@ -15,11 +15,13 @@ export default function RootLayout({
         <title>React App</title>
         <meta name="description" content="Web site created..." />
       </head>
-      <body>
-        <Providers>
-          <Navegacion />
-          <div id="root">{children}</div>
-        </Providers>
+      <body className="min-h-screen flex flex-col">
+        <div className="flex-1 flex flex-col">
+          <Providers>
+            <Navegacion />
+            <div id="root" className="w-[1200px] max-w-[95%] mx-auto">{children}</div>
+          </Providers>
+        </div>
         <footer className="w-full bg-black text-white text-center py-10">
           <div className="w-[1200px] max-w-[95%] mx-auto">
             <div className="md:grid grid-cols-3 justify-around  md:text-left">
