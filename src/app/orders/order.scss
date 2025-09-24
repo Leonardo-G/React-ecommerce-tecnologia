@@ -1,0 +1,49 @@
+.orden{
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    row-gap: 2rem;
+    label{
+        font-size: 2rem;
+        font-family: "Roboto", sans-serif;
+    }
+    input[type="text"]{
+        font-size: 1.6rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+.card_order {
+
+}
+
+.title_orden{
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.orderList{
+    background-color: rgba(128, 128, 128, 0.411);
+    text-align: center;
+    font-size: 2rem;
+    width: 50%;
+    margin: 2rem auto;
+    padding: 2rem;
+    h3{
+        margin-bottom: 1rem;
+    }
+    .orderList__pending{
+        color:  blueviolet;
+    }
+}
+
+@media (max-width: 620px) {
+    .orden{
+        width: 90%;
+    }
+    .orderList{
+        width: 90%;
+    }
+}

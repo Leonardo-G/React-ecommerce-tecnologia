@@ -1,5 +1,5 @@
+import Link from 'next/link';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export const ImgHeader = () => {
     return (
@@ -8,7 +8,7 @@ export const ImgHeader = () => {
             <div className="textAbsolute">
                 <h3>Encuentra el producto que estas buscando</h3>
                 <button className="btn btn--ok">
-                    <Link to="/busqueda">
+                    <Link href="/busqueda">
                         Buscar
                     </Link>
                 </button>
