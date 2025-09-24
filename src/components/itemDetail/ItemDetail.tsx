@@ -4,13 +4,13 @@ import React, { useContext, useEffect, useState } from 'react'
 
 import "./ItemDetail.scss"
 import { ItemCount } from '../UI/ItemCount'
-import { ItemDetailImg } from './ItemDetailImg';
 import { DetailDescription } from './DetailDescription';
 import { ZoomImg } from './ZoomImg';
 import { Alert } from '../UI/Alert';
 import { ButtonEdit } from './ButtonEdit';
 import { Plus } from 'lucide-react';
 import { CartContext } from '@/context/CartContext';
+import { ItemDetailImg } from './ItemDetailImg';
 
 
 export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especificaciones, stripe_price_id}: any) => {
@@ -95,8 +95,8 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
 
     return (
         <>
-            <div className="itemDetail">
-                <div className="itemDetail__imgs">
+            <div className="itemDetail grid grid-cols-[60%_40%] gap-10">
+                <div className="grid grid-cols-2 gap-5">
                     {
                         imgs.map( (img, idx) => (
                             <ItemDetailImg key={ idx } id={ idx } img={ img } modelo={ modelo } handleZoomImage={ handleZoomImage }/>

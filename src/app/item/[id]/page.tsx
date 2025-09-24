@@ -16,8 +16,8 @@ export default async function ItemPage({ params }: IProps) {
   console.log(productDetail);
 
   return (
-    <main className="main">
-      <div className="container">
+    <main className="w-[1200px] max-w-[95%] mx-auto pb-20">
+      <div>
         {productDetail?.id && (
           <>
             <ButtonBack />

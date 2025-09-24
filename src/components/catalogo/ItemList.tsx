@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
-import { Item } from "./Item";
 import { Spinner } from "../UI/Spinner";
+import { Item } from "./Item";
 
 export const ItemList = ({ arrayProducts }) => {
   return (
