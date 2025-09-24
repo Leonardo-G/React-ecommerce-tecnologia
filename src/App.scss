@@ -1,28 +1,16 @@
 *, *::after, *::before{
-    margin: 0;
-    padding: 0;
     box-sizing: inherit;
 }
 
 html{
-    box-sizing: border-box;
     font-size: 62.5%;
 }
 
 a{
-    text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
 
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-}
-
-
-p, h1, h2, h3, li{
+p, h1, h2, h3, li, span, button{
     font-family: "Roboto", sans-serif;
 }
 
@@ -31,21 +19,13 @@ li{
     border: none;
 }
 
-.main{
-    width: min(95%, 150rem);
-    margin: 6rem auto;
-}
-
-.container{
-    margin: 0 auto;
-    width: min(95%, 150rem);
-}
-
 .gridMain{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
     row-gap: 5rem;
+    margin-top: 2rem;
 }
 
 .btn{
@@ -128,4 +108,10 @@ li{
     .gridMain{
         display: block;
     }
+}
+
+.spinner-container{
+    width: 100%;
+    margin: 0 auto;
+    grid-column: span 2;
 }
