@@ -4,6 +4,7 @@ import { getDocumentById } from "@/helpers/getDocumets";
 import { useEffect, useState } from "react";
 import "./order.scss";
 import { ordersService } from "@/services/orders/ordersService";
+import Link from "next/link";
 
 export default function OrdersPage() {
   const [orders, setOrders] = useState([]);
@@ -29,10 +30,6 @@ export default function OrdersPage() {
 
     fetchOrders();
   }, []);
-
-  const handleChangeId = (e) => {
-    setIdInput(e.target.value);
-  };
 
   const handleSearchOrder = (e) => {
     e.preventDefault();
@@ -76,9 +73,10 @@ export default function OrdersPage() {
       <div className="space-y-5 mt-10">
         {orders.length &&
           orders.map((order, idx) => (
-            <div
+            <Link
+              href={`/orders/${order.id}`}
               key={idx}
-              className="border-1 p-10 rounded-xl border-gray-200 flex justify-between"
+              className="border-1 p-10 rounded-xl border-gray-200 flex justify-between hover:shadow-xl transition-300 transition-all shadow-gray-100"
             >
               <div>
                 <p className="text-2xl font-bold">Order {order.id}</p>
@@ -94,7 +92,7 @@ export default function OrdersPage() {
                 </p>
                 <p className="mt-2 text-gray-500">{order.paid_at.toDate().toLocaleString("es-AR")}</p>
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     </main>
