@@ -12,7 +12,9 @@ import { setDocument, updateDocuments } from "@/helpers/getDocumets";
 import validator from "validator";
 import "../../components/cart/Cart.scss";
 import { Spinner } from "@/components/UI/Spinner";
+import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
 
+initMercadoPago(process.env.NEXT_PUBLIC_PUBLIC_KEY);
 export default function Cart() {
   const { cart, setCart, removeItem } = useContext(CartContext);
   const [total, setTotal] = useState(0);
@@ -70,6 +72,23 @@ export default function Cart() {
     }
   };
 
+  const handleSetOrderMercadoPago = async () => {
+    try {
+      
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_URL_FRONT}/api/mercado-pago/checkout`,
+        {
+          method: "POST",
+        }
+      );
+  
+      const preference = await response.json();
+      window.location.href = preference.sandbox_init_point;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <main>
       {idUserOrder !== "" ? (
@@ -104,6 +123,13 @@ export default function Cart() {
                   Comprar
                   <ShoppingCart size={20} className="mb-0.5" />
                 </button>
+                <button
+                  className="flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85"
+                  onClick={handleSetOrderMercadoPago}
+                >
+                  Comprar con Mercado Pago
+                  <ShoppingCart size={20} className="mb-0.5" />
+                </button>
               </>
             ) : (
               <Spinner />
@@ -122,7 +148,10 @@ export default function Cart() {
               Parece que no has añadido nada a tu carrito. ¡Explora nuestros
               productos y encuentra algo que te guste!
             </p>
-            <Link href="/" className="mt-5 flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85">
+            <Link
+              href="/"
+              className="mt-5 flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85"
+            >
               Seguir comprando
               <ArrowRight size={20} className="mb-0.5" />
             </Link>

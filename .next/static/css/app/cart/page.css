@@ -1,0 +1,238 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/components/UI/ItemCount.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.description-stock {
+  font-size: 1.5rem;
+}
+
+.description-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.description-quantity {
+  color: #000;
+  font-size: 2.2rem;
+}
+
+@media (max-width: 620px) {
+  .description-buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/components/cart/Cart.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.titleCart {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.icon {
+  text-align: center;
+  font-size: 2rem;
+}
+.icon p {
+  margin-bottom: 2rem;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  align-items: center;
+}
+
+.cart__item {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.288);
+  padding: 2rem 0;
+}
+.cart__item:hover .icon--remove {
+  visibility: visible;
+}
+.cart__item .item--info {
+  flex: 1;
+  text-align: left;
+  padding: 0 4rem;
+}
+.cart__item .item--product {
+  width: 20rem;
+}
+.cart__item img {
+  width: 10rem;
+}
+.cart__item .itemDesc {
+  font-size: 1.6rem;
+}
+.cart__item .itemTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #000;
+}
+.cart__item .itemPrice {
+  color: rgba(39, 39, 39, 0.74);
+}
+.cart__item .item--buttons {
+  width: 30rem;
+}
+
+.icon--remove {
+  cursor: pointer;
+  visibility: hidden;
+  font-size: 2.5rem;
+}
+
+.divPrice {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.totalPrice {
+  padding: 0 3rem;
+}
+
+.order {
+  margin: 5rem auto;
+  width: 40rem;
+}
+.order h2 {
+  font-size: 2rem;
+}
+.order .order__form {
+  display: flex;
+  flex-direction: column;
+}
+.order .order__form input {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.sending {
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(228, 227, 227, 0.719);
+  z-index: 999;
+}
+.sending .spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orderUser {
+  text-align: center;
+}
+.orderUser .orderUser__texto {
+  font-size: 2rem;
+}
+.orderUser .orderUser__id {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: #6abe6a;
+  display: block;
+  width: 25rem;
+  margin: 2rem auto;
+  color: #eeeeee;
+  border-radius: 10px;
+}
+
+.error {
+  margin-top: 2rem;
+  padding: 1rem 1rem;
+  background-color: red;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 965px) {
+  .icon--remove {
+    visibility: visible;
+  }
+}
+@media (max-width: 420px) {
+  .titleCart {
+    font-size: 2.5rem;
+  }
+
+  .order {
+    width: 100%;
+  }
+}
+@media (max-width: 365px) {
+  .cart__item img {
+    display: none;
+  }
+  .cart__item .item--info {
+    padding: 0;
+  }
+  .cart__item .item--buttons {
+    flex: 0 0 30%;
+  }
+  .cart__item .itemDesc {
+    display: none;
+  }
+
+  .divPrice {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .divPrice .totalPrice {
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/components/UI/Spinner.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.lds-circle {
+  display: block;
+  text-align: center;
+  transform: translateZ(1px);
+}
+
+.lds-circle > div {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #000;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes lds-circle {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
