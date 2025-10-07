@@ -1,8 +1,1 @@
-{
-  "/api/stripe/session/[id]/route": "app/api/stripe/session/[id]/route.js",
-  "/cart/page": "app/cart/page.js",
-  "/page": "app/page.js",
-  "/category/[category]/page": "app/category/[category]/page.js",
-  "/item/[id]/page": "app/item/[id]/page.js",
-  "/checkout/success/page": "app/checkout/success/page.js"
-}
+{}
