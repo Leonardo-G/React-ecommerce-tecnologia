@@ -4,7 +4,7 @@
 #Este archivo se genera automaticamente al subir el nuevo proyecto a netlify
 /.netlify
 
-/
+/.next
 
 # dependencies
 /node_modules
