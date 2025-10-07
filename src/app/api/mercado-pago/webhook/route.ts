@@ -16,8 +16,9 @@ export async function POST(request: Request) {
   switch (body.type) {
     case "payment":
       const payment = new Payment(client);
+      console.log(body, "BODY")
       const responsePayment = await payment.get({ id: body.data.id });
-
+      console.log(responsePayment, "RESPONSE PAYMENT")
       if (responsePayment.status === "approved") {
         const updateOrder = {
           paid_at: Timestamp.fromDate(new Date()),

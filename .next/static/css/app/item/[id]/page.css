@@ -1,0 +1,241 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/components/itemDetail/ItemDetail.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.itemDetail .itemDetail__description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.itemDetail .itemDetail__description .productModified {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.itemDetail .itemDetail__description .edit {
+  flex: 0 0 80%;
+}
+.itemDetail .itemDetail__description p {
+  font-size: 1.8rem;
+  color: #00000086;
+  line-height: 30px;
+}
+.itemDetail .itemDetail__description .description-price {
+  color: #000;
+}
+.itemDetail .itemDetail__description h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.itemDetail .itemDetail__description .description--info {
+  overflow: hidden;
+}
+.itemDetail .itemDetail__description .description-false {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: 0.2s all ease-in-out;
+}
+.itemDetail .itemDetail__description .description-true {
+  visibility: visible;
+  transform: translateY(0%);
+  transition: 0.2s transform ease-in-out;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.itemDetail .itemDetail__description span {
+  color: #000;
+}
+.itemDetail .description-button {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.itemDetail .description-button p {
+  color: #000;
+}
+.itemDetail .description-button:hover .icon-rotate {
+  transition: 0.5s ease-out;
+  transform: rotate(225deg);
+}
+.itemDetail .description-button .icon-rotate {
+  transition: 0.5s ease-out;
+}
+.itemDetail .description-button:last-of-type {
+  border-bottom: 30px solid #e1e1e1;
+}
+.itemDetail .description-zoom {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.itemDetail .description-zoom:hover .hover--sombra {
+  transform: translateY(0%);
+  visibility: visible;
+  transition: 0.3s all ease-in-out;
+}
+.itemDetail .description-zoom .hover--sombra {
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.404);
+  transform: translateY(100%);
+  visibility: hidden;
+  transition: 0.3s all ease-in-out;
+}
+.itemDetail .description-zoom .icon--search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #fff;
+}
+
+.icon--back {
+  width: 10rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #18171749;
+  margin: 2rem 0;
+  display: flex;
+  column-gap: 1rem;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/components/UI/ItemCount.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.description-stock {
+  font-size: 1.5rem;
+}
+
+.description-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.description-quantity {
+  color: #000;
+  font-size: 2.2rem;
+}
+
+@media (max-width: 620px) {
+  .description-buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/components/itemDetail/ZoomImg.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.zoom {
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.zoom .zoom__container {
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80%;
+  display: flex;
+  width: min(120rem, 85%);
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+.zoom .zoom__container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.zoom .zoom__icon {
+  position: absolute;
+  cursor: pointer;
+  font-size: 3rem;
+  color: #1d1a1a6e;
+  text-align: center;
+}
+.zoom .zoom__icon:hover {
+  color: #000;
+}
+.zoom .icon--close {
+  width: 4rem;
+  height: 4rem;
+  border: 3px solid #e1e1e1;
+  border-radius: 50%;
+  top: 2.5%;
+  right: 2.5%;
+}
+.zoom .icon--next {
+  top: 50%;
+  right: 2%;
+  font-size: 4rem;
+}
+.zoom .icon--previous {
+  top: 50%;
+  left: 2%;
+  font-size: 4rem;
+}
+
+@media (max-width: 865px) {
+  .zoom .zoom__container {
+    width: 80%;
+  }
+  .zoom .zoom__icon {
+    font-size: 2.6rem;
+  }
+  .zoom .icon--next {
+    right: 1%;
+  }
+  .zoom .icon--previous {
+    left: 1%;
+  }
+}
+@media (max-width: 420px) {
+  .zoom .zoom__container {
+    width: 75%;
+  }
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/components/UI/Alert.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.alert {
+  position: fixed;
+  top: 5%;
+  right: 0;
+  background-color: #30362F;
+  padding: 1.5rem 3rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s all ease;
+}
+
+.alert p {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.visible {
+  right: 5%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.2s all ease;
+}

@@ -11,7 +11,7 @@ import {
 } from "react";
 
 type CartItem = {
-  id: string | number;
+  id: string;
   quantity: number;
   stripe_price_id: string;
   [k: string]: any;

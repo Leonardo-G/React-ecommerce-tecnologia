@@ -9,3 +9,13 @@ export interface IPaymentDetail {
     last4: string | null;
     email: string | null;
 }
+
+export interface ICheckoutItem {
+  price_id: string;
+  quantity: number;
+}
+
+export interface IBody {
+  items: ICheckoutItem[];
+  order_id: string;
+}
