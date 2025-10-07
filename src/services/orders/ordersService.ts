@@ -1,4 +1,5 @@
-import { getDocumentById, getDocumentByIds } from "@/helpers/getDocumets"
+import { getDocumentById, getDocumentByIds, updateDocument } from "@/helpers/getDocumets"
+import { IOrder } from "@/interface/order.interface";
 
 export const ORDER_COLLECTION = 'orders';
 
@@ -12,7 +13,13 @@ const getOrderById = async (id: string) => {
     return order;
 }
 
+const updateOrderById = async (id: string, orderToUpdate: Partial<IOrder>) => {
+    const order = await updateDocument(ORDER_COLLECTION, id, orderToUpdate);
+    return order;
+}
+
 export const ordersService = {
     getOrdersById,
-    getOrderById
+    getOrderById,
+    updateOrderById
 }

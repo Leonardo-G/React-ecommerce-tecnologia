@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Timestamp } from "firebase/firestore";
 import { MercadoPagoConfig, Payment } from "mercadopago";
+import { ordersService } from "@/services/orders/ordersService";
 
 export const config = {
   api: {
@@ -24,22 +25,16 @@ export async function POST(request: Request) {
           paid_at: Timestamp.fromDate(new Date()),
           status: "COMPLETED",
           stripe_session_id: body.data.id,
-          paymentType: "MERCADO PAGO",
-          // paymentDetail: {
-          //   card: paymentIntent.payment_method_types.includes("card")
-          //     ? (paymentIntent.payment_method as Stripe.PaymentMethod).card.brand
-          //     : null,
-          //   last4: paymentIntent.payment_method_types.includes("card")
-          //     ? (paymentIntent.payment_method as Stripe.PaymentMethod).card.last4
-          //     : null,
-          //   email: paymentIntent.payment_method_types.includes("link")
-          //     ? (paymentIntent.payment_method as Stripe.PaymentMethod).link.email
-          //     : null,
-          // },
+          paymentType: ["MERCADO PAGO"],
+          paymentDetail: {
+            card: null,
+            last4: null,
+            email: responsePayment.payer.email,
+          },
         };
+        await ordersService.updateOrderById(responsePayment.metadata.order_id, updateOrder);
+        return NextResponse.json({ ok: true }, { status: 201 });
       }
-
-      return NextResponse.json({ ok: true }, { status: 201 });
 
     default:
       return NextResponse.json({ msg: `Event: ${body.type}, no recapted` });
