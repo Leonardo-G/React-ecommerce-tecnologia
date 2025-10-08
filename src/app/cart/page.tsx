@@ -1,16 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, DollarSign, ShoppingCart } from "lucide-react";
+import { ArrowRight, Info, ShoppingCart } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { CartItem } from "@/components/cart/CartItem";
-import { FormUser } from "@/components/cart/FormUser";
 import { OrderUser } from "@/components/cart/OrderUser";
-import { Sending } from "@/components/cart/Sending";
 import { CartContext } from "@/context/CartContext";
-import { setDocument, updateDocuments } from "@/helpers/getDocumets";
-import validator from "validator";
-import "../../components/cart/Cart.scss";
+import { setDocument } from "@/helpers/getDocumets";
 import { Spinner } from "@/components/UI/Spinner";
 
 export default function Cart() {
@@ -70,6 +66,36 @@ export default function Cart() {
     }
   };
 
+  const handleSetOrderMercadoPago = async () => {
+    setSending(true);
+    try {
+      const createOrder = await setDocument(newOrder);
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_URL_FRONT}/api/mercado-pago/checkout`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            items: cart.map((value) => ({
+              quantity: value.quantity,
+              id: value.id,
+            })),
+            order_id: createOrder.id,
+          }),
+        }
+      );
+
+      const preference = await response.json();
+      window.location.href = preference.init_point;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <main>
       {idUserOrder !== "" ? (
@@ -91,19 +117,30 @@ export default function Cart() {
             ))}
           </section>
           <div className="w-full border-t mt-20 border-gray-200"></div>
-          <div className="flex justify-between mt-10 items-end">
+          <div className="flex justify-between mt-10 items-start">
             {!sending ? (
               <>
                 <p className="text-3xl font-bold">
                   Subtotal : $ {(total / 100).toFixed(2)}
                 </p>
-                <button
-                  className="flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85"
-                  onClick={handleSetOrder}
-                >
-                  Comprar
-                  <ShoppingCart size={20} className="mb-0.5" />
-                </button>
+                <div className="flex flex-col-reverse gap-5">
+                  <div className="flex items-center gap-3">
+                    <Info />
+                    <p>Se necesita ingresar las tarjetas para modo test</p>
+                  </div>
+                  <button
+                    className="flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85"
+                    onClick={handleSetOrder}
+                  >
+                    Comprar con Stripe
+                  </button>
+                  <button
+                    className="flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85"
+                    onClick={handleSetOrderMercadoPago}
+                  >
+                    Comprar con Mercado Pago
+                  </button>
+                </div>
               </>
             ) : (
               <Spinner />
@@ -122,7 +159,10 @@ export default function Cart() {
               Parece que no has añadido nada a tu carrito. ¡Explora nuestros
               productos y encuentra algo que te guste!
             </p>
-            <Link href="/" className="mt-5 flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85">
+            <Link
+              href="/"
+              className="mt-5 flex items-center gap-3 rounded-xl bg-black text-white px-15 py-5 text-2xl cursor-pointer hover:shadow-xl duration-300 transition-all hover:bg-black/85"
+            >
               Seguir comprando
               <ArrowRight size={20} className="mb-0.5" />
             </Link>

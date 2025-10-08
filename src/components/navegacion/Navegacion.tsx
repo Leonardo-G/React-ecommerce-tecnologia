@@ -17,14 +17,14 @@ export const Navegacion = () => {
   };
 
   return (
-    <header>
-      <nav className="navegacion">
+    <header className="max-w-full">
+      <nav className="navegacion shadow-sm">
         <div className="navegacion__logo">
           <Link href="/" onClick={handleCloseMenu}>
             X Tecnol
           </Link>
         </div>
-        <div className={`navegacion__enlaces ${menu && "menuActive"}`}>
+        <div className={`navegacion__enlaces ${menu && "menuActive w-full"}`}>
           <Link href="/" onClick={handleCloseMenu}>
             Inicio
           </Link>

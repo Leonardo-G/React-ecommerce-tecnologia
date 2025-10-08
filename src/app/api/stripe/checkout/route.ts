@@ -1,3 +1,4 @@
+import { IBody } from "@/interface/api/payment";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { array, number, object, string } from "yup";
@@ -12,15 +13,6 @@ const postSchema = object({
   ),
   order_id: string().required()
 });
-interface ICheckoutItem {
-  price_id: string;
-  quantity: number;
-}
-
-interface IBody {
-  items: ICheckoutItem[];
-  order_id: string;
-}
 
 export async function POST(request: Request) {
   try {
