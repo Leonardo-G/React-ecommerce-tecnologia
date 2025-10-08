@@ -26,7 +26,7 @@ export const ZoomImg = ({ imgShow, setImgShow, idxImg, setIdxImg }) => {
   };
 
   return (
-    <div className="zoom relative">
+    <div className="zoom relative z-99">
       <div className="absolute top-[2%] right-[2%] border p-2 border-gray-400 rounded-full cursor-pointer hover:scale-103 duration-300 transition-all" onClick={handleCloseZoom}>
         <X />
       </div>
