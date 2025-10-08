@@ -95,8 +95,8 @@ export const ItemDetail = ({id, modelo, imgs, stock, descripcion, precio, especi
 
     return (
         <>
-            <div className="itemDetail grid grid-cols-[60%_40%] gap-10">
-                <div className="grid grid-cols-2 gap-5">
+            <div className="itemDetail flex flex-col md:grid grid-cols-[60%_40%] gap-10">
+                <div className="grid grid-cols-2 gap-5 lg:h-fit min-h-lg">
                     {
                         imgs.map( (img, idx) => (
                             <ItemDetailImg key={ idx } id={ idx } img={ img } modelo={ modelo } handleZoomImage={ handleZoomImage }/>
