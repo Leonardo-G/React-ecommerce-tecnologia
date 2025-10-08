@@ -46,11 +46,13 @@ export default function SuccessDetail({
         <span className="label">Método de pago:</span>
         <div>
           <span className="value">
-            {paymentType.includes("card") ? paymentDetail.card : paymentType[0]}
+            {["card", "credit_card", "debit_card"].some(type => paymentType.includes(type))
+              ? paymentDetail.card
+              : paymentType[0]}
           </span>
           <span className="value_last4">
             *{" "}
-            {paymentType.includes("card")
+            {["card", "credit_card", "debit_card"].some(type => paymentType.includes(type))
               ? paymentDetail.last4
               : paymentDetail.email}
           </span>

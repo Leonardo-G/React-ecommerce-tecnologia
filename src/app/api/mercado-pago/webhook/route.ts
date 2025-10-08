@@ -17,22 +17,36 @@ export async function POST(request: Request) {
   switch (body.type) {
     case "payment":
       const payment = new Payment(client);
-      console.log(body, "BODY")
+
       const responsePayment = await payment.get({ id: body.data.id });
-      console.log(responsePayment, "RESPONSE PAYMENT")
+
       if (responsePayment.status === "approved") {
         const updateOrder = {
           paid_at: Timestamp.fromDate(new Date()),
           status: "COMPLETED",
           stripe_session_id: body.data.id,
-          paymentType: ["MERCADO PAGO"],
+          paymentType:
+            responsePayment.payment_method_id === "account_money"
+              ? [responsePayment.order.type]
+              : [responsePayment.payment_type_id],
           paymentDetail: {
-            card: null,
-            last4: null,
-            email: responsePayment.payer.email,
+            card:
+              responsePayment.payment_method_id === "account_money"
+                ? responsePayment.order.type
+                : responsePayment.payment_type_id,
+            last4: responsePayment.card?.last_four_digits
+              ? responsePayment.card.last_four_digits
+              : null,
+            email:
+              responsePayment.payment_method_id === "account_money"
+                ? responsePayment.payer.email
+                : null,
           },
         };
-        await ordersService.updateOrderById(responsePayment.metadata.order_id, updateOrder);
+        await ordersService.updateOrderById(
+          responsePayment.metadata.order_id,
+          updateOrder
+        );
         return NextResponse.json({ ok: true }, { status: 201 });
       }
 

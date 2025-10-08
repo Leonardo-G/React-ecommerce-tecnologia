@@ -33,7 +33,7 @@ export async function POST(request: Request) {
   const body = (await postSchema.validate(
     await request.json()
   )) as IBodyMercadoPago;
-  console.log(body);
+
   try {
     const products = await productsService.getProducts(
       body.items.map((item) => item.id)
@@ -45,7 +45,6 @@ export async function POST(request: Request) {
       unit_price: Number(product.precio) / 100,
       id: product.id,
     }));
-    console.log(products);
     const preference = new Preference(client);
     const responsePreference = await preference.create({
       body: {
@@ -53,7 +52,7 @@ export async function POST(request: Request) {
         metadata: { order_id: body.order_id },
         back_urls: {
           success: `${process.env.NEXT_PUBLIC_URL_FRONT}/checkout/success`,
-          failure: `${process.env.NEXT_PUBLIC_URL_FRONT}/checkout/failure`,
+          failure: `${process.env.NEXT_PUBLIC_URL_FRONT}/checkout/cancel`,
           pending: `${process.env.NEXT_PUBLIC_URL_FRONT}/checkout/pending`,
         },
         auto_return: "approved",

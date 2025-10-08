@@ -1,20 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, DollarSign, Info, ShoppingCart } from "lucide-react";
+import { ArrowRight, Info, ShoppingCart } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { CartItem } from "@/components/cart/CartItem";
-import { FormUser } from "@/components/cart/FormUser";
 import { OrderUser } from "@/components/cart/OrderUser";
-import { Sending } from "@/components/cart/Sending";
 import { CartContext } from "@/context/CartContext";
-import { setDocument, updateDocuments } from "@/helpers/getDocumets";
-import validator from "validator";
-import "../../components/cart/Cart.scss";
+import { setDocument } from "@/helpers/getDocumets";
 import { Spinner } from "@/components/UI/Spinner";
-import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 
-initMercadoPago(process.env.NEXT_PUBLIC_PUBLIC_KEY);
 export default function Cart() {
   const { cart, setCart, removeItem } = useContext(CartContext);
   const [total, setTotal] = useState(0);
