@@ -61,7 +61,11 @@ export async function POST(request: Request) {
     });
     return NextResponse.json(responsePreference);
   } catch (error) {
-    console.log(error);
-
+    return NextResponse.json(
+      {
+        msg: error,
+      },
+      { status: 404 }
+    );
   }
 }
